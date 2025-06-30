@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+@import "tailwindcss";
+
 body {
     background-color: white;
     display: flex;
@@ -60,6 +66,7 @@ a {
 }
 
 /*------------REGISTRO------------*/
+
 .registro-body {
     background-color: white;
     display: flex;
