@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
+    <link rel="stylesheet" href="./src/output.css" >
     <link rel="stylesheet" href="styleLogin.css">
-    
 </head>
-<body class="registro-body">
-    
 
+<body class="registro-body">
+
+<header class="contenedor-header">
+    <h1 class="titulo-404-header">404</h1>
+</header>
+
+<section class="flex items-center justify-center min-h-screen">
 <div class="registro-container">
-    <h1>Crear Cuenta</h1>
+    <h1 class="titulo-crear-cuenta">Crear Cuenta</h1>
     <form id="registro-form">
         <input type="text" placeholder="Nombre">
         <input type="text" placeholder="Apellido">
@@ -20,6 +25,69 @@
         <button type="submit" class="btn-crear">Crear</button>
     </form>
 </div>
+</section>
+
+<footer class="w-full bg-[#27445D] py-10 border-t border-gray-100">
+    <section class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-wrap justify-between gap-8">
+
+        <div class="politicas space-y-2 font-[monospace]">
+            <h2 class="text-2xl font-bold text-white">Nuestras políticas</h2>
+            <div class="contenedor-politicas flex flex-col">
+                <a href="#" class="text-white text-lg hover:text-green-400">Política de devolución</a>
+                <a href="#" class="text-white text-lg hover:text-green-400">Política de privacidad</a>
+                <a href="#" class="text-white text-lg hover:text-green-400">Política de envío</a>
+            </div>
+       </div>
+
+        <div class="contactos space-y-2 font-[monospace] text-white">
+         <h3 class="text-2xl font-bold">Contacto</h3>
+          <div class="space-y-2">
+            <div class="flex items-center text-lg gap-2">
+                <img src="iconos-contacto-footer/whatsapp.svg" class="h-[1.4rem]"> <span>+595 982923265</span>
+            </div>
+
+            <div class="flex items-center text-lg gap-2">
+                <img src="iconos-contacto-footer/gmail.svg" class="h-[1.4rem]">
+                <span> 404@info.com</span>
+            </div>
+          </div>  
+        </div>
+
+        <div class="enlaces-de-interes space-y-2 font-[monospace] text-white">
+            <h3 class="text-2xl font-bold">Enlaces de interés</h3>
+            <div class="contenedor-enlaces-de-interes flex flex-col text-lg">
+                <a href="#" class="hover:text-green-400">Sobre nosotros</a>
+                <a href="#" class="hover:text-green-400">Preguntas frecuentes</a>
+                <a href="#" class="hover:text-green-400">Formas de pago</a>
+            </div>
+        </div>
+
+        <div class="nuestras-redes space-y-2 font-[monospace]">
+            <h3 class="text-2xl font-bold text-white">Síguenos</h3>
+            <div class="contenedor-redes flex gap-x-3">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="iconos-contacto-footer/instagram (1).svg" class="h-[1.6rem] transition-transform duration-300 hover:scale-110" alt="instagram">
+                </a>
+
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="iconos-contacto-footer/facebook (1).svg" class="h-[1.6rem] transition-transform duration-300 hover:scale-110" alt="facebook">
+                </a>
+
+                <a href="https://x.com/?lang=es" target="_blank">
+                    <img src="iconos-contacto-footer/x.svg" class="h-[1.6rem] transition-transform duration-300 hover:scale-110" alt="x">
+                </a>
+            </div>
+        </div>
+
+      </div>
+
+        <div class="derechos-reservados flex justify-center items-center text-white mt-7">
+            <p>© 404 2025. Todos los derechos reservados.</p>
+        </div>
+
+    </section>
+</footer>
 
 
 </body>

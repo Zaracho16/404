@@ -1,17 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-
 @import "tailwindcss";
-
-body {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    font-family: monospace;
-    align-items: center;
-    height: 100vh;
-}
 
 .login-container {
     padding: 2rem;
@@ -19,6 +6,7 @@ body {
     box-shadow: 0 0 20px #404040;
     text-align: center;
     background-color: #27445D;
+    margin-top: -3rem;
 }
 
 input {
@@ -30,6 +18,7 @@ input {
     border: none;
     width: 100%;
     height: 1.5rem;
+    background-color: white;
 }
 
 button {
@@ -40,14 +29,15 @@ button {
     cursor: pointer;
     font-family: monospace;
     font-weight: bold;
+    background-color: white;
 }
 
 button:hover {
     background-color: #71BBB2;
 }
 
-.login-container h1,
-.registro-container h1 {
+.titulo-iniciar-sesion,
+.titulo-crear-cuenta {
     font-size: 3rem;
     font-weight: bold;
 }
@@ -57,7 +47,7 @@ button:hover {
     font-size: 0.9rem;
 }
 
-a {
+.p-clave {
     color: #EFE9D5;
 }
 
@@ -65,16 +55,23 @@ a {
     text-decoration: none;
 }
 
-/*------------REGISTRO------------*/
-
-.registro-body {
-    background-color: white;
+.contenedor-header {
+    background-color: #27445D;
+    height: 9vh;
     display: flex;
     justify-content: center;
-    font-family: monospace;
     align-items: center;
-    height: 100vh;
 }
+
+.titulo-404-header {
+    font-family: "monospace";
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+
+/*------------REGISTRO------------*/
 
 .registro-container {
     padding: 2rem;
@@ -82,6 +79,7 @@ a {
     box-shadow: 0 0 20px #404040;
     text-align: center;
     background-color: #27445D;
+    margin-top: -3rem;
 }
 
 .btn-crear {
