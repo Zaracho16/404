@@ -1,0 +1,60 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.contenedor-marcas-perfumes {
+    background-color: #497D74;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 20px;
+    row-gap: 15px;
+    column-gap: 15px;
+}
+
+.cuadro-marcas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 80px;
+    padding: 1rem;
+    gap: 0.5rem;
+    transition: transform 1.5s ease;
+    cursor: pointer;
+}
+
+.cuadro-marcas:hover {
+    transform: scale(1.05);
+}
+
+.imagen-marcas-perfumes {
+    width: 188px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; 
+    background-color: white;
+}
+
+.cuadro-marcas h3 {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: black;
+}
+
+@media (max-width: 1024px) {
+    .contenedor-marcas-perfumes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .contenedor-marcas-perfumes {
+        grid-template-columns: 1fr;
+    }
+}
