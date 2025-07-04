@@ -6,9 +6,200 @@
     <title>404</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    
 
+
+<nav class="flex items-center py-4 justify-between flex-wrap bg-[#27445D] px-6 w-full font-[monospace]">
+
+        <!--Logo-->
+        <h1 class="text-[1.4rem] font-bold text-white">404</h1>
+
+        <!--Boton hamb (solo visible en pantallas mas pequeñas)-->
+        <button class="text-white text-2xl md:hidden" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+         
+        <!--Menu de navegacion pc-->
+        <ul class="hidden md:flex gap-8 text-[1.4rem] text-white flex-grow ml-12">   
+            <li><a href="#" class="hover:text-[#71BBB2]">Inicio</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Marcas</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Tienda</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Contacto</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Nosotros</a></li>
+        </ul>
+
+        <!--Buscador-->
+        <div class="relative mr-6 hidden md:block">
+            <input type="text" placeholder="Buscar producto" class="pl-4 pr-10 py-2 rounded-xl focus:outline-none border border-white text-white text-[1rem]">
+            <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-white">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+
+        <div class="flex items-center gap-4 text-xl text-white">
+            <a href="inicioSesion.html"><i class="fa-solid fa-user"></i></a>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+        <!--Menu en pantallas mas pequeñas-->
+        <ul class="w-full mt-4 flex-col gap-2 text-white text-[1.2rem] hidden" id="mobile-menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Nosotros</a></li>
+        </ul>
+
+</nav>
+
+<section class="seccion-marcas-perfumes">
+
+    <div class="contenedor-marcas-perfumes">
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/carolinaHerrera.png" alt="carolinaHerrera-img" class="imagen-marcas-perfumes">
+            <h3>Carolina Herrera</h3>
+        </div>
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/chanel.jpg" alt="chanel-img" class="imagen-marcas-perfumes">
+            <h3>Chanel</h3>
+        </div>
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/dior.jpg" alt="dior-img" class="imagen-marcas-perfumes">
+            <h3>Dior</h3>
+        </div>
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/giorgioArmani.jpg" alt="giorgioArmani-img" class="imagen-marcas-perfumes"> 
+            <h3>Giorgio Armani</h3>
+        </div>
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/hugoBoss.jpg" alt="hugoBoss-img" class="imagen-marcas-perfumes">
+            <h3>Hugo Boss</h3>
+        </div>
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/ysl.png" alt="Saint Laurent" class="imagen-marcas-perfumes">
+            <h3>Saint Laurent</h3>
+        </div>
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/jpg.svg" alt="Jean Paul Gaultier" class="imagen-marcas-perfumes">
+            <h3>Jean Paul Gaultier</h3>
+        </div>
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/pacoRabanne.jpg" alt="Paco Rabanne" class="imagen-marcas-perfumes">
+            <h3>Paco Rabanne</h3>
+        </div>
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/versace.png" alt="Versace" class="imagen-marcas-perfumes">
+            <h3>Versace</h3>
+        </div>
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/tomFord.png" alt="Tom Ford" class="imagen-marcas-perfumes">
+            <h3>Tom Ford</h3>
+        </div>
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/azzaro.png" alt="Azzaro" class="imagen-marcas-perfumes">
+            <h3>Azzaro</h3>
+        </div>
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/creed.jpg" alt="Creed" class="imagen-marcas-perfumes">
+            <h3>Creed</h3>
+        </div>
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/bleuDeChanel.png" alt="Bleu de Chanel" class="imagen-marcas-perfumes">
+            <h3>Bleu De Chanel</h3>
+        </div>
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/montBlanc.svg" alt="Mont Blanc" class="imagen-marcas-perfumes">
+            <h3>Mont Blanc</h3>
+        </div>
+
+        <div class="cuadro-marcas">
+            <img src="marcasPerfumes-icons/Dolce&Gabbana.png" alt="Dolce & Gabbana" class="imagen-marcas-perfumes">
+            <h3>Dolce & Gabbana</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="w-full bg-[#27445D] py-10 border-t border-gray-100">
+    <section class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-wrap justify-between gap-8">
+
+        <div class="politicas space-y-2 font-[monospace]">
+            <h2 class="text-2xl font-bold text-white">Nuestras políticas</h2>
+            <div class="contenedor-politicas flex flex-col">
+                <a href="#" class="text-white text-lg hover:text-green-400">Política de devolución</a>
+                <a href="#" class="text-white text-lg hover:text-green-400">Política de privacidad</a>
+                <a href="#" class="text-white text-lg hover:text-green-400">Política de envío</a>
+            </div>
+       </div>
+
+        <div class="contactos space-y-2 font-[monospace] text-white">
+         <h3 class="text-2xl font-bold">Contacto</h3>
+          <div class="space-y-2">
+            <div class="flex items-center text-lg gap-2">
+                <img src="iconos-contacto-footer/whatsapp.svg" class="h-[1.4rem]"> <span>+595 982923265</span>
+            </div>
+
+            <div class="flex items-center text-lg gap-2">
+                <img src="iconos-contacto-footer/gmail.svg" class="h-[1.4rem]">
+                <span> 404@info.com</span>
+            </div>
+          </div>  
+        </div>
+
+        <div class="enlaces-de-interes space-y-2 font-[monospace] text-white">
+            <h3 class="text-2xl font-bold">Enlaces de interés</h3>
+            <div class="contenedor-enlaces-de-interes flex flex-col text-lg">
+                <a href="#" class="hover:text-green-400">Sobre nosotros</a>
+                <a href="#" class="hover:text-green-400">Preguntas frecuentes</a>
+                <a href="#" class="hover:text-green-400">Formas de pago</a>
+            </div>
+        </div>
+
+        <div class="nuestras-redes space-y-2 font-[monospace]">
+            <h3 class="text-2xl font-bold text-white">Síguenos</h3>
+            <div class="contenedor-redes flex gap-x-3">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="iconos-contacto-footer/instagram (1).svg" class="h-[1.6rem] transition-transform duration-300 hover:scale-110" alt="instagram">
+                </a>
+
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="iconos-contacto-footer/facebook (1).svg" class="h-[1.6rem] transition-transform duration-300 hover:scale-110" alt="facebook">
+                </a>
+
+                <a href="https://x.com/?lang=es" target="_blank">
+                    <img src="iconos-contacto-footer/x.svg" class="h-[1.6rem] transition-transform duration-300 hover:scale-110" alt="x">
+                </a>
+            </div>
+        </div>
+
+      </div>
+
+        <div class="derechos-reservados flex justify-center items-center text-white mt-7">
+            <p>© 404 2025. Todos los derechos reservados.</p>
+        </div>
+
+    </section>
+</footer>
+
+    
+<script src="script.js"></script>
 </body>
 </html>
