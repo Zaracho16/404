@@ -1,0 +1,150 @@
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 0e1a9b1..6e25494 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -6,9 +6,200 @@[m
+     <title>404</title>[m
+     <link rel="stylesheet" href="style.css">[m
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>[m
+[32m+[m[32m    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">[m
+ </head>[m
+ <body>[m
+[31m-    [m
+ [m
+[32m+[m
+[32m+[m[32m<nav class="flex items-center py-4 justify-between flex-wrap bg-[#27445D] px-6 w-full font-[monospace]">[m
+[32m+[m
+[32m+[m[32m        <!--Logo-->[m
+[32m+[m[32m        <h1 class="text-[1.4rem] font-bold text-white">404</h1>[m
+[32m+[m
+[32m+[m[32m        <!--Boton hamb (solo visible en pantallas mas pequeñas)-->[m
+[32m+[m[32m        <button class="text-white text-2xl md:hidden" id="menu-btn">[m
+[32m+[m[32m            <i class="fa-solid fa-bars"></i>[m
+[32m+[m[32m        </button>[m
+[32m+[m[41m         [m
+[32m+[m[32m        <!--Menu de navegacion pc-->[m
+[32m+[m[32m        <ul class="hidden md:flex gap-8 text-[1.4rem] text-white flex-grow ml-12">[m[41m   [m
+[32m+[m[32m            <li><a href="#" class="hover:text-[#71BBB2]">Inicio</a></li>[m
+[32m+[m[32m            <li><a href="#" class="hover:text-[#71BBB2]">Marcas</a></li>[m
+[32m+[m[32m            <li><a href="#" class="hover:text-[#71BBB2]">Tienda</a></li>[m
+[32m+[m[32m            <li><a href="#" class="hover:text-[#71BBB2]">Contacto</a></li>[m
+[32m+[m[32m            <li><a href="#" class="hover:text-[#71BBB2]">Nosotros</a></li>[m
+[32m+[m[32m        </ul>[m
+[32m+[m
+[32m+[m[32m        <!--Buscador-->[m
+[32m+[m[32m        <div class="relative mr-6 hidden md:block">[m
+[32m+[m[32m            <input type="text" placeholder="Buscar producto" class="pl-4 pr-10 py-2 rounded-xl focus:outline-none border border-white text-white text-[1rem]">[m
+[32m+[m[32m            <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-white">[m
+[32m+[m[32m                <i class="fa-solid fa-magnifying-glass"></i>[m
+[32m+[m[32m            </span>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="flex items-center gap-4 text-xl text-white">[m
+[32m+[m[32m            <a href="inicioSesion.html"><i class="fa-solid fa-user"></i></a>[m
+[32m+[m[32m            <i class="fa-solid fa-cart-shopping"></i>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <!--Menu en pantallas mas pequeñas-->[m
+[32m+[m[32m        <ul class="w-full mt-4 flex-col gap-2 text-white text-[1.2rem] hidden" id="mobile-menu">[m
+[32m+[m[32m            <li><a href="#">Inicio</a></li>[m
+[32m+[m[32m            <li><a href="#">Categorias</a></li>[m
+[32m+[m[32m            <li><a href="#">Tienda</a></li>[m
+[32m+[m[32m            <li><a href="#">Contacto</a></li>[m
+[32m+[m[32m            <li><a href="#">Nosotros</a></li>[m
+[32m+[m[32m        </ul>[m
+[32m+[m
+[32m+[m[32m</nav>[m
+[32m+[m
+[32m+[m[32m<section class="seccion-marcas-perfumes">[m
+[32m+[m
+[32m+[m[32m    <div class="contenedor-marcas-perfumes">[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/carolinaHerrera.png" alt="carolinaHerrera-img" class="imagen-marcas-perfumes">[m
+[32m+[m[32m            <h3>Carolina Herrera</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/chanel.jpg" alt="chanel-img" class="imagen-marcas-perfumes">[m
+[32m+[m[32m            <h3>Chanel</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/dior.jpg" alt="dior-img" class="imagen-marcas-perfumes">[m
+[32m+[m[32m            <h3>Dior</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/giorgioArmani.jpg" alt="giorgioArmani-img" class="imagen-marcas-perfumes">[m[41m [m
+[32m+[m[32m            <h3>Giorgio Armani</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/hugoBoss.jpg" alt="hugoBoss-img" class="imagen-marcas-perfumes">[m
+[32m+[m[32m            <h3>Hugo Boss</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/ysl.png" alt="Saint Laurent" class="imagen-marcas-perfumes">[m
+[32m+[m[32m            <h3>Saint Laurent</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/jpg.svg" alt="Jean Paul Gaultier" class="imagen-marcas-perfumes">[m
+[32m+[m[32m            <h3>Jean Paul Gaultier</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/pacoRabanne.jpg" alt="Paco Rabanne" class="imagen-marcas-perfumes">[m
+[32m+[m[32m            <h3>Paco Rabanne</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/versace.png" alt="Versace" class="imagen-marcas-perfumes">[m
+[32m+[m[32m            <h3>Versace</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/tomFord.png" alt="Tom Ford" class="imagen-marcas-perfumes">[m
+[32m+[m[32m            <h3>Tom Ford</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/azzaro.png" alt="Azzaro" class="imagen-marcas-perfumes">[m
+[32m+[m[32m            <h3>Azzaro</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/creed.jpg" alt="Creed" class="imagen-marcas-perfumes">[m
+[32m+[m[32m            <h3>Creed</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/bleuDeChanel.png" alt="Bleu de Chanel" class="imagen-marcas-perfumes">[m
+[32m+[m[32m            <h3>Bleu De Chanel</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/montBlanc.svg" alt="Mont Blanc" class="imagen-marcas-perfumes">[m
+[32m+[m[32m            <h3>Mont Blanc</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="cuadro-marcas">[m
+[32m+[m[32m            <img src="marcasPerfumes-icons/Dolce&Gabbana.png" alt="Dolce & Gabbana" class="imagen-marcas-perfumes">[m
+[32m+[m[32m            <h3>Dolce & Gabbana</h3>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[32m</section>[m
+[32m+[m
+[32m+[m[32m<footer class="w-full bg-[#27445D] py-10 border-t border-gray-100">[m
+[32m+[m[32m    <section class="max-w-6xl mx-auto px-4">[m
+[32m+[m[32m      <div class="flex flex-wrap justify-between gap-8">[m
+[32m+[m
+[32m+[m[32m        <div class="politicas space-y-2 font-[monospace]">[m
+[32m+[m[32m            <h2 class="text-2xl font-bold text-white">Nuestras políticas</h2>[m
+[32m+[m[32m            <div class="contenedor-politicas flex flex-col">[m
+[32m+[m[32m                <a href="#" class="text-white text-lg hover:text-green-400">Política de devolución</a>[m
+[32m+[m[32m                <a href="#" class="text-white text-lg hover:text-green-400">Política de privacidad</a>[m
+[32m+[m[32m                <a href="#" class="text-white text-lg hover:text-green-400">Pol

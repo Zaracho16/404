@@ -31,8 +31,8 @@ body, html {
 }
 
 .imagen-marcas-perfumes {
-    width: 188px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%; 
     background-color: white;
@@ -58,3 +58,252 @@ body, html {
         grid-template-columns: 1fr;
     }
 }
+
+
+/*------TIENDA CAROLINA HERRERA------*/
+.tienda-carolinaHerrera {
+
+}
+
+.contenedor-tienda-carolinaHerrera {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+    row-gap: 15px;
+    column-gap: 15px;
+}
+
+.cuadro-perfumes-carolinaHerrera {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ch-img {
+    width: 320px;
+    height: 260px;
+    object-fit: cover;
+   
+}
+
+.cuadro-perfumes-carolinaHerrera h3 {
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin-top: 1rem;
+}
+
+.cuadro-perfumes-carolinaHerrera span {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.img-con-overlay {
+    position: relative;
+    width: fit-content;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: opacity 0.3s ease;
+}
+
+.img-con-overlay:hover .overlay {
+    opacity: 1;
+}
+
+.boton-carrito,
+.boton-vista {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    font-family: monospace;
+}
+
+.boton-carrito {
+    background-color: #27ae60;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.boton-vista {
+    background-color: #f39c12;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.img-con-overlay:hover .boton-carrito {
+    background-color: #1e8449;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.img-con-overlay:hover .boton-vista {
+    background-color: #f39c12;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.boton-vista:hover {
+    background-color: #d68910;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-contenido {
+    width: 60rem;
+    height: 36rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: #e3f0e8;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 40px;
+    color: #df0e0e;
+}
+
+@media (max-width: 1024px) {
+    .contenedor-tienda-carolinaHerrera {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .contenedor-tienda-carolinaHerrera {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*------ESTILOS VISTA PREVIA------*/
+.contenedor-vistaPrevia {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    height: 100%;
+    margin-top: 1rem;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.imagen-vistaPrevia {
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.img-vistaPrevia {
+    width: 100%;
+    height: 95%;
+}
+
+.informacion-vistaPrevia {
+    border: 3px solid rgb(214, 214, 189);
+    margin-left: 10px;
+    width: 50%;
+    padding: 10px;
+    font-family: monospace;
+    overflow-y: auto;
+    max-height: 100%;
+    box-sizing: border-box;
+    background-color: rgb(214, 214, 189);
+}
+
+.titulo-infoVistaPrevia {
+    font-family: monospace;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.informacion-vistaPrevia p,
+.informacion-vistaPrevia span {
+    font-size: 1rem;
+}
+
+/*Agregar al carrito - Vista previa*/
+
+.contenedor-carrito-vistaPrevia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.contador {
+    display: flex;
+    align-items: center;
+    border: 1px solid #497D74;
+    border-radius: 5px;
+    width: 5rem; height: 3rem;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.izquierda-cuadro-VistaPrevia {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #497D74;
+}
+
+.derecha-cuadro-VistaPrevia {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #497D74;
+}
+
+.btn-vistaPrevia-agregarAlCarrito {
+    background-color: #d68910;
+    padding: 14px;
+    cursor: pointer;
+    height: auto;
+}
+
+.contador button {
+    cursor: pointer;
+    height: 100%; width: 100%;
+}
+
+.contador button:hover {
+    background-color: #27ae60;
+}
+
