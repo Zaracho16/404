@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes Carolina Herrera</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="flex items-center py-4 justify-between flex-wrap bg-[#27445D] px-6 w-full font-[monospace]">
+
+        <!--Logo-->
+        <h1 class="text-[1.4rem] font-bold text-white">404</h1>
+
+        <!--Boton hamb (solo visible en pantallas mas pequeñas)-->
+        <button class="text-white text-2xl md:hidden" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+         
+        <!--Menu de navegacion pc-->
+        <ul class="hidden md:flex gap-8 text-[1.4rem] text-white flex-grow ml-12">   
+            <li><a href="#" class="hover:text-[#71BBB2]">Inicio</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Marcas</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Tienda</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Contacto</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Nosotros</a></li>
+        </ul>
+
+        <!--Buscador-->
+        <div class="relative mr-6 hidden md:block">
+            <input type="text" placeholder="Buscar producto" class="pl-4 pr-10 py-2 rounded-xl focus:outline-none border border-white text-white text-[1rem]">
+            <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-white">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+
+        <div class="flex items-center gap-4 text-xl text-white">
+            <a href="inicioSesion.html"><i class="fa-solid fa-user"></i></a>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+        <!--Menu en pantallas mas pequeñas-->
+        <ul class="w-full mt-4 flex-col gap-2 text-white text-[1.2rem] hidden" id="mobile-menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Nosotros</a></li>
+        </ul>
+
+</nav>
+
+<section class="seccion-titulo-marca-carolinaHerrera h-full w-full bg-[#497D74] flex items-center justify-center">
+    <h1 class="font-[monospace] text-[2rem] font-bold">Carolina Herrera - Perfumes Masculinos</h1>
+</section>
+
+
+<section class="tienda-carolinaHerrera">
+
+    <div class="contenedor-tienda-carolinaHerrera">
+
+        <div class="cuadro-perfumes-carolinaHerrera">
+            <div class="img-con-overlay">
+                <img src="perfumesPorMarca/carolinaHerrera/212 Men edt.jpg" alt="212 Men Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://fuschia.com.py/userfiles/images/productos/600/8411061896259-1.jpg"
+                    data-titulo="CAROLINA HERRERA 212 MEN EDT - 100Ml"
+                    data-precio="500.000gs"
+                    data-familia="Amaderada Floral Almizclada"
+                    data-salida="Bergamota, toronja, hojas de naranjo amargo, especias verdes, lavanda"
+                    data-corazon="Salvia, jengibre, violeta, gardenia, pimienta verde"
+                    data-fondo="Sándalo, vetiver, almizcle, incienso ládano, madera de gaiac"
+                    data-descripcion="Un aroma limpio, fresco, verde y moderno, ideal para uso diario. Tiene ese toque urbano y elegante, como un tipo que camina confiado por la ciudad con auriculares puestos y un plan en mente. Ni muy dulce, ni muy seco: está equilibrado y transmite energía sin empalagar."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera 212 Men NYC Edt</h3>
+            <span> 500.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-carolinaHerrera">
+            <div class="img-con-overlay">
+                <img src="https://farmalife.vtexassets.com/arquivos/ids/175033-800-auto?v=637566047992400000&width=800&height=auto&aspect=true" alt="212 Men Heroes Forever Young" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="https://farmalife.vtexassets.com/arquivos/ids/175033-800-auto?v=637566047992400000&width=800&height=auto&aspect=true"
+                    data-titulo="CAROLINA HERRERA 212 MEN HEROES - 100ML "
+                    data-precio="700.000gs"
+                    data-familia="Aromática Frutal"
+                    data-salida="Pera, cannabis, jengibre."
+                    data-corazon="Geranio, Salvia."
+                    data-fondo="Almizcle, cuero."
+                    data-descripcion="Un combo moderno, juvenil y rebelde. La pera le da un comienzo jugoso y fresco, el cannabis lo vuelve inesperado y edgy, y el jengibre lo mantiene vibrante. Luego se vuelve herbal con geranio y salvia, y cierra con cuero suave y almizcle, dándole un toque más maduro sin perder la frescura.
+                    Es un perfume que dice “soy libre, hago skate, tengo estilo y no me importa tu opinión”. Ideal para climas templados o calurosos y perfecto si querés algo fresco pero distinto al típico cítrico genérico."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera 212 Men Heroes</h3>
+            <span> 700.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-carolinaHerrera">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2024/10/3125.webp" alt="Bad boy cobalt elixir edp" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="https://puntotienda.com.py/wp-content/uploads/2024/10/3125.webp"
+                    data-titulo="CAROLINA HERRERA BAD BOY COBALT ELIXIR EDP - 100ML"
+                    data-precio="820.000gs"
+                    data-familia="Amaderada Aromática"
+                    data-salida="Pimienta negra, salvia."
+                    data-corazon="Trufa negra, maderas cálidas"
+                    data-fondo="Vainilla, incienso."
+                    data-descripcion="A una noche fría con actitud.
+                    Es un perfume oscuro, sexy y misterioso. La pimienta con la salvia te dan un arranque especiado, después entra la trufa negra que lo vuelve terroso y elegante, y al final la vainilla y el incienso lo envuelven todo con un aire cálido, intenso y envolvente.
+                    Es como si Bad Boy se pusiera saco de terciopelo negro y saliera a conquistar con mirada asesina. No es para cualquiera: es audaz, tiene personalidad, y se nota."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera Bad Boy Cobalt Elixir Edp</h3>
+            <span> 820.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-carolinaHerrera">
+            <div class="img-con-overlay">
+                <img src="https://saharaperfumes.com/cdn/shop/files/CH_Bad_Boy_Extreme_Eau_De_Parfum_For_Men_100ML.webp?v=1725618528" alt="Bad boy extreme" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="https://fuschia.com.py/userfiles/images/productos/600/8411061057193-1.jpg"
+                    data-titulo="CAROLINA HERRERA BAD BOY EXTREME - 100ML"
+                    data-precio="970.000"
+                    data-familia="Ámbar Aromático Amaderado"
+                    data-salida="Jengibre, bergamota, salvia."
+                    data-corazon="Vetiver des sables, cacao"
+                    data-fondo="Haba tonka, pachulí, incienso ligero"
+                    data-descripcion="Un dulce especiado con básico de chocolate oscuro. La salida es cálida (jengibre), luego entra el cacao que domina como un abrazo achocolatado, y termina con fondo amaderado-ambarado. Ideal para clima frío o salidas nocturnas."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera Bad Boy Extreme</h3>
+            <span> 970.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-carolinaHerrera">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2023/09/2583.webp" alt="Bad boy gold fantasy" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="https://m.media-amazon.com/images/I/41hrtPwX7dL._SL1000_.jpg"
+                    data-titulo="CAROLINA HERRERA BAD BOY GOLD FANTASY - 100ML"
+                    data-precio="840.000gs"
+                    data-familia="Oriental Amaderada"
+                    data-salida="Pimienta blanca, pimienta rosa, bergamota."
+                    data-corazon="Salvia escclarea, cedro, vetiver."
+                    data-fondo="Haba tonka, cacao, ámbar madera."
+                    data-descripcion="Arranque especiado–fresco con pimientas chispeantes y cítrico. Se transforma en una mezcla entre herbal y amaderado en el corazón, con la salvia y el cedro creando una base sólida. El fondo cierra con dulce y cremoso: tonka, cacao y un toque ámbar‑madera. Es un Bad Boy elegante, más refinado que los demás, sin perder esa dualidad callejera‑lux."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera Bad Boy Gold Fantasy</h3>
+            <span> 840.000gs</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Modal para vista previa -->
+<div class="modal" id="modalVistaPrevia">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <div class="contenedor-vistaPrevia">
+      <div class="imagen-vistaPrevia">
+        <img id="img-vistaPrevia" class="img-vistaPrevia">
+      </div>
+      <div class="informacion-vistaPrevia">
+        <h2 id="titulo-infoVistaPrevia" class="titulo-infoVistaPrevia"></h2><br>
+        <p><strong>Precio: </strong><span id="precio"></span></p><br>
+        <span><strong>Familia olfativa: </strong><span id="familia"></span></span><br><br>
+        <span><strong>Notas de salida: </strong><span id="salida"></span></span><br><br>
+        <span><strong>Notas de corazón: </strong><span id="corazon"></span></span><br><br>
+        <span><strong>Notas de fondo: </strong><span id="fondo"></span></span><br><br>
+        <span><strong>¿A qué huele?<br></strong><span id="descripcion"></span></span>
+        
+        <div class="contenedor-carrito-vistaPrevia">
+
+            <div class="contador">
+                <div class="izquierda-cuadro-VistaPrevia">
+                    <button onclick="disminuir()">-</button>
+                </div>
+                <div class="numero-cuadro-VistaPrevia">
+                    <span id="cantidad">1</span>
+                </div>
+                <div class="derecha-cuadro-VistaPrevia">
+                    <button onclick="aumentar()">+</button>
+                </div>
+            </div>
+            <button class="btn-vistaPrevia-agregarAlCarrito">Agregar al carrito</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+<script src="script.js"></script>
+</body>
+</html>
