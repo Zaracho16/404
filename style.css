@@ -61,10 +61,6 @@ body, html {
 
 
 /*------TIENDA CAROLINA HERRERA------*/
-.tienda-carolinaHerrera {
-
-}
-
 .contenedor-tienda-carolinaHerrera {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -79,13 +75,15 @@ body, html {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;    
 }
 
 .ch-img {
-    width: 320px;
+    width: 100%;
     height: 260px;
     object-fit: cover;
-   
 }
 
 .cuadro-perfumes-carolinaHerrera h3 {
@@ -242,6 +240,10 @@ body, html {
     background-color: rgb(214, 214, 189);
 }
 
+.informacion-vistaPrevia::-webkit-scrollbar {
+    display: none;
+}
+
 .titulo-infoVistaPrevia {
     font-family: monospace;
     font-size: 1.7rem;
@@ -261,6 +263,7 @@ body, html {
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .contador {
@@ -307,3 +310,125 @@ body, html {
     background-color: #27ae60;
 }
 
+/*-----CARRITO DE COMPRAS----- */
+.carrito-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #e0d2d2;
+    display: none;
+    width: 25rem;
+    height: 100%;
+    z-index: 9999;
+    scrollbar-width: none; 
+}
+
+.carrito-lateral.active {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+.carrito-lateral ul {
+  list-style: none;
+  padding: 0;
+}
+
+.carrito-lateral li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.carrito-lista-scroll {
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.carrito-lista-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.contenedor-cerrar-titulo-carritoCompra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-carritoCompra {
+   font-weight: bold;
+   font-size: 1.5rem;
+}
+
+.cerrar-carritoCompra {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.contenedor-totalPrecio-carritoCompra {
+    font-size: 1.3rem;
+    display: flex;
+}
+
+.btn-finalizarCompra {
+    background-color: #27ae60;
+    padding: 10px;
+    border-radius: 30px;
+    margin-top: 35px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/*-----Estilos para las imagenes en el carrito de compra-----*/
+.producto-contenedor-carritoCompra {
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    height: 95px;
+}
+
+.caja-img-carrito {
+    width: 40%;
+}
+
+.caja-nombre-carrito {
+    width: 100%;
+    margin-left: 0.2rem;
+}
+
+.estilo-img-carrito {
+    width: 100%;
+    object-fit: cover;
+}
+
+.nombreProducto-carrito {
+    font-size: 1.01rem;
+}
+
+.icono-eliminarProductoCarrito {
+    margin-left: 1rem;
+}
+
+/*-----Fondo oscuro-----*/
+.fondo-oscuro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 9998; 
+  display: none;
+}
+
+.fondo-oscuro.active {
+  display: block;
+}
