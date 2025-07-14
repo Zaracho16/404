@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<nav class="flex items-center py-4 justify-between flex-wrap bg-[#27445D] px-6 w-full font-[monospace]">
+<nav class="flex items-center py-4 justify-between flex-wrap bg-[#27445D] px-6 w-full font-[monospace] fixed z-[99]">
 
         <!--Logo-->
         <h1 class="text-[1.4rem] font-bold text-white">404</h1>
@@ -22,7 +22,7 @@
          
         <!--Menu de navegacion pc-->
         <ul class="hidden md:flex gap-8 text-[1.4rem] text-white flex-grow ml-12">   
-            <li><a href="#" class="hover:text-[#71BBB2]">Inicio</a></li>
+            <li><a href="index.html" class="hover:text-[#71BBB2]">Inicio</a></li>
             <li><a href="#" class="hover:text-[#71BBB2]">Marcas</a></li>
             <li><a href="#" class="hover:text-[#71BBB2]">Tienda</a></li>
             <li><a href="#" class="hover:text-[#71BBB2]">Contacto</a></li>
@@ -39,7 +39,12 @@
 
         <div class="flex items-center gap-4 text-xl text-white">
             <a href="inicioSesion.html"><i class="fa-solid fa-user"></i></a>
-            <i class="fa-solid fa-cart-shopping"></i>
+
+            <div class="contador-cantidadDeProductosEnCarrito">
+                <i class="fa-solid fa-cart-shopping" id="icono-carrito">
+                    <span class="numeroContadorCantidadProductos"></span>
+                </i>
+            </div>
         </div>
 
         <!--Menu en pantallas mas pequeñas-->
@@ -53,16 +58,16 @@
 
 </nav>
 
-<section class="seccion-titulo-marca-carolinaHerrera h-full w-full bg-[#497D74] flex items-center justify-center">
-    <h1 class="font-[monospace] text-[2rem] font-bold">Carolina Herrera - Perfumes Masculinos</h1>
+<section class="seccion-titulo-marca-carolinaHerrera h-full w-full bg-[#497D74] flex items-center justify-center mt-[65px] p-[0.6rem] items-center">
+    <h1 class="font-[monospace] text-[2rem] font-bold text-[#71BBB2]">Carolina Herrera - Perfumes Masculinos</h1>
 </section>
 
 
-<section class="tienda-carolinaHerrera">
+<section class="tienda-General">
 
-    <div class="contenedor-tienda-carolinaHerrera">
+    <div class="contenedor-tienda-General">
 
-        <div class="cuadro-perfumes-carolinaHerrera">
+        <div class="cuadro-perfumes-General">
             <div class="img-con-overlay">
                 <img src="perfumesPorMarca/carolinaHerrera/212 Men edt.jpg" alt="212 Men Edt" class="ch-img">
                 <div class="overlay">
@@ -84,11 +89,13 @@
             <span> 500.000gs</span>
         </div>
 
-        <div class="cuadro-perfumes-carolinaHerrera">
+        <div class="cuadro-perfumes-General">
             <div class="img-con-overlay">
                 <img src="https://farmalife.vtexassets.com/arquivos/ids/175033-800-auto?v=637566047992400000&width=800&height=auto&aspect=true" alt="212 Men Heroes Forever Young" class="ch-img">
                 <div class="overlay">
-                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-carrito" id="incrementoNumeroCarrito"
+                    >Agregar al carrito</button>
+
                     <button class="boton-vista" 
                     onclick="mostrarModal(this)"
                     data-img="https://farmalife.vtexassets.com/arquivos/ids/175033-800-auto?v=637566047992400000&width=800&height=auto&aspect=true"
@@ -107,7 +114,7 @@
             <span> 700.000gs</span>
         </div>
 
-        <div class="cuadro-perfumes-carolinaHerrera">
+        <div class="cuadro-perfumes-General">
             <div class="img-con-overlay">
                 <img src="https://puntotienda.com.py/wp-content/uploads/2024/10/3125.webp" alt="Bad boy cobalt elixir edp" class="ch-img">
                 <div class="overlay">
@@ -131,7 +138,7 @@
             <span> 820.000gs</span>
         </div>
 
-        <div class="cuadro-perfumes-carolinaHerrera">
+        <div class="cuadro-perfumes-General">
             <div class="img-con-overlay">
                 <img src="https://saharaperfumes.com/cdn/shop/files/CH_Bad_Boy_Extreme_Eau_De_Parfum_For_Men_100ML.webp?v=1725618528" alt="Bad boy extreme" class="ch-img">
                 <div class="overlay">
@@ -153,7 +160,7 @@
             <span> 970.000gs</span>
         </div>
 
-        <div class="cuadro-perfumes-carolinaHerrera">
+        <div class="cuadro-perfumes-General">
             <div class="img-con-overlay">
                 <img src="https://puntotienda.com.py/wp-content/uploads/2023/09/2583.webp" alt="Bad boy gold fantasy" class="ch-img">
                 <div class="overlay">
@@ -175,9 +182,118 @@
             <span> 840.000gs</span>
         </div>
 
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="perfumesPorMarca/carolinaHerrera/Bad boy le parfum.jpg" alt="Bad boy le parfum" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="perfumesPorMarca/carolinaHerrera/Bad boy le parfum.jpg"
+                    data-titulo="CAROLINA HERRERA BAD BOY LE PARFUM - 100ML"
+                    data-precio="950.000gs"
+                    data-familia="Cuero Aromático"
+                    data-salida="Cannabis, toronja."
+                    data-corazon="Pimienta negra, geranio."
+                    data-fondo="Cuero, vetiver."
+                    data-descripcion="Una fragancia rompedora, que mezcla la frescura cítrica del pomelo con un cáñamo terroso y salvaje. Se vuelve especiada al pasar por la pimienta y geranio, y termina con cuero fuerte y vetiver amaderado. Es ideal para gente que no busca agradar con lo típico: es atrevido, distintivo y con carácter propio."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera Bad boy le parfum</h3>
+            <span> 950.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="perfumesPorMarca/carolinaHerrera/Ch king.jpg" alt="King" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="perfumesPorMarca/carolinaHerrera/Ch king.jpg"
+                    data-titulo="CAROLINA HERRERA KING - 100ML"
+                    data-precio="620.000gs"
+                    data-familia="Aromática Especiada / Fougère Aromático"
+                    data-salida="Pimienta rosa, pimienta negra, violeta, cardamomo."
+                    data-corazon="Cacao, café, piña, lavanda, salvia esclarea."
+                    data-fondo="Haba tonka, ámbar, almizcle."
+                    data-descripcion="Un perfume con actitud real. Arranca especiado y fresco con esas pimientas y el cardamomo; luego entra un centro casi gourmand con cacao, café y piña, con ese aire herbal‑elegante de lavanda y salvia; y cierra suave pero persistente gracias al tonka, ámbar y almizcle. Es como un rey moderno: dulce, con nervio y presencia urbana."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera King</h3>
+            <span> 620.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="perfumesPorMarca/carolinaHerrera/Ch men sport.jpg" alt="Men sport" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="perfumesPorMarca/carolinaHerrera/Ch men sport.jpg"
+                    data-titulo="CAROLINA HERRERA MEN SPORT - 100ML"
+                    data-precio="540.000gs"
+                    data-familia="Aromática Especiada / Amaderada–Marina"
+                    data-salida="Pomelo, bergamota, salvia."
+                    data-corazon="Enebro de virginia, notas marinas, pimienta de Sichuan."
+                    data-fondo="Vetiver, sándalo, musgo de roble."
+                    data-descripcion="Es un aroma fresco, verde, energizante, con ese aire marino que sugiere brisa de agua salada y madera mojada. La salida cítrica se mezcla con hierbas y un toque picante; luego emerge una base cremosa-amaderada. Un perfume sporty que suena elegante, no genérico ni sintético al olfato atento."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera Men Sport</h3>
+            <span>540.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="perfumesPorMarca/carolinaHerrera/Ch men.jpg" alt="Men edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="perfumesPorMarca/carolinaHerrera/Ch men.jpg"
+                    data-titulo="CAROLINA HERRERA MEN - 100ML"
+                    data-precio="430.000gs"
+                    data-familia="Oriental Especiado / Aromático"
+                    data-salida="Hierba, bergamota, toronja."
+                    data-corazon="Notas amaderadas, nuez moscada, violeta, azafrán, jazmín."
+                    data-fondo="Azúcar, cuero, vainilla, gamuza, ámbar, madera de cachemira, sándalo, musgo de roble, vetiver."
+                    data-descripcion="Es una fragancia dulce-amaderada con esencia masculina. Arranca fresca y verde, transita por un corazón especiado-floral, y cierra con un fondo gourmand y de cuero suave. Ideal para reforzar la elegancia sin perder naturalidad"
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera Men edt</h3>
+            <span>430.000gs</span>
+        </div>
+
+        
     </div>
 
 </section>
+
+<div id="fondo-oscuro" class="fondo-oscuro"></div>
+<aside class="carrito-lateral">
+    <div class="contenedor-cerrar-titulo-carritoCompra">
+        <h2 class="titulo-carritoCompra">Carrito de Compras</h2>
+        <button id="cerrar-carrito" class="cerrar-carritoCompra">Cerrar</button>
+    </div>
+
+    <div class="carrito-lista-scroll">
+        <ul id="carrito-lista"></ul>
+    </div>
+
+    <div class="contenedor-totalPrecio-carritoCompra">
+        <p class="totalPrecio-carritoCompra"><strong>Total:</strong> <span id="total-carrito">0</span> Gs</p>
+    </div>
+
+    <button class="btn-finalizarCompra">Finalizar compra</button>
+
+</aside>
+
 
 <!-- Modal para vista previa -->
 <div class="modal" id="modalVistaPrevia">
@@ -209,7 +325,7 @@
                     <button onclick="aumentar()">+</button>
                 </div>
             </div>
-            <button class="btn-vistaPrevia-agregarAlCarrito">Agregar al carrito</button>
+            <button id="btnAgregarDesdeVistaPrevia" class="btn-vistaPrevia-agregarAlCarrito">Agregar al carrito</button>
 
         </div>
       </div>
@@ -217,6 +333,9 @@
   </div>
 </div>
 
+<div id="mensajeCarrito" class="mensaje-carrito oculto">
+    ¡Se añadio al carrito!
+</div>
     
 <script src="script.js"></script>
 </body>
