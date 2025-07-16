@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes Versace</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="flex items-center py-4 justify-between flex-wrap bg-[#27445D] px-6 w-full font-[monospace] fixed z-[99]">
+
+        <!--Logo-->
+        <h1 class="text-[1.4rem] font-bold text-white">404</h1>
+
+        <!--Boton hamb (solo visible en pantallas mas pequeñas)-->
+        <button class="text-white text-2xl md:hidden" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+         
+        <!--Menu de navegacion pc-->
+        <ul class="hidden md:flex gap-8 text-[1.4rem] text-white flex-grow ml-12">   
+            <li><a href="index.html" class="hover:text-[#71BBB2]">Inicio</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Marcas</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Tienda</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Contacto</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Nosotros</a></li>
+        </ul>
+
+        <!--Buscador-->
+        <div class="relative mr-6 hidden md:block">
+            <input type="text" placeholder="Buscar producto" class="pl-4 pr-10 py-2 rounded-xl focus:outline-none border border-white text-white text-[1rem]">
+            <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-white">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+
+        <div class="flex items-center gap-4 text-xl text-white">
+            <a href="inicioSesion.html"><i class="fa-solid fa-user"></i></a>
+
+            <div class="contador-cantidadDeProductosEnCarrito">
+                <i class="fa-solid fa-cart-shopping" id="icono-carrito">
+                    <span class="numeroContadorCantidadProductos"></span>
+                </i>
+            </div>
+        </div>
+
+        <!--Menu en pantallas mas pequeñas-->
+        <ul class="w-full mt-4 flex-col gap-2 text-white text-[1.2rem] hidden" id="mobile-menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Nosotros</a></li>
+        </ul>
+
+</nav>
+
+<section class="seccion-titulo-marca-carolinaHerrera h-full w-full bg-[#497D74] flex items-center justify-center mt-[65px] p-[0.6rem] items-center">
+    <h1 class="font-[monospace] text-[2rem] font-bold text-[#71BBB2]">Versace - Perfumes Masculinos</h1>
+</section>
+
+
+<section class="tienda-General">
+
+    <div class="contenedor-tienda-General">
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://i.ebayimg.com/images/g/lZsAAOSwHDloGYRG/s-l225.jpg" alt="Versace Pour Homme" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://i.ebayimg.com/images/g/lZsAAOSwHDloGYRG/s-l225.jpg"
+                    data-titulo="Versace Pour Homme - 100ml"
+                    data-precio="510.000gs"
+                    data-familia="Aromático fougère"
+                    data-salida="Limón (lima ácida), bergamota, neroli, rosa de Mai."
+                    data-corazon="Jacinto, cedro, salvia esclarea, geranio."
+                    data-fondo="Almizcle, haba tonka, ámbar."
+                    data-descripcion="Un aroma fresco, limpio y ligeramente floral-cítrico, ideal para uso diario y ambientes profesionales. Muy versátil."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Versace Pour Homme</h3>
+            <span>510.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7HN6ZgLSq5VM6EcGSo4b3niQzCRQCkP0law&s" alt="Versace Pour Homme Oud Noir" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7HN6ZgLSq5VM6EcGSo4b3niQzCRQCkP0law&s"
+                    data-titulo="Versace Pour Homme Oud Noir - 100ml"
+                    data-precio="400.000gs"
+                    data-familia="Oriental amaderada"
+                    data-salida="Pimienta negra, naranja amarga, neroli."
+                    data-corazon="Cardamomo, azafrán, incienso (olíbano)."
+                    data-fondo="Oud, pachulí, madera de cuero."
+                    data-descripcion="Un oud oscuro y especiado, con un aire refinado y misterioso. Ideal para la noche y clima frío."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Versace Pour Homme Oud Noir</h3>
+            <span>400.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://laperfumeria.com.py/wp-content/uploads/2024/06/s-l1600-1-600x600.jpg" alt="Versace Eros Eau de Parfum" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://laperfumeria.com.py/wp-content/uploads/2024/06/s-l1600-1-600x600.jpg"
+                    data-titulo="Versace Eros Eau de Parfum - 100ml"
+                    data-precio="820.000gs"
+                    data-familia="Oriental amaderada"
+                    data-salida="Menta, manzana verde, limón, mandarina."
+                    data-corazon="Ambroxan, geranio, salvia esclarea."
+                    data-fondo="Vainilla de Madagascar, cedro (Virginiano y Atlas), sándalo, neroli amarga, pachulí, cuero, vetiver, musgo de roble"
+                    data-descripcion="Dulce, fresco y seductor. Comienza vibrante con menta y manzana, evolucionando hacia un fondo cremoso, ambarado y levemente amaderado. Perfecto para la noche o clima templado."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Versace Eros Eau de Parfum</h3>
+            <span>820.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdLCzZshSMS4Xr65FhCpKX3fSvwd0fX6q7Iw&s" alt="Versace Dylan Blue" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdLCzZshSMS4Xr65FhCpKX3fSvwd0fX6q7Iw&s"
+                    data-titulo="Versace Dylan Blue - 100ml"
+                    data-precio="600.000gs"
+                    data-familia="Amaderada aromática/acuática"
+                    data-salida="Pomelo, bergamota, notas acuáticas."
+                    data-corazon="Ambroxan, incienso."
+                    data-fondo="Profundidad amaderada ligera."
+                    data-descripcion="resco, limpio y versátil; un aroma acuático limpio con un toque moderno y ligeramente especiado. Ideal para uso diario en cualquier ambiente."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Versace Dylan Blue</h3>
+            <span>600.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://cellshop.com.py/media/catalog/product/2/0/2063263_1_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=616&width=616&canvas=616:616" alt="Versace Eros Flame " class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://cellshop.com.py/media/catalog/product/2/0/2063263_1_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=616&width=616&canvas=616:616"
+                    data-titulo="Versace Eros Flame - 100ml"
+                    data-precio="900.000gs"
+                    data-familia="Amaderada especiada "
+                    data-salida="Mandarina, limón (lima ácida), chinotto, romero, pimienta negra."
+                    data-corazon="Pimienta, geranio, rosa, pepperwood."
+                    data-fondo="Vainilla, haba tonka, cedro de Texas, sándalo, pachulí, vetiver, musgo de roble."
+                    data-descripcion="Un perfume intenso y apasionado que combina contrastes de lo frío y lo cálido: arranca cítrico y especiado en la salida, evoluciona con un corazón picante-floral, y cierra con un fondo cálido, dulce y amaderado. Es una fragancia con notable proyección y duración sólida."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Versace Eros Flame</h3>
+            <span>900.000gs</span>
+        </div>
+        
+    </div>
+
+</section>
+
+<div id="fondo-oscuro" class="fondo-oscuro"></div>
+<aside class="carrito-lateral">
+    <div class="contenedor-cerrar-titulo-carritoCompra">
+        <h2 class="titulo-carritoCompra">Carrito de Compras</h2>
+        <button id="cerrar-carrito" class="cerrar-carritoCompra">Cerrar</button>
+    </div>
+
+    <div class="carrito-lista-scroll">
+        <ul id="carrito-lista"></ul>
+    </div>
+
+    <div class="contenedor-totalPrecio-carritoCompra">
+        <p class="totalPrecio-carritoCompra"><strong>Total:</strong> <span id="total-carrito">0</span> Gs</p>
+    </div>
+
+    <button class="btn-finalizarCompra">Finalizar compra</button>
+
+</aside>
+
+
+<!-- Modal para vista previa -->
+<div class="modal" id="modalVistaPrevia">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <div class="contenedor-vistaPrevia">
+      <div class="imagen-vistaPrevia">
+        <img id="img-vistaPrevia" class="img-vistaPrevia">
+      </div>
+      <div class="informacion-vistaPrevia">
+        <h2 id="titulo-infoVistaPrevia" class="titulo-infoVistaPrevia"></h2><br>
+        <p><strong>Precio: </strong><span id="precio"></span></p><br>
+        <span><strong>Familia olfativa: </strong><span id="familia"></span></span><br><br>
+        <span><strong>Notas de salida: </strong><span id="salida"></span></span><br><br>
+        <span><strong>Notas de corazón: </strong><span id="corazon"></span></span><br><br>
+        <span><strong>Notas de fondo: </strong><span id="fondo"></span></span><br><br>
+        <span><strong>¿A qué huele?<br></strong><span id="descripcion"></span></span>
+        
+        <div class="contenedor-carrito-vistaPrevia">
+
+            <div class="contador">
+                <div class="izquierda-cuadro-VistaPrevia">
+                    <button onclick="disminuir()">-</button>
+                </div>
+                <div class="numero-cuadro-VistaPrevia">
+                    <span id="cantidad">1</span>
+                </div>
+                <div class="derecha-cuadro-VistaPrevia">
+                    <button onclick="aumentar()">+</button>
+                </div>
+            </div>
+            <button id="btnAgregarDesdeVistaPrevia" class="btn-vistaPrevia-agregarAlCarrito">Agregar al carrito</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="mensajeCarrito" class="mensaje-carrito oculto">
+    ¡Se añadio al carrito!
+</div>
+    
+<script src="script.js"></script>
+</body>
+</html>

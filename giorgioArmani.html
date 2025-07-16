@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes Giorgio Armani</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="flex items-center py-4 justify-between flex-wrap bg-[#27445D] px-6 w-full font-[monospace] fixed z-[99]">
+
+        <!--Logo-->
+        <h1 class="text-[1.4rem] font-bold text-white">404</h1>
+
+        <!--Boton hamb (solo visible en pantallas mas pequeñas)-->
+        <button class="text-white text-2xl md:hidden" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+         
+        <!--Menu de navegacion pc-->
+        <ul class="hidden md:flex gap-8 text-[1.4rem] text-white flex-grow ml-12">   
+            <li><a href="index.html" class="hover:text-[#71BBB2]">Inicio</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Marcas</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Tienda</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Contacto</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Nosotros</a></li>
+        </ul>
+
+        <!--Buscador-->
+        <div class="relative mr-6 hidden md:block">
+            <input type="text" placeholder="Buscar producto" class="pl-4 pr-10 py-2 rounded-xl focus:outline-none border border-white text-white text-[1rem]">
+            <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-white">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+
+        <div class="flex items-center gap-4 text-xl text-white">
+            <a href="inicioSesion.html"><i class="fa-solid fa-user"></i></a>
+
+            <div class="contador-cantidadDeProductosEnCarrito">
+                <i class="fa-solid fa-cart-shopping" id="icono-carrito">
+                    <span class="numeroContadorCantidadProductos"></span>
+                </i>
+            </div>
+        </div>
+
+        <!--Menu en pantallas mas pequeñas-->
+        <ul class="w-full mt-4 flex-col gap-2 text-white text-[1.2rem] hidden" id="mobile-menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Nosotros</a></li>
+        </ul>
+
+</nav>
+
+<section class="seccion-titulo-marca-carolinaHerrera h-full w-full bg-[#497D74] flex items-center justify-center mt-[65px] p-[0.6rem] items-center">
+    <h1 class="font-[monospace] text-[2rem] font-bold text-[#71BBB2]">Giorgio Armani - Perfumes Masculinos</h1>
+</section>
+
+
+<section class="tienda-General">
+
+    <div class="contenedor-tienda-General">
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/g/i/giorgio_armani_acqua_di_gi_profumo_parfum_-_masculino_125ml.jpg" alt="Giorgio Armani Acqua Di Gio Profumo Parfum" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/g/i/giorgio_armani_acqua_di_gi_profumo_parfum_-_masculino_125ml.jpg"
+                    data-titulo="GIORGIO ARMANI ACQUA DI GIO PROFUMO PARFAM - 125ML"
+                    data-precio="700.000gs"
+                    data-familia="Aromática acuática con fondo ahumado"
+                    data-salida="Bergamota, notas marinas, romero, salvia, geranio."
+                    data-corazon="Pachulí, incienso ahumado, vetiver, madera."
+                    data-fondo="Incienso, pachulí, vetiver, ládano, ámbar gris."
+                    data-descripcion="Imagináte una brisa marina intensa con un fondo ahumado y terroso. Empieza ultrafresco como original Giò, pero evoluciona a un aura más profunda gracias al incienso y pachulí. Refinado, maduro y muy atractivo."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Giorgio Armani Acqua Di Gio Profumo Parfum</h3>
+            <span> 700.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://www.champs.com.py/products/images/1801/195205887.jpg" alt="Acqua Di Gio Pour Homme" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://www.champs.com.py/products/images/1801/195205887.jpg"
+                    data-titulo="GIORGIO ARMANI ACQUA DI GIO POUR HOMME - 100ML"
+                    data-precio="800.000gs"
+                    data-familia="Aromática Acuática"
+                    data-salida="Lima, limón, bergamota, neroli, mandarina, jazmín, naranja, cilantro."
+                    data-corazon="Notas marinas, calone, romero, jazmín, durazno, freesia, ciclamen, violeta, coriandro, rosa, nuez moscada, muguet."
+                    data-fondo="Almizcle blanco, cedro, musgo de roble, patchouli, ámbar, ambergris."
+                    data-descripcion="Empieza fresco‑cítrico como una ola mediterránea, mezcla notas florales y marinas en el corazón, y cierra con una base cálida, ligeramente amaderada-musgosa. Es limpio, fácil de llevar y relajado, pero nunca plano."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Giorgio Armani Di Gio Pour Homme</h3>
+            <span> 800.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/p/e/perfume_giorgio_armani_code_parfum_-_masculino_125ml.jpg" alt="Giorgio Armani Eau de Parfum" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/p/e/perfume_giorgio_armani_code_parfum_-_masculino_125ml.jpg"
+                    data-titulo="GIORGIO ARMANI EAU DE PARFUM"
+                    data-precio="650.000gs"
+                    data-familia="Oriental Fougère Aromática"
+                    data-salida="Lavanda, limón/lima, bergamota."
+                    data-corazon="Haba tonka"
+                    data-fondo="Vainilla, gamuza, cedro, almizcle"
+                    data-descripcion="Arranque talcado y cítrico elegante, evoluciona con la tonka y vainilla hacia una vibra suave, cremosa y ligeramente leathery gracias a la gamuza y cedro. Un fougère moderno que sabe lo que es la elegancia sin exagerar."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Giorgio Armani Eau de Parfum</h3>
+            <span> 650.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2023/02/1590.webp" alt="Armani Code absolu Parfum" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://puntotienda.com.py/wp-content/uploads/2023/02/1590.webp"
+                    data-titulo="GIORGIO ARMANI CODE ABSOLU PARFUM - 100ML"
+                    data-precio="510.000gs"
+                    data-familia="Oriental Especiado Gourmand"
+                    data-salida="Mandarina verde, manzana, naranja — ultra fresca y dulce."
+                    data-corazon="Nuez moscada, semilla de zanahoria, cardamomo — cálido y especiado."
+                    data-fondo="Tonka, vainilla, gamuza/suede, notas amaderadas — cremoso, cálido, sexy."
+                    data-descripcion="Una bomba gourmand que combina frescura frutal en la apertura (mandarina/manzana), evoluciona a un centro especiado muy bien equilibrado, y termina en un dry-down de tonka-suede-vanilla que es puro lujo abrazador. Su vibra: masculina, envolvente y seductor."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Giorgio Armani Code absolu Parfum</h3>
+            <span> 510.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2023/02/Perfume-Stronger-with-you-Intensely-original-de-100-ml-de-Armani-en-Fragancias-Fiord.jpg" alt="Emporio Armani Stronger With You Intensely Edp" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://puntotienda.com.py/wp-content/uploads/2023/02/Perfume-Stronger-with-you-Intensely-original-de-100-ml-de-Armani-en-Fragancias-Fiord.jpg"
+                    data-titulo="EMPORIO ARMANI STRONGER WITH YOU INTENSELY EDP - 100ML"
+                    data-precio="780.000gs"
+                    data-familia="Gourmand especiado-amaderado"
+                    data-salida="Pimienta rosa, enebro, hoja de violeta."
+                    data-corazon="Toffee, canela, lavanda, salvia."
+                    data-fondo="Vainilla, haba tonka, ámbar, gamuza"
+                    data-descripcion="Es un abrazo dulce y especiado que te envuelve con calidez. Al principio pica la pimienta rosa con un toque fresco y herbal, después llega el toffee y la canela que le dan esa vibra cremosa y casi comestible, y al final la vainilla y el gamuza te dejan una estela sexy, suave y persistente. Perfecto para la noche y climas fríos, para quien no teme destacar con elegancia y un punto de misterio."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Emporio Armani Stronger With You Intensely Edp</h3>
+            <span> 780.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://www.ubuy.com.py/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNTFaZC1yUklLY0wuX1NMMTAwMF8uanBn.jpg" alt="Giorgio Armani Eau De Nuit" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://www.ubuy.com.py/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNTFaZC1yUklLY0wuX1NMMTAwMF8uanBn.jpg"
+                    data-titulo="GIORGIO ARMANI EAU DE NUIT - 100ML"
+                    data-precio="630.000gs"
+                    data-familia="Oriental Fougère"
+                    data-salida="Pimienta rosa, bergamota."
+                    data-corazon="Iris, cardamomo, nuez moscada, heliotropo."
+                    data-fondo="Haba tonka, ámbar, cedro."
+                    data-descripcion="Es una fragancia masculina elegante y sofisticada que combina notas especiadas y amaderadas. La pimienta rosa y la bergamota en la salida aportan frescura y picante, mientras que el corazón de iris, cardamomo, nuez moscada y heliotropo le da un carácter floral y especiado. El fondo de haba tonka, ámbar y cedro ofrece una base cálida y envolvente. Ideal para ocasiones nocturnas y formales."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Giorgio Armani Eau De Nuit</h3>
+            <span> 630.000gs</span>
+        </div>
+        
+    </div>
+
+</section>
+
+<div id="fondo-oscuro" class="fondo-oscuro"></div>
+<aside class="carrito-lateral">
+    <div class="contenedor-cerrar-titulo-carritoCompra">
+        <h2 class="titulo-carritoCompra">Carrito de Compras</h2>
+        <button id="cerrar-carrito" class="cerrar-carritoCompra">Cerrar</button>
+    </div>
+
+    <div class="carrito-lista-scroll">
+        <ul id="carrito-lista"></ul>
+    </div>
+
+    <div class="contenedor-totalPrecio-carritoCompra">
+        <p class="totalPrecio-carritoCompra"><strong>Total:</strong> <span id="total-carrito">0</span> Gs</p>
+    </div>
+
+    <button class="btn-finalizarCompra">Finalizar compra</button>
+
+</aside>
+
+
+<!-- Modal para vista previa -->
+<div class="modal" id="modalVistaPrevia">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <div class="contenedor-vistaPrevia">
+      <div class="imagen-vistaPrevia">
+        <img id="img-vistaPrevia" class="img-vistaPrevia">
+      </div>
+      <div class="informacion-vistaPrevia">
+        <h2 id="titulo-infoVistaPrevia" class="titulo-infoVistaPrevia"></h2><br>
+        <p><strong>Precio: </strong><span id="precio"></span></p><br>
+        <span><strong>Familia olfativa: </strong><span id="familia"></span></span><br><br>
+        <span><strong>Notas de salida: </strong><span id="salida"></span></span><br><br>
+        <span><strong>Notas de corazón: </strong><span id="corazon"></span></span><br><br>
+        <span><strong>Notas de fondo: </strong><span id="fondo"></span></span><br><br>
+        <span><strong>¿A qué huele?<br></strong><span id="descripcion"></span></span>
+        
+        <div class="contenedor-carrito-vistaPrevia">
+
+            <div class="contador">
+                <div class="izquierda-cuadro-VistaPrevia">
+                    <button onclick="disminuir()">-</button>
+                </div>
+                <div class="numero-cuadro-VistaPrevia">
+                    <span id="cantidad">1</span>
+                </div>
+                <div class="derecha-cuadro-VistaPrevia">
+                    <button onclick="aumentar()">+</button>
+                </div>
+            </div>
+            <button id="btnAgregarDesdeVistaPrevia" class="btn-vistaPrevia-agregarAlCarrito">Agregar al carrito</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="mensajeCarrito" class="mensaje-carrito oculto">
+    ¡Se añadio al carrito!
+</div>
+    
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes Hugo Boss</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="flex items-center py-4 justify-between flex-wrap bg-[#27445D] px-6 w-full font-[monospace] fixed z-[99]">
+
+        <!--Logo-->
+        <h1 class="text-[1.4rem] font-bold text-white">404</h1>
+
+        <!--Boton hamb (solo visible en pantallas mas pequeñas)-->
+        <button class="text-white text-2xl md:hidden" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+         
+        <!--Menu de navegacion pc-->
+        <ul class="hidden md:flex gap-8 text-[1.4rem] text-white flex-grow ml-12">   
+            <li><a href="index.html" class="hover:text-[#71BBB2]">Inicio</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Marcas</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Tienda</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Contacto</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Nosotros</a></li>
+        </ul>
+
+        <!--Buscador-->
+        <div class="relative mr-6 hidden md:block">
+            <input type="text" placeholder="Buscar producto" class="pl-4 pr-10 py-2 rounded-xl focus:outline-none border border-white text-white text-[1rem]">
+            <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-white">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+
+        <div class="flex items-center gap-4 text-xl text-white">
+            <a href="inicioSesion.html"><i class="fa-solid fa-user"></i></a>
+
+            <div class="contador-cantidadDeProductosEnCarrito">
+                <i class="fa-solid fa-cart-shopping" id="icono-carrito">
+                    <span class="numeroContadorCantidadProductos"></span>
+                </i>
+            </div>
+        </div>
+
+        <!--Menu en pantallas mas pequeñas-->
+        <ul class="w-full mt-4 flex-col gap-2 text-white text-[1.2rem] hidden" id="mobile-menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Nosotros</a></li>
+        </ul>
+
+</nav>
+
+<section class="seccion-titulo-marca-carolinaHerrera h-full w-full bg-[#497D74] flex items-center justify-center mt-[65px] p-[0.6rem] items-center">
+    <h1 class="font-[monospace] text-[2rem] font-bold text-[#71BBB2]">Hugo Boss - Perfumes Masculinos</h1>
+</section>
+
+
+<section class="tienda-General">
+
+    <div class="contenedor-tienda-General">
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/r/f/rfcgpS0ukLQ6zIQUt9NIKrAiJh90RLtotLu.jpg" alt="Hugo Boss Bottled Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/r/f/rfcgpS0ukLQ6zIQUt9NIKrAiJh90RLtotLu.jpg"
+                    data-titulo="HUGO BOSS BOTTLED EDT - 100ML"
+                    data-precio="450.000gs"
+                    data-familia="Amaderada especiada"
+                    data-salida="Manzana, ciruela, bergamota, limón, musgo de roble, geranio."
+                    data-corazon="Canela, caoba, clavo de olor."
+                    data-fondo="Sándalo, cedro, vetiver, olivo, vainilla."
+                    data-descripcion="Es una fragancia masculina clásica que combina notas frutales y especiadas con una base amaderada. La apertura es fresca y afrutada, seguida de un corazón cálido y especiado, y un fondo amaderado y suave. Ideal para el uso diario y para ocasiones informales."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Hugo Boss Bottled Edt</h3>
+            <span> 450.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://m.media-amazon.com/images/I/51VUiytAHaL._UF894,1000_QL80_.jpg" alt="Hugo Boss Bottled Intense Edp" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://i5-mx.walmartimages.com/mg/images/product-images/img_large/00800561025846l.jpg"
+                    data-titulo="HUGO BOSS BOTTLED INTENSE EDP - 100ML"
+                    data-precio="300.000gs"
+                    data-familia="Amaderada especiada"
+                    data-salida="Manzana, flor de azahar del naranjo, bergamota."
+                    data-corazon="Canela, clavos de olor, cardamomo, geranio, lavanda."
+                    data-fondo="Vainilla, sándalo, cumarina, cedro, vetiver"
+                    data-descripcion="Es una fragancia masculina que combina notas frutales, especiadas y amaderadas. La apertura es fresca y afrutada, seguida de un corazón cálido y especiado, y un fondo amaderado y suave. Ideal para el uso diario y para ocasiones informales."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Hugo Boss Bottled Intense Edp</h3>
+            <span> 300.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://vendome.com.py/wp-content/uploads/2024/02/88045-2-960x960.webp" alt="Hugo Boss Bottled Night Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://vendome.com.py/wp-content/uploads/2024/02/88045-2-960x960.webp"
+                    data-titulo="HUGO BOSS BOTTLED NIGHT EDT - 100ML"
+                    data-precio="630.000gs"
+                    data-familia="Amaderada aromática"
+                    data-salida="Lavanda, hojas de abedul."
+                    data-corazon="Violeta."
+                    data-fondo="Notas amaderadas, almizcle."
+                    data-descripcion="Es una fragancia masculina que combina notas frescas y amaderadas con un toque floral. La apertura es fresca y limpia gracias a la lavanda y las hojas de abedul, seguida de un corazón floral de violeta que le da un toque de sofisticación. El fondo amaderado y almizclado aporta profundidad y calidez, haciendo de esta fragancia una opción versátil para diversas ocasiones."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Hugo Boss Bottled Night Edt</h3>
+            <span> 630.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://vendome.com.py/wp-content/uploads/2023/02/3614229823776-960x960.jpg" alt="Hugo Boss Man Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://vendome.com.py/wp-content/uploads/2023/02/3614229823776-960x960.jpg"
+                    data-titulo="HUGO BOSS MAN EDT - 100ML"
+                    data-precio="430.000gs"
+                    data-familia="Amaderada aromática"
+                    data-salida="Manzana verde."
+                    data-corazon="Lavanda."
+                    data-fondo="Pino, notas amaderadas, bálsamo de abeto."
+                    data-descripcion="Es una fragancia masculina que combina notas frescas y amaderadas con un toque floral. La apertura es fresca y afrutada gracias a la manzana verde, seguida de un corazón floral de lavanda que le da un toque de sofisticación. El fondo amaderado y balsámico aporta profundidad y calidez, haciendo de esta fragancia una opción versátil para diversas ocasiones."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Hugo Boss Man Edt</h3>
+            <span> 430.000gs</span>
+        </div>
+        
+    </div>
+
+</section>
+
+<div id="fondo-oscuro" class="fondo-oscuro"></div>
+<aside class="carrito-lateral">
+    <div class="contenedor-cerrar-titulo-carritoCompra">
+        <h2 class="titulo-carritoCompra">Carrito de Compras</h2>
+        <button id="cerrar-carrito" class="cerrar-carritoCompra">Cerrar</button>
+    </div>
+
+    <div class="carrito-lista-scroll">
+        <ul id="carrito-lista"></ul>
+    </div>
+
+    <div class="contenedor-totalPrecio-carritoCompra">
+        <p class="totalPrecio-carritoCompra"><strong>Total:</strong> <span id="total-carrito">0</span> Gs</p>
+    </div>
+
+    <button class="btn-finalizarCompra">Finalizar compra</button>
+
+</aside>
+
+
+<!-- Modal para vista previa -->
+<div class="modal" id="modalVistaPrevia">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <div class="contenedor-vistaPrevia">
+      <div class="imagen-vistaPrevia">
+        <img id="img-vistaPrevia" class="img-vistaPrevia">
+      </div>
+      <div class="informacion-vistaPrevia">
+        <h2 id="titulo-infoVistaPrevia" class="titulo-infoVistaPrevia"></h2><br>
+        <p><strong>Precio: </strong><span id="precio"></span></p><br>
+        <span><strong>Familia olfativa: </strong><span id="familia"></span></span><br><br>
+        <span><strong>Notas de salida: </strong><span id="salida"></span></span><br><br>
+        <span><strong>Notas de corazón: </strong><span id="corazon"></span></span><br><br>
+        <span><strong>Notas de fondo: </strong><span id="fondo"></span></span><br><br>
+        <span><strong>¿A qué huele?<br></strong><span id="descripcion"></span></span>
+        
+        <div class="contenedor-carrito-vistaPrevia">
+
+            <div class="contador">
+                <div class="izquierda-cuadro-VistaPrevia">
+                    <button onclick="disminuir()">-</button>
+                </div>
+                <div class="numero-cuadro-VistaPrevia">
+                    <span id="cantidad">1</span>
+                </div>
+                <div class="derecha-cuadro-VistaPrevia">
+                    <button onclick="aumentar()">+</button>
+                </div>
+            </div>
+            <button id="btnAgregarDesdeVistaPrevia" class="btn-vistaPrevia-agregarAlCarrito">Agregar al carrito</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="mensajeCarrito" class="mensaje-carrito oculto">
+    ¡Se añadio al carrito!
+</div>
+    
+<script src="script.js"></script>
+</body>
+</html>
