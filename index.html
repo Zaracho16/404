@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class="flex flex-col">
 
-
-<nav class="flex items-center py-4 justify-between flex-wrap bg-[#27445D] px-6 w-full font-[monospace]">
+<nav class="fixed top-0 left-0  flex items-center py-4 justify-between flex-wrap bg-[#27445D] px-6 w-full font-[monospace] z-1000">
 
         <!--Logo-->
         <h1 class="text-[1.4rem] font-bold text-white">404</h1>
@@ -23,11 +22,11 @@
          
         <!--Menu de navegacion pc-->
         <ul class="hidden md:flex gap-8 text-[1.4rem] text-white flex-grow ml-12">   
-            <li><a href="#" class="hover:text-[#71BBB2]">Inicio</a></li>
-            <li><a href="#" class="hover:text-[#71BBB2]">Marcas</a></li>
+            <li><a href="#Inicio" class="hover:text-[#71BBB2]">Inicio</a></li>
+            <li><a href="#Marcas" class="hover:text-[#71BBB2]">Marcas</a></li>
             <li><a href="#" class="hover:text-[#71BBB2]">Tienda</a></li>
-            <li><a href="#" class="hover:text-[#71BBB2]">Contacto</a></li>
-            <li><a href="#" class="hover:text-[#71BBB2]">Nosotros</a></li>
+            <li><a href="#Contacto" class="hover:text-[#71BBB2]">Contacto</a></li>
+            <li><a href="sobreNosotros.html" class="hover:text-[#71BBB2]">Nosotros</a></li>
         </ul>
 
         <!--Buscador-->
@@ -40,7 +39,9 @@
 
         <div class="flex items-center gap-4 text-xl text-white">
             <a href="inicioSesion.html"><i class="fa-solid fa-user"></i></a>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-cart-shopping iconoCarritoIndex" id="icono-carrito">
+                    <span class="numeroContadorCantidadProductos"></span>
+            </i>
         </div>
 
         <!--Menu en pantallas mas pequeñas-->
@@ -54,11 +55,15 @@
 
 </nav>
 
-<section class="seccion-Portada" id="">
+<main class="pt-16 flex-grow" id="Inicio">
+
+<section class="seccion-Portada">
     <img src="imagen-principal/portada-img-2.jpg" class="w-full h-[30rem]" alt="Portada">
 </section>
 
 <section class="seccion-marcas-perfumes border-t border-gray-100">
+
+    <h1 class="text-center font-bold text-[2.5rem] font-[monospace] bg-[#497D74] text-[black]" id="Marcas">Perfumes por marca</h1>
 
     <div class="contenedor-marcas-perfumes">
 
@@ -78,77 +83,114 @@
         </div>
 
         <div class="cuadro-marcas">
-            <img src="marcasPerfumes-icons/giorgioArmani.jpg" alt="giorgioArmani-img" class="imagen-marcas-perfumes"> 
-            <h3>Giorgio Armani</h3>
+            <a href="giorgioArmani.html"><img src="marcasPerfumes-icons/giorgioArmani.jpg" alt="giorgioArmani-img" class="imagen-marcas-perfumes"> 
+            <h3>Giorgio Armani</h3></a>
         </div>
 
         <div class="cuadro-marcas">
-            <img src="marcasPerfumes-icons/hugoBoss.jpg" alt="hugoBoss-img" class="imagen-marcas-perfumes">
-            <h3>Hugo Boss</h3>
+            <a href="hugoBoss.html"><img src="marcasPerfumes-icons/hugoBoss.jpg" alt="hugoBoss-img" class="imagen-marcas-perfumes">
+            <h3>Hugo Boss</h3></a>
         </div>
 
         <div class="cuadro-marcas">
-            <img src="marcasPerfumes-icons/ysl.png" alt="Saint Laurent" class="imagen-marcas-perfumes">
-            <h3>Saint Laurent</h3>
+            <a href="saintLaurent.html"><img src="marcasPerfumes-icons/ysl.png" alt="Saint Laurent" class="imagen-marcas-perfumes">
+            <h3>Saint Laurent</h3></a>
         </div>
 
         <div class="cuadro-marcas">
-            <img src="marcasPerfumes-icons/jpg.svg" alt="Jean Paul Gaultier" class="imagen-marcas-perfumes">
-            <h3>Jean Paul Gaultier</h3>
+            <a href="jpg.html"><img src="marcasPerfumes-icons/jpg.svg" alt="Jean Paul Gaultier" class="imagen-marcas-perfumes">
+            <h3>Jean Paul Gaultier</h3></a>
         </div>
 
         <div class="cuadro-marcas">
-            <img src="marcasPerfumes-icons/pacoRabanne.jpg" alt="Paco Rabanne" class="imagen-marcas-perfumes">
-            <h3>Paco Rabanne</h3>
+            <a href="pacoRabanne.html"><img src="marcasPerfumes-icons/pacoRabanne.jpg" alt="Paco Rabanne" class="imagen-marcas-perfumes">
+            <h3>Paco Rabanne</h3></a>
         </div>
 
         <div class="cuadro-marcas">
-            <img src="marcasPerfumes-icons/versace.png" alt="Versace" class="imagen-marcas-perfumes">
-            <h3>Versace</h3>
+            <a href="versace.html"><img src="marcasPerfumes-icons/versace.png" alt="Versace" class="imagen-marcas-perfumes">
+            <h3>Versace</h3></a>
         </div>
 
         <div class="cuadro-marcas">
-            <img src="marcasPerfumes-icons/tomFord.png" alt="Tom Ford" class="imagen-marcas-perfumes">
-            <h3>Tom Ford</h3>
+            <a href="tomFord.html"><img src="marcasPerfumes-icons/tomFord.png" alt="Tom Ford" class="imagen-marcas-perfumes">
+            <h3>Tom Ford</h3></a>
         </div>
 
         <div class="cuadro-marcas">
-            <img src="marcasPerfumes-icons/azzaro.png" alt="Azzaro" class="imagen-marcas-perfumes">
-            <h3>Azzaro</h3>
-        </div>
-
-        <div class="cuadro-marcas">
-            <img src="marcasPerfumes-icons/creed.jpg" alt="Creed" class="imagen-marcas-perfumes">
-            <h3>Creed</h3>
-        </div>
-
-        <div class="cuadro-marcas">
-            <img src="marcasPerfumes-icons/bleuDeChanel.png" alt="Bleu de Chanel" class="imagen-marcas-perfumes">
-            <h3>Bleu De Chanel</h3>
-        </div>
-
-        <div class="cuadro-marcas">
-            <img src="marcasPerfumes-icons/montBlanc.svg" alt="Mont Blanc" class="imagen-marcas-perfumes">
-            <h3>Mont Blanc</h3>
-        </div>
-
-        <div class="cuadro-marcas">
-            <img src="marcasPerfumes-icons/Dolce&Gabbana.png" alt="Dolce & Gabbana" class="imagen-marcas-perfumes">
-            <h3>Dolce & Gabbana</h3>
+            <a href="azzaro.html"><img src="marcasPerfumes-icons/azzaro.png" alt="Azzaro" class="imagen-marcas-perfumes">
+            <h3>Azzaro</h3></a>
         </div>
 
     </div>
 
 </section>
 
-<footer class="w-full bg-[#27445D] py-10 border-t border-gray-100">
-    <section class="max-w-6xl mx-auto px-4">
+
+<section class="seccion-InfoIndex">
+
+<div class="min-h-[300px] flex flex-col lg:flex-row lg:w-full p-3 font-[monospace] bg-[#71BBB2]">
+
+  <div class="flex flex-col md:flex-row gap-8 w-full mt-8">
+
+    <!-- Caja 1 -->
+    <div class="flex flex-col items-center text-center flex-1 p-4">
+      <i class="fas fa-truck text-[4rem]"></i>
+      <h4 class="font-bold text-[1.3rem] mt-4">ENVIOS RÁPIDOS</h4>
+      <span class="text-[1rem]">Lo pedís hoy, te lo entregamos hoy!</span>
+    </div>
+
+    <!-- Caja 2 -->
+    <div class="flex flex-col items-center text-center flex-1 p-4">
+      <i class="fas fa-award text-[4rem]"></i>
+      <h4 class="font-bold text-[1.3rem] mt-4">PRODUCTOS ORIGINALES</h4>
+      <span class="text-[1rem]">Perfumes originales, de importadores legales y confiables.</span>
+    </div>
+
+    <!-- Caja 3 -->
+    <div class="flex flex-col items-center text-center flex-1 p-4">
+      <i class="fas fa-credit-card text-[4rem]"></i>
+      <h4 class="font-bold text-[1.3rem] mt-4">FACILIDADES DE PAGO</h4>
+      <span class="text-[1rem]">Podes pagar al recibir en efectivo, a través de transferencias bancarias, tarjetas de crédito, débito, etc.</span>
+    </div>
+
+  </div>
+
+</div>
+
+
+</section>
+
+
+<div id="fondo-oscuro" class="fondo-oscuro"></div>
+<aside class="carrito-lateral">
+    <div class="contenedor-cerrar-titulo-carritoCompra">
+        <h2 class="titulo-carritoCompra">Carrito de Compras</h2>
+        <button id="cerrar-carrito" class="cerrar-carritoCompra">Cerrar</button>
+    </div>
+
+    <div class="carrito-lista-scroll">
+        <ul id="carrito-lista"></ul>
+    </div>
+
+    <div class="contenedor-totalPrecio-carritoCompra">
+        <p class="totalPrecio-carritoCompra"><strong>Total:</strong> <span id="total-carrito">0</span> Gs</p>
+    </div>
+
+    <button class="btn-finalizarCompra">Finalizar compra</button>
+</aside>
+
+</main>
+
+
+<footer class="w-full bg-[#27445D] py-10 border-t border-gray-100" id="footer">
+    <section class="max-w-6xl mx-auto px-4" id="Contacto">
       <div class="flex flex-wrap justify-between gap-8">
 
         <div class="politicas space-y-2 font-[monospace]">
             <h2 class="text-2xl font-bold text-white">Nuestras políticas</h2>
             <div class="contenedor-politicas flex flex-col">
-                <a href="#" class="text-white text-lg hover:text-green-400">Política de devolución</a>
+                <a href="nuestrasPoliticas/devolucion.html" class="text-white text-lg hover:text-green-400">Política de devolución</a>
                 <a href="#" class="text-white text-lg hover:text-green-400">Política de privacidad</a>
                 <a href="#" class="text-white text-lg hover:text-green-400">Política de envío</a>
             </div>

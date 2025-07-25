@@ -5,6 +5,10 @@ body, html {
   scroll-behavior: smooth;
 }
 
+.iconoCarritoIndex {
+    cursor: pointer;
+}
+
 .contenedor-marcas-perfumes {
     background-color: #497D74;
     display: grid;
@@ -31,8 +35,8 @@ body, html {
 }
 
 .imagen-marcas-perfumes {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%; 
     background-color: white;
@@ -332,7 +336,6 @@ body, html {
 }
 
 .carrito-lateral ul {
-  list-style: none;
   padding: 0;
 }
 

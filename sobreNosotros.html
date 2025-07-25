@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - 404</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="fixed top-0 left-0  flex items-center py-4 justify-between flex-wrap bg-[#27445D] px-6 w-full font-[monospace] z-1000">
+
+        <!--Logo-->
+        <h1 class="text-[1.4rem] font-bold text-white">404</h1>
+
+        <!--Boton hamb (solo visible en pantallas mas pequeñas)-->
+        <button class="text-white text-2xl md:hidden" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+         
+        <!--Menu de navegacion pc-->
+        <ul class="hidden md:flex gap-8 text-[1.4rem] text-white flex-grow ml-12">   
+            <li><a href="#Inicio" class="hover:text-[#71BBB2]">Inicio</a></li>
+            <li><a href="#Marcas" class="hover:text-[#71BBB2]">Marcas</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Tienda</a></li>
+            <li><a href="#Contacto" class="hover:text-[#71BBB2]">Contacto</a></li>
+            <li><a href="sobreNosotros.html" class="hover:text-[#71BBB2]">Nosotros</a></li>
+        </ul>
+
+        <!--Buscador-->
+        <div class="relative mr-6 hidden md:block">
+            <input type="text" placeholder="Buscar producto" class="pl-4 pr-10 py-2 rounded-xl focus:outline-none border border-white text-white text-[1rem]">
+            <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-white">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+
+        <div class="flex items-center gap-4 text-xl text-white">
+            <a href="inicioSesion.html"><i class="fa-solid fa-user"></i></a>
+            <i class="fa-solid fa-cart-shopping iconoCarritoIndex" id="icono-carrito">
+                    <span class="numeroContadorCantidadProductos"></span>
+            </i>
+        </div>
+
+        <!--Menu en pantallas mas pequeñas-->
+        <ul class="w-full mt-4 flex-col gap-2 text-white text-[1.2rem] hidden" id="mobile-menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Nosotros</a></li>
+        </ul>
+
+</nav>
+
+<section class="pt-16">
+
+    <div class="p-2 font-[monospace] bg-[white] h-screen flex items-center justify-center">
+
+        <div class="text-center ml-[4rem] mr-[4rem]">  
+            <h3 class="text-[2.5rem] font-bold">Sobre Nosotros</h3>
+            <p class="text-[1.1rem] text-[#374151] text-left">
+                Somos 404 Perfumería y vinimos a romper el molde. Acá no se trata solo de oler bien, se trata de dejar huella. Somos una tienda pensada para los que no se conforman con lo común, para los que eligen un perfume como quien elige su soundtrack: con actitud y estilo.
+                Reunimos las mejores marcas y fragancias para que encuentres esa que diga todo de vos sin tener que decir nada. Fresco, dulce, intenso, misterioso... tenemos el aroma que va con vos.<br>
+                <strong>Perfumería: No es solo perfume. Es presencia.</strong>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="flex flex-col lg:flex-row lg:w-full p-3 font-[monospace] bg-[#71BBB2]">
+
+        <div class="w-full lg:w-[60%] p-3 lg:ml-[1rem] items-center justify-center flex flex-col">
+            <div>
+                <h3 class="font-bold text-[2.1rem]">¿Por qué comprar en nuestra tienda?</h3>
+                <span class="text-[1.1rem]">En 404 Perfumería, no solo vendemos perfumes: ofrecemos experiencias. Nos esforzamos cada día por brindarte un servicio confiable, con productos 100% originales y entregas rápidas y seguras. Trabajamos con marcas reconocidas y fragancias auténticas, seleccionadas para quienes saben lo que quieren y no aceptan imitaciones.
+                Además, nuestro equipo está siempre listo para ayudarte a elegir ese perfume ideal que encaje con tu estilo, tu momento o esa ocasión especial. Porque para nosotros, cada cliente es único, y cada elección merece atención.</span>
+            </div>
+        </div>
+
+        <div class="w-full lg:w-[40%] p-3 mt-6">
+            <div class="flex flex-col space-y-8">
+
+                <div class="flex flex-col lg:flex-row p-1">
+                    <div class="w-full lg:w-[30%] flex items-center justify-center mb-2 lg:mb-0">
+                       <i class="fas fa-truck text-[4rem]"></i>
+                    </div>
+
+                    <div class="flex flex-col justify-center w-full text-center lg:text-left"> 
+                        <h4 class="font-bold text-[1.4rem]">ENVIOS RÁPIDOS</h4>
+                        <span class="text-[1.1rem]">Lo pedís hoy, te lo entregamos hoy!</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row p-1">
+                    <div class="w-full lg:w-[30%] flex items-center justify-center mb-2 lg:mb-0">
+                        <i aria-hidden="true" class="fas fa-award text-[4rem]"></i>
+                    </div>
+
+                    <div class="flex flex-col justify-center w-full text-center lg:text-left"> 
+                        <h4 class="font-bold text-[1.4rem]">PRODUCTOS ORIGINALES</h4>
+                        <span class="text-[1.1rem]">Perfumes originales, de importadores legales y confiables.</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row p-1">
+                    <div class="w-full lg:w-[30%] flex items-center justify-center mb-2 lg:mb-0">
+                        <i class="fas fa-credit-card text-[4rem]"></i>
+                    </div>
+
+                    <div class="flex flex-col justify-center w-full text-center lg:text-left"> 
+                        <h4 class="font-bold text-[1.4rem]">FACILIDADES DE PAGO</h4>
+                        <span class="text-[1.1rem]">Podes pagar al recibir en efectivo, a través de transferencias bancarias, tarjetas de crédito, débito, etc.</span>
+                    </div>
+                </div>
+
+            </div>             
+        </div>
+
+    </div>
+
+</section>
+
+<div id="footer"></div>
+<script src="../js/cargarFooter.js"></script>
+
+</body>
+</html>
