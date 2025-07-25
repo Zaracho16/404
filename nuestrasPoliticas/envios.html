@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Politica De Envío</title>
+</head>
+<body>
+
+<nav class="fixed top-0 left-0  flex items-center py-4 justify-between flex-wrap bg-[#27445D] px-6 w-full font-[monospace] z-1000">
+
+        <!--Logo-->
+        <h1 class="text-[1.4rem] font-bold text-white">404</h1>
+
+        <!--Boton hamb (solo visible en pantallas mas pequeñas)-->
+        <button class="text-white text-2xl md:hidden" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+         
+        <!--Menu de navegacion pc-->
+        <ul class="hidden md:flex gap-8 text-[1.4rem] text-white flex-grow ml-12">   
+            <li><a href="#Inicio" class="hover:text-[#71BBB2]">Inicio</a></li>
+            <li><a href="#Marcas" class="hover:text-[#71BBB2]">Marcas</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Tienda</a></li>
+            <li><a href="#Contacto" class="hover:text-[#71BBB2]">Contacto</a></li>
+            <li><a href="sobreNosotros.html" class="hover:text-[#71BBB2]">Nosotros</a></li>
+        </ul>
+
+        <!--Buscador-->
+        <div class="relative mr-6 hidden md:block">
+            <input type="text" placeholder="Buscar producto" class="pl-4 pr-10 py-2 rounded-xl focus:outline-none border border-white text-white text-[1rem]">
+            <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-white">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+
+        <div class="flex items-center gap-4 text-xl text-white">
+            <a href="inicioSesion.html"><i class="fa-solid fa-user"></i></a>
+            <i class="fa-solid fa-cart-shopping iconoCarritoIndex" id="icono-carrito">
+                <span class="numeroContadorCantidadProductos"></span>
+            </i>
+        </div>
+
+        <!--Menu en pantallas mas pequeñas-->
+        <ul class="w-full mt-4 flex-col gap-2 text-white text-[1.2rem] hidden" id="mobile-menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Nosotros</a></li>
+        </ul>
+
+</nav>
+
+
+
+<section class="mt-16 font-[monospace] bg-[#497D74]">
+    <h1 class="text-center text-[2.2rem] min-h-[3rem] p-5 font-bold text-[#71BBB2]">Politica De Envío</h1>
+</section>
+
+<section class="seccion-PoliticaDeEnvio">
+
+    <div class="m-6 min-h-[450px] p-5 text-[#374151]">
+        <span class="text-xl font-[monospace]">
+            En 404 Perfumería, hacemos envíos a todo el país. Trabajamos con empresas de logística confiables para que tu pedido llegue rápido, seguro y en perfectas condiciones.<br><br>
+
+            <b>Tipos de entrega:</b><br>
+
+            <ul style="list-style-type: disc; margin-left: 20px; padding-left: 20px;">
+                <li>Capital y zonas urbanas: de 24 a 48 horas hábiles.</li>
+                <li>Interior del país: de 2 a 5 días hábiles, dependiendo de la ubicación.</li>
+            </ul><br>
+
+            <b>Costos de envío:</b><br>
+            <ul style="list-style-type: disc; margin-left: 20px; padding-left: 20px;">
+                <li>Envío gratis en compras mayores a 250.000gs</li>
+                <li>Para montos menores, el costo varía según la zona.</li>
+            </ul><br>
+
+            <b>Seguimiento:</b> Te enviamos un número de guía por WhatsApp o correo una vez despachado tu pedido.<br><br>
+            <b>Importante:</b> Revisá el paquete al recibirlo. Si notás algún daño, notificanos de inmediato.
+
+        </span>
+    </div>
+
+</section>
+
+<div id="footer"></div>
+
+<script src="../js/cargarFooter.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Preguntas Frecuentes</title>
+</head>
+<body>
+
+<nav class="fixed top-0 left-0  flex items-center py-4 justify-between flex-wrap bg-[#27445D] px-6 w-full font-[monospace] z-1000">
+
+        <!--Logo-->
+        <h1 class="text-[1.4rem] font-bold text-white">404</h1>
+
+        <!--Boton hamb (solo visible en pantallas mas pequeñas)-->
+        <button class="text-white text-2xl md:hidden" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+         
+        <!--Menu de navegacion pc-->
+        <ul class="hidden md:flex gap-8 text-[1.4rem] text-white flex-grow ml-12">   
+            <li><a href="#Inicio" class="hover:text-[#71BBB2]">Inicio</a></li>
+            <li><a href="#Marcas" class="hover:text-[#71BBB2]">Marcas</a></li>
+            <li><a href="#" class="hover:text-[#71BBB2]">Tienda</a></li>
+            <li><a href="#Contacto" class="hover:text-[#71BBB2]">Contacto</a></li>
+            <li><a href="sobreNosotros.html" class="hover:text-[#71BBB2]">Nosotros</a></li>
+        </ul>
+
+        <!--Buscador-->
+        <div class="relative mr-6 hidden md:block">
+            <input type="text" placeholder="Buscar producto" class="pl-4 pr-10 py-2 rounded-xl focus:outline-none border border-white text-white text-[1rem]">
+            <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-white">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+
+        <div class="flex items-center gap-4 text-xl text-white">
+            <a href="inicioSesion.html"><i class="fa-solid fa-user"></i></a>
+            <i class="fa-solid fa-cart-shopping iconoCarritoIndex" id="icono-carrito">
+                <span class="numeroContadorCantidadProductos"></span>
+            </i>
+        </div>
+
+        <!--Menu en pantallas mas pequeñas-->
+        <ul class="w-full mt-4 flex-col gap-2 text-white text-[1.2rem] hidden" id="mobile-menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Nosotros</a></li>
+        </ul>
+
+</nav>
+
+
+
+<section class="mt-16 font-[monospace] bg-[#497D74]">
+    <h1 class="text-center text-[2.2rem] min-h-[3rem] p-5 font-bold text-[#71BBB2]">Preguntas Frecuentes</h1>
+</section>
+
+<section class="seccion-PoliticaDePrivacidad">
+
+    <div class="m-6 min-h-[450px] p-5 text-[#374151]">
+        <span class="text-xl font-[monospace]">
+         
+        <ol style="list-style-type: decimal; margin-left: 20px; padding-left: 20px;">
+            <li><strong>¿Los perfumes son originales?</strong></li>
+            Sí, todos nuestros productos son 100% originales y cuentan con garantía de autenticidad. No vendemos imitaciones ni testers.
+
+            <li class="mt-6"><strong>¿Hacen envíos a todo el país?</strong></li>
+            ¡Así mismo! Enviamos a todo Paraguay mediante empresas logísticas confiables. Te pasamos el número de seguimiento apenas se despacha tu pedido.
+
+            <li class="mt-6"><strong>¿Cuánto tarda en llegar mi pedido?</strong></li>
+            Depende de tu ubicación:
+                <ul style="list-style-type: disc; margin-left: 20px; padding-left: 20px;">
+                    <li>Capital y zonas cercanas: 24 a 48hs hábiles.</li>
+                    <li>Interior del país: 2 a 5 días hábiles.</li>
+                </ul>
+
+            <li class="mt-6"><strong>¿Puedo cambiar un perfume si no me gusta el aroma?</strong></li>
+            Por razones de higiene y seguridad, no aceptamos devoluciones de productos abiertos. Pero si llega dañado o hay un error en tu pedido, te lo cambiamos sin problema.
+
+            <li class="mt-6"><strong>¿Puedo comprar sin crear una cuenta?</strong></li>
+            Sí, podés comprar como invitado. Aunque te recomendamos crear una cuenta para tener seguimiento de tus pedidos y recibir beneficios exclusivos.
+
+            <li class="mt-6"><strong>¿Tienen tienda física?</strong></li>
+            Por ahora somos 100% online. Esto nos permite ofrecerte mejores precios y envíos rápidos.
+        </ol>
+
+        </span>
+    </div>
+
+</section>
+
+<div id="footer"></div>
+
+<script src="../js/cargarFooter.js"></script>
+
+</body>
+</html>
