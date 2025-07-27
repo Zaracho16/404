@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+<div id="nav"></div>
+
+<section class="seccion-titulo-marca-carolinaHerrera h-full w-full bg-[#497D74] flex items-center justify-center mt-[65px] p-[0.6rem] items-center">
+    <h1 class="font-[monospace] text-[2rem] font-bold text-[#71BBB2]">Tienda</h1>
+</section>
+
+<section class="tienda-General">
+
+    <div class="contenedor-tienda-General">
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="perfumesPorMarca/carolinaHerrera/212 Men edt.jpg" alt="212 Men Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://fuschia.com.py/userfiles/images/productos/600/8411061896259-1.jpg"
+                    data-titulo="CAROLINA HERRERA 212 MEN EDT - 100Ml"
+                    data-precio="500.000gs"
+                    data-familia="Amaderada Floral Almizclada"
+                    data-salida="Bergamota, toronja, hojas de naranjo amargo, especias verdes, lavanda"
+                    data-corazon="Salvia, jengibre, violeta, gardenia, pimienta verde"
+                    data-fondo="Sándalo, vetiver, almizcle, incienso ládano, madera de gaiac"
+                    data-descripcion="Un aroma limpio, fresco, verde y moderno, ideal para uso diario. Tiene ese toque urbano y elegante, como un tipo que camina confiado por la ciudad con auriculares puestos y un plan en mente. Ni muy dulce, ni muy seco: está equilibrado y transmite energía sin empalagar."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera 212 Men NYC Edt</h3>
+            <span> 500.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://farmalife.vtexassets.com/arquivos/ids/175033-800-auto?v=637566047992400000&width=800&height=auto&aspect=true" alt="212 Men Heroes Forever Young" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito" id="incrementoNumeroCarrito"
+                    >Agregar al carrito</button>
+
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="https://farmalife.vtexassets.com/arquivos/ids/175033-800-auto?v=637566047992400000&width=800&height=auto&aspect=true"
+                    data-titulo="CAROLINA HERRERA 212 MEN HEROES - 100ML "
+                    data-precio="700.000gs"
+                    data-familia="Aromática Frutal"
+                    data-salida="Pera, cannabis, jengibre."
+                    data-corazon="Geranio, Salvia."
+                    data-fondo="Almizcle, cuero."
+                    data-descripcion="Un combo moderno, juvenil y rebelde. La pera le da un comienzo jugoso y fresco, el cannabis lo vuelve inesperado y edgy, y el jengibre lo mantiene vibrante. Luego se vuelve herbal con geranio y salvia, y cierra con cuero suave y almizcle, dándole un toque más maduro sin perder la frescura.
+                    Es un perfume que dice “soy libre, hago skate, tengo estilo y no me importa tu opinión”. Ideal para climas templados o calurosos y perfecto si querés algo fresco pero distinto al típico cítrico genérico."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera 212 Men Heroes</h3>
+            <span> 700.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2024/10/3125.webp" alt="Bad boy cobalt elixir edp" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="https://puntotienda.com.py/wp-content/uploads/2024/10/3125.webp"
+                    data-titulo="CAROLINA HERRERA BAD BOY COBALT ELIXIR EDP - 100ML"
+                    data-precio="820.000gs"
+                    data-familia="Amaderada Aromática"
+                    data-salida="Pimienta negra, salvia."
+                    data-corazon="Trufa negra, maderas cálidas"
+                    data-fondo="Vainilla, incienso."
+                    data-descripcion="A una noche fría con actitud.
+                    Es un perfume oscuro, sexy y misterioso. La pimienta con la salvia te dan un arranque especiado, después entra la trufa negra que lo vuelve terroso y elegante, y al final la vainilla y el incienso lo envuelven todo con un aire cálido, intenso y envolvente.
+                    Es como si Bad Boy se pusiera saco de terciopelo negro y saliera a conquistar con mirada asesina. No es para cualquiera: es audaz, tiene personalidad, y se nota."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera Bad Boy Cobalt Elixir Edp</h3>
+            <span> 820.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://saharaperfumes.com/cdn/shop/files/CH_Bad_Boy_Extreme_Eau_De_Parfum_For_Men_100ML.webp?v=1725618528" alt="Bad boy extreme" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="https://fuschia.com.py/userfiles/images/productos/600/8411061057193-1.jpg"
+                    data-titulo="CAROLINA HERRERA BAD BOY EXTREME - 100ML"
+                    data-precio="970.000"
+                    data-familia="Ámbar Aromático Amaderado"
+                    data-salida="Jengibre, bergamota, salvia."
+                    data-corazon="Vetiver des sables, cacao"
+                    data-fondo="Haba tonka, pachulí, incienso ligero"
+                    data-descripcion="Un dulce especiado con básico de chocolate oscuro. La salida es cálida (jengibre), luego entra el cacao que domina como un abrazo achocolatado, y termina con fondo amaderado-ambarado. Ideal para clima frío o salidas nocturnas."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera Bad Boy Extreme</h3>
+            <span> 970.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2023/09/2583.webp" alt="Bad boy gold fantasy" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="https://m.media-amazon.com/images/I/41hrtPwX7dL._SL1000_.jpg"
+                    data-titulo="CAROLINA HERRERA BAD BOY GOLD FANTASY - 100ML"
+                    data-precio="840.000gs"
+                    data-familia="Oriental Amaderada"
+                    data-salida="Pimienta blanca, pimienta rosa, bergamota."
+                    data-corazon="Salvia escclarea, cedro, vetiver."
+                    data-fondo="Haba tonka, cacao, ámbar madera."
+                    data-descripcion="Arranque especiado–fresco con pimientas chispeantes y cítrico. Se transforma en una mezcla entre herbal y amaderado en el corazón, con la salvia y el cedro creando una base sólida. El fondo cierra con dulce y cremoso: tonka, cacao y un toque ámbar‑madera. Es un Bad Boy elegante, más refinado que los demás, sin perder esa dualidad callejera‑lux."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera Bad Boy Gold Fantasy</h3>
+            <span> 840.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="perfumesPorMarca/carolinaHerrera/Bad boy le parfum.jpg" alt="Bad boy le parfum" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="perfumesPorMarca/carolinaHerrera/Bad boy le parfum.jpg"
+                    data-titulo="CAROLINA HERRERA BAD BOY LE PARFUM - 100ML"
+                    data-precio="950.000gs"
+                    data-familia="Cuero Aromático"
+                    data-salida="Cannabis, toronja."
+                    data-corazon="Pimienta negra, geranio."
+                    data-fondo="Cuero, vetiver."
+                    data-descripcion="Una fragancia rompedora, que mezcla la frescura cítrica del pomelo con un cáñamo terroso y salvaje. Se vuelve especiada al pasar por la pimienta y geranio, y termina con cuero fuerte y vetiver amaderado. Es ideal para gente que no busca agradar con lo típico: es atrevido, distintivo y con carácter propio."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera Bad boy le parfum</h3>
+            <span> 950.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="perfumesPorMarca/carolinaHerrera/Ch king.jpg" alt="King" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="perfumesPorMarca/carolinaHerrera/Ch king.jpg"
+                    data-titulo="CAROLINA HERRERA KING - 100ML"
+                    data-precio="620.000gs"
+                    data-familia="Aromática Especiada / Fougère Aromático"
+                    data-salida="Pimienta rosa, pimienta negra, violeta, cardamomo."
+                    data-corazon="Cacao, café, piña, lavanda, salvia esclarea."
+                    data-fondo="Haba tonka, ámbar, almizcle."
+                    data-descripcion="Un perfume con actitud real. Arranca especiado y fresco con esas pimientas y el cardamomo; luego entra un centro casi gourmand con cacao, café y piña, con ese aire herbal‑elegante de lavanda y salvia; y cierra suave pero persistente gracias al tonka, ámbar y almizcle. Es como un rey moderno: dulce, con nervio y presencia urbana."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera King</h3>
+            <span> 620.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="perfumesPorMarca/carolinaHerrera/Ch men sport.jpg" alt="Men sport" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="perfumesPorMarca/carolinaHerrera/Ch men sport.jpg"
+                    data-titulo="CAROLINA HERRERA MEN SPORT - 100ML"
+                    data-precio="540.000gs"
+                    data-familia="Aromática Especiada / Amaderada–Marina"
+                    data-salida="Pomelo, bergamota, salvia."
+                    data-corazon="Enebro de virginia, notas marinas, pimienta de Sichuan."
+                    data-fondo="Vetiver, sándalo, musgo de roble."
+                    data-descripcion="Es un aroma fresco, verde, energizante, con ese aire marino que sugiere brisa de agua salada y madera mojada. La salida cítrica se mezcla con hierbas y un toque picante; luego emerge una base cremosa-amaderada. Un perfume sporty que suena elegante, no genérico ni sintético al olfato atento."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera Men Sport</h3>
+            <span>540.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="perfumesPorMarca/carolinaHerrera/Ch men.jpg" alt="Men edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" 
+                    onclick="mostrarModal(this)"
+                    data-img="perfumesPorMarca/carolinaHerrera/Ch men.jpg"
+                    data-titulo="CAROLINA HERRERA MEN - 100ML"
+                    data-precio="430.000gs"
+                    data-familia="Oriental Especiado / Aromático"
+                    data-salida="Hierba, bergamota, toronja."
+                    data-corazon="Notas amaderadas, nuez moscada, violeta, azafrán, jazmín."
+                    data-fondo="Azúcar, cuero, vainilla, gamuza, ámbar, madera de cachemira, sándalo, musgo de roble, vetiver."
+                    data-descripcion="Es una fragancia dulce-amaderada con esencia masculina. Arranca fresca y verde, transita por un corazón especiado-floral, y cierra con un fondo gourmand y de cuero suave. Ideal para reforzar la elegancia sin perder naturalidad"
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Carolina Herrera Men edt</h3>
+            <span>430.000gs</span>
+        </div>
+
+                <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://i0.wp.com/brandss.com.py/index/wp-content/uploads/2024/06/A-446.png?fit=600%2C600&ssl=1" alt="Azzaro Pour Homme Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://i0.wp.com/brandss.com.py/index/wp-content/uploads/2024/06/A-446.png?fit=600%2C600&ssl=1"
+                    data-titulo="Azzaro Pour Homme Edt - 100ml"
+                    data-precio="300.000gs"
+                    data-familia="Aromático fougère"
+                    data-salida="Lavanda, limón, alcaravea, albahaca, bergamota, salvia esclarea, iris, anís estrellado."
+                    data-corazon="Vetiver, sándalo, pachulí, cedro, bayas de enebro, cardamomo."
+                    data-fondo="Musgo de roble, cuero, ámbar, almizcle, haba tonka."
+                    data-descripcion="Un clásico de barbería: fresco-herbal al inicio, con un corazón amaderado suave y un fondo cálido de cuero y musgo. Versátil, ideal para ocasiones formales y uso diario."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Azzaro Pour Homme Edt</h3>
+            <span>300.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://laperfumeria.com.py/wp-content/uploads/2024/10/600946.jpg" alt="Azzaro Wanted" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://laperfumeria.com.py/wp-content/uploads/2024/10/600946.jpg"
+                    data-titulo="Azzaro Wanted - 100ml"
+                    data-precio="420.000gs"
+                    data-familia="Amaderada especiada"
+                    data-salida="Limón, menta, lavanda, jengibre."
+                    data-corazon="Cardamomo de Guatemala, enebro, geranio, manzana."
+                    data-fondo="Vetiver haitiano, haba tonka, amberwood."
+                    data-descripcion="Refrescante y energizante con cítrico-mintal al inicio, un medio especiado-ligero con manzana, y un fondo cálido y amaderado. Muy versátil para el día y clima templado."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Azzaro Wanted</h3>
+            <span>420.000gs</span>
+        </div>
+
+       <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="perfumesPorMarca/chanel/chanel bleu edp.jpeg" alt="Bleu EDP" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://puntotienda.com.py/wp-content/uploads/2023/02/257.webp"
+                    data-titulo="CHANEL BLEU EDP - 100ML"
+                    data-precio="430.000gs"
+                    data-familia="Amaderada Aromática"
+                    data-salida="Pomelo, limón, menta, bergamota, pimienta rosa, aldehídos, cilantro."
+                    data-corazon="Jengibre, nuez moscada, jazmín, melón."
+                    data-fondo="Incienso, ámbar, cedro, sándalo, pachulí, amberwood, ládano."
+                    data-descripcion="Un azul sofisticado: fresco y cítrico al principio, after surge un corazón especiado-floral, y al final aterriza en una base profunda, ahumada-amaderada. Es elegante, versátil y hecho para quien no quiere sonar genérico pero tampoco invasivo."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Chanel Bleu EDP</h3>
+            <span>430.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2023/02/71001.jpg" alt="Chanel Allure Homme Sport" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://static.sweetcare.com/img/prd/488/v-638562956188817174/chanel-008531cl_01.webp"
+                    data-titulo="CHANEL ALLURE HOMME SPORT EDT - 100ML"
+                    data-precio="500.000gs"
+                    data-familia="Amaderada-Oriental con toque acuático"
+                    data-salida="Mandarina, naranja, aldehídos, acordes marinos."
+                    data-corazon="Pimienta, neroli, cedro."
+                    data-fondo="Haba tonka, vainilla, almicle blanco, ámbar, vetiver, resina."
+                    data-descripcion="Es un perfume limpio y fresco, como ropa recién lavada con un twist cítrico-marino, luego se vuelve suave y cálido gracias a la tonka y la vainilla. Da vibra de verano con elegancia, sin cliché."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Chanel Allure Home Sport Edt</h3>
+            <span> 500.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2023/02/1581.webp" alt="Chanel Allure Homme Sport Eau Extreme" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://puntotienda.com.py/wp-content/uploads/2023/02/1581.webp"
+                    data-titulo="CHANEL ALLURE HOMME SPORT EAU EXTREME - 100ML"
+                    data-precio="720.000gs"
+                    data-familia="Amaderada Aromática"
+                    data-salida="Mandarina, menta, ciprés, salvia."
+                    data-corazon="Pimienta."
+                    data-fondo="Tonka, almizcle, sándalo, cedro."
+                    data-descripcion="Una frescura cítrica mentolada al principio que luego se torna cremosa y leñosa. La combinación de tonka + madera crea un final suave, cálido y casualmente refinado. Pensalo como un freshie elegante, no un gel de ducha."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Chanel Allure Homme Sport EAU Extreme</h3>
+            <span> 720.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2024/02/2813.webp" alt="Chanel Allure Homme Edition Blanche Edp" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://puntotienda.com.py/wp-content/uploads/2024/02/2813.webp"
+                    data-titulo="CHANEL ALLURE HOMME EDITION BLANCHE EDP - 100ML"
+                    data-precio="900.000gs"
+                    data-familia="Citrico‑Crema/Amaderado Aromático"
+                    data-salida="Limón, bergamota, pimienta."
+                    data-corazon="Veta de madera: sándalo, vetiver, un toque cremoso."
+                    data-fondo="Vainilla, ámbar, almizcle blanco, madera cálida."
+                    data-descripcion="Es como una tarta cremosa de limón rodeada de maderas elegantes. Arranca cítrico intenso, luego se suaviza con un corazón cremoso y termina cálido y reconfortante. No pasa desapercibido, pero tampoco grita por atención. Perfecto para una vibra sofisticada y ligera."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Chanel Allure Homme Edition Blanche Edp</h3>
+            <span> 900.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2023/02/1236.webp" alt="Chanel Allure Homme Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://puntotienda.com.py/wp-content/uploads/2023/02/1236.webp"
+                    data-titulo="CHANEL ALLURE HOMME EDT - 100ML"
+                    data-precio="450.000gs"
+                    data-familia="Amaderada-Oriental/Fougère Ámbar"
+                    data-salida="Mandarina, limón, bergamota, coriandro, melocotón, jengibre, lavanda."
+                    data-corazon="Fresia, geranio, rosa, jazmín, pimienta, vetiver."
+                    data-fondo="Tonka, ládano, sándalo, cedro, vainilla, ámbar, almizcle, vetiver, cuero & musgo de roble."
+                    data-descripcion="Es una fragancia limpia, cremosa y algo especiada con un corazón casi gourmand. Piensa en una mezcla elegante entre cítricos suaves, durazno aterciopelado y un fondo cálido de vainilla y madera. Compleja pero nunca estridente."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Chanel Allure Homme Edt</h3>
+            <span> 450.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROb32wB4BFWmIpGJ8ILlNMwtk1jGEBYL0Rdw&s" alt="Chanel Egoiste Platinum Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://fimgs.net/mdimg/perfume-thumbs/375x500.614.jpg"
+                    data-titulo="CHANEL EGOISTE PLATINUM EDT - 100ML"
+                    data-precio="610.000gs"
+                    data-familia="Aromático‑Fougère"
+                    data-salida="Lavanda, romero, nerolí, petit grain de Paraguay."
+                    data-corazon="Geranio, salvia sclarea, jazmín."
+                    data-fondo="Musgo de roble, vetiver, cedro, sándalo, ámbar."
+                    data-descripcion="Es como un jabón de lujo con un toque de masculinidad clásica. Arranca fresco y limpio, con lavanda y romero dominando, y se asienta en una base amaderada y terrosa. Es un fougère moderno que evoca la elegancia discreta de los años 90."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Chanel Egoiste Platinum Edt</h3>
+            <span> 610.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://www.mapy.com.py/wp-content/uploads/2024/10/282949.jpg" alt="Chanel Egoiste Pour Homme Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://www.mapy.com.py/wp-content/uploads/2024/10/282949.jpg"
+                    data-titulo="CHANEL EGOISTE POUR HOMME EDT"
+                    data-precio="790.000gs"
+                    data-familia="Amaderada‑Especiada/Oriental"
+                    data-salida="Palisandro brasileño, cilantro, mandarina, caoba/mahogany."
+                    data-corazon="Canela, rosa de Damasco, clavel"
+                    data-fondo="Sándalo, tabaco, vainilla, cuero, ámbar, semillas de ambreta"
+                    data-descripcion="Un boom de madera especiada con un trasfondo dulce y masculino. Comienza con cítricos especiados, se despliega en un corazón floral-picante y termina con una base leñosa, cremosa y ambarada. Tiene ese rollo retro de los 90, pero refinado. Es audaz, elegante y unisex en tipazo que no quiere ser sello genérico."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Chanel Egoiste Pour Homme Edt</h3>
+            <span> 790.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/g/i/giorgio_armani_acqua_di_gi_profumo_parfum_-_masculino_125ml.jpg" alt="Giorgio Armani Acqua Di Gio Profumo Parfum" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/g/i/giorgio_armani_acqua_di_gi_profumo_parfum_-_masculino_125ml.jpg"
+                    data-titulo="GIORGIO ARMANI ACQUA DI GIO PROFUMO PARFAM - 125ML"
+                    data-precio="700.000gs"
+                    data-familia="Aromática acuática con fondo ahumado"
+                    data-salida="Bergamota, notas marinas, romero, salvia, geranio."
+                    data-corazon="Pachulí, incienso ahumado, vetiver, madera."
+                    data-fondo="Incienso, pachulí, vetiver, ládano, ámbar gris."
+                    data-descripcion="Imagináte una brisa marina intensa con un fondo ahumado y terroso. Empieza ultrafresco como original Giò, pero evoluciona a un aura más profunda gracias al incienso y pachulí. Refinado, maduro y muy atractivo."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Giorgio Armani Acqua Di Gio Profumo Parfum</h3>
+            <span> 700.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://www.champs.com.py/products/images/1801/195205887.jpg" alt="Acqua Di Gio Pour Homme" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://www.champs.com.py/products/images/1801/195205887.jpg"
+                    data-titulo="GIORGIO ARMANI ACQUA DI GIO POUR HOMME - 100ML"
+                    data-precio="800.000gs"
+                    data-familia="Aromática Acuática"
+                    data-salida="Lima, limón, bergamota, neroli, mandarina, jazmín, naranja, cilantro."
+                    data-corazon="Notas marinas, calone, romero, jazmín, durazno, freesia, ciclamen, violeta, coriandro, rosa, nuez moscada, muguet."
+                    data-fondo="Almizcle blanco, cedro, musgo de roble, patchouli, ámbar, ambergris."
+                    data-descripcion="Empieza fresco‑cítrico como una ola mediterránea, mezcla notas florales y marinas en el corazón, y cierra con una base cálida, ligeramente amaderada-musgosa. Es limpio, fácil de llevar y relajado, pero nunca plano."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Giorgio Armani Di Gio Pour Homme</h3>
+            <span> 800.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/p/e/perfume_giorgio_armani_code_parfum_-_masculino_125ml.jpg" alt="Giorgio Armani Eau de Parfum" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/p/e/perfume_giorgio_armani_code_parfum_-_masculino_125ml.jpg"
+                    data-titulo="GIORGIO ARMANI EAU DE PARFUM"
+                    data-precio="650.000gs"
+                    data-familia="Oriental Fougère Aromática"
+                    data-salida="Lavanda, limón/lima, bergamota."
+                    data-corazon="Haba tonka"
+                    data-fondo="Vainilla, gamuza, cedro, almizcle"
+                    data-descripcion="Arranque talcado y cítrico elegante, evoluciona con la tonka y vainilla hacia una vibra suave, cremosa y ligeramente leathery gracias a la gamuza y cedro. Un fougère moderno que sabe lo que es la elegancia sin exagerar."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Giorgio Armani Eau de Parfum</h3>
+            <span> 650.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2023/02/1590.webp" alt="Armani Code absolu Parfum" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://puntotienda.com.py/wp-content/uploads/2023/02/1590.webp"
+                    data-titulo="GIORGIO ARMANI CODE ABSOLU PARFUM - 100ML"
+                    data-precio="510.000gs"
+                    data-familia="Oriental Especiado Gourmand"
+                    data-salida="Mandarina verde, manzana, naranja — ultra fresca y dulce."
+                    data-corazon="Nuez moscada, semilla de zanahoria, cardamomo — cálido y especiado."
+                    data-fondo="Tonka, vainilla, gamuza/suede, notas amaderadas — cremoso, cálido, sexy."
+                    data-descripcion="Una bomba gourmand que combina frescura frutal en la apertura (mandarina/manzana), evoluciona a un centro especiado muy bien equilibrado, y termina en un dry-down de tonka-suede-vanilla que es puro lujo abrazador. Su vibra: masculina, envolvente y seductor."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Giorgio Armani Code absolu Parfum</h3>
+            <span> 510.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2023/02/Perfume-Stronger-with-you-Intensely-original-de-100-ml-de-Armani-en-Fragancias-Fiord.jpg" alt="Emporio Armani Stronger With You Intensely Edp" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://puntotienda.com.py/wp-content/uploads/2023/02/Perfume-Stronger-with-you-Intensely-original-de-100-ml-de-Armani-en-Fragancias-Fiord.jpg"
+                    data-titulo="EMPORIO ARMANI STRONGER WITH YOU INTENSELY EDP - 100ML"
+                    data-precio="780.000gs"
+                    data-familia="Gourmand especiado-amaderado"
+                    data-salida="Pimienta rosa, enebro, hoja de violeta."
+                    data-corazon="Toffee, canela, lavanda, salvia."
+                    data-fondo="Vainilla, haba tonka, ámbar, gamuza"
+                    data-descripcion="Es un abrazo dulce y especiado que te envuelve con calidez. Al principio pica la pimienta rosa con un toque fresco y herbal, después llega el toffee y la canela que le dan esa vibra cremosa y casi comestible, y al final la vainilla y el gamuza te dejan una estela sexy, suave y persistente. Perfecto para la noche y climas fríos, para quien no teme destacar con elegancia y un punto de misterio."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Emporio Armani Stronger With You Intensely Edp</h3>
+            <span> 780.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://www.ubuy.com.py/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNTFaZC1yUklLY0wuX1NMMTAwMF8uanBn.jpg" alt="Giorgio Armani Eau De Nuit" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://www.ubuy.com.py/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNTFaZC1yUklLY0wuX1NMMTAwMF8uanBn.jpg"
+                    data-titulo="GIORGIO ARMANI EAU DE NUIT - 100ML"
+                    data-precio="630.000gs"
+                    data-familia="Oriental Fougère"
+                    data-salida="Pimienta rosa, bergamota."
+                    data-corazon="Iris, cardamomo, nuez moscada, heliotropo."
+                    data-fondo="Haba tonka, ámbar, cedro."
+                    data-descripcion="Es una fragancia masculina elegante y sofisticada que combina notas especiadas y amaderadas. La pimienta rosa y la bergamota en la salida aportan frescura y picante, mientras que el corazón de iris, cardamomo, nuez moscada y heliotropo le da un carácter floral y especiado. El fondo de haba tonka, ámbar y cedro ofrece una base cálida y envolvente. Ideal para ocasiones nocturnas y formales."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Giorgio Armani Eau De Nuit</h3>
+            <span> 630.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/r/f/rfcgpS0ukLQ6zIQUt9NIKrAiJh90RLtotLu.jpg" alt="Hugo Boss Bottled Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/r/f/rfcgpS0ukLQ6zIQUt9NIKrAiJh90RLtotLu.jpg"
+                    data-titulo="HUGO BOSS BOTTLED EDT - 100ML"
+                    data-precio="450.000gs"
+                    data-familia="Amaderada especiada"
+                    data-salida="Manzana, ciruela, bergamota, limón, musgo de roble, geranio."
+                    data-corazon="Canela, caoba, clavo de olor."
+                    data-fondo="Sándalo, cedro, vetiver, olivo, vainilla."
+                    data-descripcion="Es una fragancia masculina clásica que combina notas frutales y especiadas con una base amaderada. La apertura es fresca y afrutada, seguida de un corazón cálido y especiado, y un fondo amaderado y suave. Ideal para el uso diario y para ocasiones informales."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Hugo Boss Bottled Edt</h3>
+            <span> 450.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://m.media-amazon.com/images/I/51VUiytAHaL._UF894,1000_QL80_.jpg" alt="Hugo Boss Bottled Intense Edp" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://i5-mx.walmartimages.com/mg/images/product-images/img_large/00800561025846l.jpg"
+                    data-titulo="HUGO BOSS BOTTLED INTENSE EDP - 100ML"
+                    data-precio="300.000gs"
+                    data-familia="Amaderada especiada"
+                    data-salida="Manzana, flor de azahar del naranjo, bergamota."
+                    data-corazon="Canela, clavos de olor, cardamomo, geranio, lavanda."
+                    data-fondo="Vainilla, sándalo, cumarina, cedro, vetiver"
+                    data-descripcion="Es una fragancia masculina que combina notas frutales, especiadas y amaderadas. La apertura es fresca y afrutada, seguida de un corazón cálido y especiado, y un fondo amaderado y suave. Ideal para el uso diario y para ocasiones informales."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Hugo Boss Bottled Intense Edp</h3>
+            <span> 300.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://vendome.com.py/wp-content/uploads/2024/02/88045-2-960x960.webp" alt="Hugo Boss Bottled Night Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://vendome.com.py/wp-content/uploads/2024/02/88045-2-960x960.webp"
+                    data-titulo="HUGO BOSS BOTTLED NIGHT EDT - 100ML"
+                    data-precio="630.000gs"
+                    data-familia="Amaderada aromática"
+                    data-salida="Lavanda, hojas de abedul."
+                    data-corazon="Violeta."
+                    data-fondo="Notas amaderadas, almizcle."
+                    data-descripcion="Es una fragancia masculina que combina notas frescas y amaderadas con un toque floral. La apertura es fresca y limpia gracias a la lavanda y las hojas de abedul, seguida de un corazón floral de violeta que le da un toque de sofisticación. El fondo amaderado y almizclado aporta profundidad y calidez, haciendo de esta fragancia una opción versátil para diversas ocasiones."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Hugo Boss Bottled Night Edt</h3>
+            <span> 630.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://vendome.com.py/wp-content/uploads/2023/02/3614229823776-960x960.jpg" alt="Hugo Boss Man Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://vendome.com.py/wp-content/uploads/2023/02/3614229823776-960x960.jpg"
+                    data-titulo="HUGO BOSS MAN EDT - 100ML"
+                    data-precio="430.000gs"
+                    data-familia="Amaderada aromática"
+                    data-salida="Manzana verde."
+                    data-corazon="Lavanda."
+                    data-fondo="Pino, notas amaderadas, bálsamo de abeto."
+                    data-descripcion="Es una fragancia masculina que combina notas frescas y amaderadas con un toque floral. La apertura es fresca y afrutada gracias a la manzana verde, seguida de un corazón floral de lavanda que le da un toque de sofisticación. El fondo amaderado y balsámico aporta profundidad y calidez, haciendo de esta fragancia una opción versátil para diversas ocasiones."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Hugo Boss Man Edt</h3>
+            <span> 430.000gs</span>
+        </div>
+
+       <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://cellshop.com.py/media/catalog/product/1/2/1217742_1_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=616&width=616&canvas=616:616" alt="JPG Le Male Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://cellshop.com.py/media/catalog/product/1/2/1217742_1_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=616&width=616&canvas=616:616"
+                    data-titulo="JPG Le Male Edt - 100ml"
+                    data-precio="540.000gs"
+                    data-familia="Oriental fougère"
+                    data-salida="Lavanda, menta, cardamomo, bergamota, artemisia."
+                    data-corazon="Canela, flor de azahar, alcaravea (caraway)."
+                    data-fondo="Vainilla, haba tonka, ámbar, sándalo, cedro."
+                    data-descripcion="Es un choque de contrastes: comienza fresco por la lavanda y menta con madres cítricas y herbales, luego se vuelve especiado y cálido por la canela y el azahar. Termina suave y cremoso con la vainilla, tonka y maderas. Es sexy, seductor, con una vibra retro ‘90s pero perfectamente usable hoy."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>JPG Le Male Edt</h3>
+            <span>540.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2023/02/1580.webp" alt="JPG Le Male Le Parfum Intense" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_1H6DbzinAE5iN90NYGt6VtTRgWcD7S8hIw&s"
+                    data-titulo="JPG Le Male Le Parfum Intense - 100ml"
+                    data-precio="750.000gs"
+                    data-familia="Oriental fougère gourmand"
+                    data-salida="Cardamomo, iris, lavanda"
+                    data-corazon="Iris, lavanda (combinación floral‑polvorosa)"
+                    data-fondo="Vainilla, maderas (iris‑vainilla dominate)"
+                    data-descripcion="Es un giro añejo y afilado del clásico ‘Le Male’, con el toque especiado del cardamomo y la lavanda que transmiten limpieza masculina. Luego entra un corazón dulce‑polvoroso con iris, y finaliza en un fondo cálido de vainilla cremosa y maderas sensuales. El resultado es una fragancia envolvente, elegante y pegajosa en clima frío."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>JPG Le Male Le Parfum Intense</h3>
+            <span>750.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2023/02/1977.webp" alt="JPG Le Beau Le Parfum Intense" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://puntotienda.com.py/wp-content/uploads/2023/02/1977.webp"
+                    data-titulo="JPG Le Beau Le Parfum Intense - 125ml"
+                    data-precio="880.000gs"
+                    data-familia="Ámbar amaderado"
+                    data-salida="Piña, iris, ciprés, jengibre."
+                    data-corazon="Coco, notas amaderadas"
+                    data-fondo="Haba tonka, sándalo, ámbar, ámbar gris"
+                    data-descripcion="Es como una piña colada sexy: abre dulce y tropical con piña, coco y un toque de jengibre fresco. Luego entra un corazón cremoso con madera suave, y el secado final mezcla tonka, sándalo y ámbares con un susurro de ambar gris. Vibras cálidas, veraniegas, con presencia y seducción."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>JPG Le Beau Le Parfum Intense</h3>
+            <span> 880.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://matriximportados.com.py/wp-content/uploads/2023/12/15239497628_15237303688_444354.jpg" alt="JPG Ultra Male Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://matriximportados.com.py/wp-content/uploads/2023/12/15239497628_15237303688_444354.jpg"
+                    data-titulo="JPG Ultra Male Edt - 125ml"
+                    data-precio="550.000gs"
+                    data-familia="Oriental fougère gourmand"
+                    data-salida="Pera, bergamota, lavanda, menta, limón."
+                    data-corazon="Canela, salvia achicoria (clary sage), alcaravea, comino."
+                    data-fondo="Vainilla negra, ámbar, pachulí, cedro."
+                    data-descripcion="Es una bomba moderna que mezcla la dulzura de la pera y la vainilla con toques especiados y frescos. La apertura frutal y mentolada transita a un corazón cálido y especiado, y luego cae en una base cremosa y amaderada. Resultado: un aroma disonante, sexy, potente y para salidas nocturnas."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>JPG Ultra Male Edt</h3>
+            <span>550.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://cellshop.com.py/media/catalog/product/2/8/2885445_1_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=616&width=616&canvas=616:616" alt="JPG Scandal Pour Homme Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://cellshop.com.py/media/catalog/product/2/8/2885445_1_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=616&width=616&canvas=616:616"
+                    data-titulo="JPG Scandal Pour Homme Edt - 100ml"
+                    data-precio="700.000gs"
+                    data-familia="Amaderada ambarada"
+                    data-salida="Mandarina, salvia esclarea."
+                    data-corazon="Caramelo, haba tonka."
+                    data-fondo="Vetiver."
+                    data-descripcion="Es una fragancia que combina frescura y dulzura con un toque masculino. La mandarina y la salvia esclarea ofrecen una apertura fresca y energética. El corazón revela una mezcla dulce de caramelo y haba tonka, mientras que el vetiver en el fondo aporta profundidad y un toque terroso. Es una opción versátil para el día a día, especialmente en climas más frescos."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>JPG Scandal Pour Homme Edt</h3>
+            <span>700.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://cdn.farmacenter.com.py/180/666932.jpg" alt="Paco Rabanne Phantom Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://cdn.farmacenter.com.py/180/666932.jpg"
+                    data-titulo="Paco Rabanne Phantom Edt - 100ml"
+                    data-precio="430.000gs"
+                    data-familia="Amaderada aromática/chipre"
+                    data-salida="Lavanda, limón de Amalfi, cardamomo, bergamota, ruibarbo."
+                    data-corazon="Manzana, humo, pachulí, geranio, cedro, lavanda."
+                    data-fondo="Vainilla, bálsamo de Tolú, vetiver, lavanda."
+                    data-descripcion="Una combinación moderna y adictiva: lavanda cremosamente fresca, cítricos chispeantes, con un corazón especiado-ahumado y un fondo dulce de vainilla-terroso. “Electrizante, futurista y vanguardista."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Paco Rabanne Phantom Edt</h3>
+            <span>430.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY_OAs32GkLMMN78yDuwygAyT6qXGCjBQ2Sw&s" alt="Paco Rabanne Pour Homme Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY_OAs32GkLMMN78yDuwygAyT6qXGCjBQ2Sw&s"
+                    data-titulo="Paco Rabanne Pour Homme Edt - 100ml"
+                    data-precio="530.000gs"
+                    data-familia="Lavanda, geranio, haba tonka"
+                    data-salida="Romero, salvia esclarea, palo de rosa brasileño."
+                    data-corazon="Musgo de roble, miel, almizcle, ámbar, tabaco."
+                    data-fondo="DDDDDD"
+                    data-descripcion="Una fougère clásica: limpio, herbal y ligeramente dulce, con un toque especiado y ambarado. Un perfume elegante, masculino y nostálgico. Según aficionados, “airey y buena lavanda con un giro de tabaco y suave dulzura."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Paco Rabanne Pour Homme Edt</h3>
+            <span>530.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://cdn.farmacenter.com.py/180/631224.jpg" alt="Paco Rabanne One Million Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://cdn.farmacenter.com.py/180/631224.jpg"
+                    data-titulo="Paco Rabanne One Million Edt - 100ml"
+                    data-precio="900.000gs"
+                    data-familia="Amaderada/ambarada terrosa"
+                    data-salida="Pomelo helado, especias, rosa."
+                    data-corazon="Madera blanca, ámbar ketal, almizcle."
+                    data-fondo="Cuero rubio, madera, ambarinos."
+                    data-descripcion="Lujoso, dulce y potente, con una mezcla cálida de cuero y especias, equilibrada por una frescura cítrica y floral. Ideal para una versión moderna y audaz de la masculinidad."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Paco Rabanne One Million Edt</h3>
+            <span>900.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://www.blessimport.com.py/image/cache/catalog/perfumeecosmeticos/perfumes/pacorabanne/perfumemasculinopacorabanneinvictusedt100ml-2048x2048.jpg" alt="Paco Rabanne Invictus Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://www.blessimport.com.py/image/cache/catalog/perfumeecosmeticos/perfumes/pacorabanne/perfumemasculinopacorabanneinvictusedt100ml-2048x2048.jpg"
+                    data-titulo="Paco Rabanne Invictus Edt - 100ml"
+                    data-precio="640.000gs"
+                    data-familia="Amaderada acuática"
+                    data-salida="Toronja, notas marinas, mandarina."
+                    data-corazon="Laurel, jazmín."
+                    data-fondo="Madera de gaiac, musgo de roble, pachulí, ámbar gris"
+                    data-descripcion="Refrescante y deportivo: cítrico y marino al inicio, evolucionando hacia un fondo levemente dulce, musgoso y amaderado. “Un fresco acuático con un seco dulce-moscoso"
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Paco Rabanne Invictus Edt</h3>
+            <span>640.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://cdn.farmacenter.com.py/180/666932.jpg" alt="Paco Rabanne Phantom Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://cdn.farmacenter.com.py/180/666932.jpg"
+                    data-titulo="Paco Rabanne Phantom Edt - 100ml"
+                    data-precio="430.000gs"
+                    data-familia="Amaderada aromática/chipre"
+                    data-salida="Lavanda, limón de Amalfi, cardamomo, bergamota, ruibarbo."
+                    data-corazon="Manzana, humo, pachulí, geranio, cedro, lavanda."
+                    data-fondo="Vainilla, bálsamo de Tolú, vetiver, lavanda."
+                    data-descripcion="Una combinación moderna y adictiva: lavanda cremosamente fresca, cítricos chispeantes, con un corazón especiado-ahumado y un fondo dulce de vainilla-terroso. “Electrizante, futurista y vanguardista."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Paco Rabanne Phantom Edt</h3>
+            <span>430.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY_OAs32GkLMMN78yDuwygAyT6qXGCjBQ2Sw&s" alt="Paco Rabanne Pour Homme Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY_OAs32GkLMMN78yDuwygAyT6qXGCjBQ2Sw&s"
+                    data-titulo="Paco Rabanne Pour Homme Edt - 100ml"
+                    data-precio="530.000gs"
+                    data-familia="Lavanda, geranio, haba tonka"
+                    data-salida="Romero, salvia esclarea, palo de rosa brasileño."
+                    data-corazon="Musgo de roble, miel, almizcle, ámbar, tabaco."
+                    data-fondo="DDDDDD"
+                    data-descripcion="Una fougère clásica: limpio, herbal y ligeramente dulce, con un toque especiado y ambarado. Un perfume elegante, masculino y nostálgico. Según aficionados, “airey y buena lavanda con un giro de tabaco y suave dulzura."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Paco Rabanne Pour Homme Edt</h3>
+            <span>530.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://cdn.farmacenter.com.py/180/631224.jpg" alt="Paco Rabanne One Million Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://cdn.farmacenter.com.py/180/631224.jpg"
+                    data-titulo="Paco Rabanne One Million Edt - 100ml"
+                    data-precio="900.000gs"
+                    data-familia="Amaderada/ambarada terrosa"
+                    data-salida="Pomelo helado, especias, rosa."
+                    data-corazon="Madera blanca, ámbar ketal, almizcle."
+                    data-fondo="Cuero rubio, madera, ambarinos."
+                    data-descripcion="Lujoso, dulce y potente, con una mezcla cálida de cuero y especias, equilibrada por una frescura cítrica y floral. Ideal para una versión moderna y audaz de la masculinidad."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Paco Rabanne One Million Edt</h3>
+            <span>900.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://www.blessimport.com.py/image/cache/catalog/perfumeecosmeticos/perfumes/pacorabanne/perfumemasculinopacorabanneinvictusedt100ml-2048x2048.jpg" alt="Paco Rabanne Invictus Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://www.blessimport.com.py/image/cache/catalog/perfumeecosmeticos/perfumes/pacorabanne/perfumemasculinopacorabanneinvictusedt100ml-2048x2048.jpg"
+                    data-titulo="Paco Rabanne Invictus Edt - 100ml"
+                    data-precio="640.000gs"
+                    data-familia="Amaderada acuática"
+                    data-salida="Toronja, notas marinas, mandarina."
+                    data-corazon="Laurel, jazmín."
+                    data-fondo="Madera de gaiac, musgo de roble, pachulí, ámbar gris"
+                    data-descripcion="Refrescante y deportivo: cítrico y marino al inicio, evolucionando hacia un fondo levemente dulce, musgoso y amaderado. “Un fresco acuático con un seco dulce-moscoso"
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Paco Rabanne Invictus Edt</h3>
+            <span>640.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2023/02/263.webp" alt="Yves Saint Laurent La Nuit De L´homme" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://puntotienda.com.py/wp-content/uploads/2023/02/263.webp"
+                    data-titulo="Yves Saint Laurent La Nuit De L´homme - 100ml"
+                    data-precio="610.000gs"
+                    data-familia="Aromática – Oriental"
+                    data-salida="Cardamomo (con un toque bergamota)."
+                    data-corazon="Lavanda, cedro, violeta, bergamota herbal."
+                    data-fondo="Vetiver, cedro seco, cueros suaves sutiles."
+                    data-descripcion="Un aroma nocturno elegante y embriagador.
+                    Abre con un cardamomo picante y cítrico que manda; luego se siente una lavanda cremosa mezclada con un cedro limpio, y el dry-down se vuelve terroso y sensual gracias al vetiver y maderas suaves. Perfecto para una cita o salida elegante nocturna: seductor pero sin estridencias."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Yves Saint Laurent La Nuit De L´homme</h3>
+            <span> 610.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://puntotienda.com.py/wp-content/uploads/2023/02/perfume_yves_saint_laurent_y_edp_-_masculino_100ml.jpg" alt="Ives Aaint Lurent Y Masc Edp" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://puntotienda.com.py/wp-content/uploads/2023/02/perfume_yves_saint_laurent_y_edp_-_masculino_100ml.jpg"
+                    data-titulo="Ives Aaint Lurent Y Masc Edp - 100ml"
+                    data-precio="800.000gs"
+                    data-familia="Aromática amaderada"
+                    data-salida="Manzana verde, bergamota, jengibre."
+                    data-corazon="Salvia, geranio, bayas de enebro."
+                    data-fondo="Amberwood (ámbar amaderado), haba tonka, cedro, vetiver, olíbano."
+                    data-descripcion="Es un aroma masculino limpio y fresco con onda contemporánea.
+                    La salida cítrico-afrutada (manzana-bergamota-ginger) equilibra el primer contacto. Después llega un corazón herbal y sofisticado: salvia, geranio y un twist de enebro. El fondo se siente amaderado-ámbar, con la dulzura suave de la tonka, el cedro seco, vetiver limpio y un toque de olíbano, que le da distancia y estilo elegante."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Ives Aaint Lurent Y Masc Edp</h3>
+            <span>800.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://m.media-amazon.com/images/I/61RWBH0ZYaL._SL1000_.jpg" alt="Yves Saint Laurent Ysl Kouros Edt" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://m.media-amazon.com/images/I/61RWBH0ZYaL._SL1000_.jpg"
+                    data-titulo="Yves Saint Laurent Ysl Kouros Edt - 100ml"
+                    data-precio="530.000gs"
+                    data-familia="Aromático fougère"
+                    data-salida="Aldehídos, bergamota, coriandro, salvia, artemisia."
+                    data-corazon="Clavel, vetiver, pachulí, canela, jazmín, iris, geranio."
+                    data-fondo="Civet, miel, cuero, almizcle, incienso, ámbar, tonka, vainilla, musgo de roble."
+                    data-descripcion="Es una bestia aromática animal con una vibra extremadamente masculina y retro, perfecta mezcla entre limpieza (aldehídos/libre) y un trasfondo cual sauna de cuero sudado. El fondo aporta ese toque salvaje, casi primitivo, reforzado por el civet y cuero: imponente, indómito, polarizador. En ediciones modernas se atenúa, pero sigue siendo una firma intensa y audaz."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Yves Saint Laurent Ysl Kouros Edt</h3>
+            <span>530.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://static.sweetcare.com/img/prd/488/v-638200527207220569/yves-saint-laurent-015558ys-4.webp" alt="YSL L'Homme EDP" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://static.sweetcare.com/img/prd/488/v-638200527207220569/yves-saint-laurent-015558ys-4.webp"
+                    data-titulo="YSL L'Homme EDP - 100ml"
+                    data-precio="900.000gs"
+                    data-familia="Amaderada aromática"
+                    data-salida="Manzana verde, bergamota, jengibre."
+                    data-corazon="Salvia, geranio, bayas de enebro."
+                    data-fondo="Oakwood infusion (roble de barricas de coñac), vetiver, cedro, haba tonka, olíbano."
+                    data-descripcion="Es un aroma moderno y versátil: comienza con frescura afrutada (manzana) y chispa cítrica‑especiada. Luego entra un centro herbal elegante con salvia y geranio. En su secado, aparece una base amaderada‑cálida gracias al roble infusionado con coñac, vetiver limpio, cedro seco, y toques suaves de tonka y olíbano. Resuelve en una vibra sofisticada y segura, ideal tanto para oficina como para citas nocturnas."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>YSL L'Homme EDP</h3>
+            <span> 900.000gs</span>
+        </div>
+
+       <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://www.perfumenz.co.nz/cdn/shop/products/tom-ford-noir-extreme-100ml_1200x1200.png?v=1658096796" alt="Tom Ford Noir Extreme" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://www.perfumenz.co.nz/cdn/shop/products/tom-ford-noir-extreme-100ml_1200x1200.png?v=1658096796"
+                    data-titulo="Tom Ford Noir Extreme - 100ml"
+                    data-precio="1.000.000"
+                    data-familia="Oriental ambarada/amaderada"
+                    data-salida="Cardamomo, nuez moscada, azafrán, mandarina y néroli."
+                    data-corazon="Kulfi (postre indio cremoso con pistacho), rosa, resina de lentisco, jazmín y flor de azahar."
+                    data-fondo="Vainilla, ámbar, maderas(sándalo)."
+                    data-descripcion="Una gourmand especiada, cálida y cremosa, que arranca con un toque cítrico y especiado, evoluciona en un corazón dulce y floral, y termina con un fondo suave de vainilla y ámbar."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Tom Ford Noir Extreme</h3>
+            <span> 1.000.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREmS5eXyANd9-4vbd-RCRCtd3KvU7Q-98uFw&s" alt="Tom Ford Tobacco Vanille Edp" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREmS5eXyANd9-4vbd-RCRCtd3KvU7Q-98uFw&s"
+                    data-titulo="Tom Ford Tobacco Vanille Edp - 100ml"
+                    data-precio="880.000gs"
+                    data-familia="Oriental especiada"
+                    data-salida="Hojas de tabaco y especias (canela, jengibre)."
+                    data-corazon="Vainilla, cacao, haba tonka, flor de tabaco."
+                    data-fondo="Frutos secos, madera dulce de cedro y vetiver."
+                    data-descripcion="Un aroma rico, opulento y sofisticado que combina tabaco ahumado con dulzura cremosa de vainilla y cacao."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Tom Ford Tobacco Vanille Edp</h3>
+            <span>880.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://cellshop.com.py/media/catalog/product/4/5/4580201_1_ea73_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=616&width=616&canvas=616:616" alt="Tom Ford Costa Azzurra Edp" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://cellshop.com.py/media/catalog/product/4/5/4580201_1_ea73_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=616&width=616&canvas=616:616"
+                    data-titulo="Tom Ford Costa Azzurra Edp - 100ml"
+                    data-precio="620.000gs"
+                    data-familia="Aromática fougère costera"
+                    data-salida="Albahaca, limón, enebro (frescura mediterránea)."
+                    data-corazon="Algas marinas, lavanda."
+                    data-fondo="Incienso, madera clara, musgo marino."
+                    data-descripcion="Un fresco marítimo sofisticado, ideal para verano. Evoca costa italiana: sal marina, brisa, y un toque amaderado limpio."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Tom Ford Costa Azzurra Edp</h3>
+            <span>620.000gs</span>
+        </div>
+
+       <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://i.ebayimg.com/images/g/lZsAAOSwHDloGYRG/s-l225.jpg" alt="Versace Pour Homme" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://i.ebayimg.com/images/g/lZsAAOSwHDloGYRG/s-l225.jpg"
+                    data-titulo="Versace Pour Homme - 100ml"
+                    data-precio="510.000gs"
+                    data-familia="Aromático fougère"
+                    data-salida="Limón (lima ácida), bergamota, neroli, rosa de Mai."
+                    data-corazon="Jacinto, cedro, salvia esclarea, geranio."
+                    data-fondo="Almizcle, haba tonka, ámbar."
+                    data-descripcion="Un aroma fresco, limpio y ligeramente floral-cítrico, ideal para uso diario y ambientes profesionales. Muy versátil."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Versace Pour Homme</h3>
+            <span>510.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7HN6ZgLSq5VM6EcGSo4b3niQzCRQCkP0law&s" alt="Versace Pour Homme Oud Noir" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7HN6ZgLSq5VM6EcGSo4b3niQzCRQCkP0law&s"
+                    data-titulo="Versace Pour Homme Oud Noir - 100ml"
+                    data-precio="400.000gs"
+                    data-familia="Oriental amaderada"
+                    data-salida="Pimienta negra, naranja amarga, neroli."
+                    data-corazon="Cardamomo, azafrán, incienso (olíbano)."
+                    data-fondo="Oud, pachulí, madera de cuero."
+                    data-descripcion="Un oud oscuro y especiado, con un aire refinado y misterioso. Ideal para la noche y clima frío."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Versace Pour Homme Oud Noir</h3>
+            <span>400.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://laperfumeria.com.py/wp-content/uploads/2024/06/s-l1600-1-600x600.jpg" alt="Versace Eros Eau de Parfum" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://laperfumeria.com.py/wp-content/uploads/2024/06/s-l1600-1-600x600.jpg"
+                    data-titulo="Versace Eros Eau de Parfum - 100ml"
+                    data-precio="820.000gs"
+                    data-familia="Oriental amaderada"
+                    data-salida="Menta, manzana verde, limón, mandarina."
+                    data-corazon="Ambroxan, geranio, salvia esclarea."
+                    data-fondo="Vainilla de Madagascar, cedro (Virginiano y Atlas), sándalo, neroli amarga, pachulí, cuero, vetiver, musgo de roble"
+                    data-descripcion="Dulce, fresco y seductor. Comienza vibrante con menta y manzana, evolucionando hacia un fondo cremoso, ambarado y levemente amaderado. Perfecto para la noche o clima templado."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Versace Eros Eau de Parfum</h3>
+            <span>820.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdLCzZshSMS4Xr65FhCpKX3fSvwd0fX6q7Iw&s" alt="Versace Dylan Blue" class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdLCzZshSMS4Xr65FhCpKX3fSvwd0fX6q7Iw&s"
+                    data-titulo="Versace Dylan Blue - 100ml"
+                    data-precio="600.000gs"
+                    data-familia="Amaderada aromática/acuática"
+                    data-salida="Pomelo, bergamota, notas acuáticas."
+                    data-corazon="Ambroxan, incienso."
+                    data-fondo="Profundidad amaderada ligera."
+                    data-descripcion="resco, limpio y versátil; un aroma acuático limpio con un toque moderno y ligeramente especiado. Ideal para uso diario en cualquier ambiente."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Versace Dylan Blue</h3>
+            <span>600.000gs</span>
+        </div>
+
+        <div class="cuadro-perfumes-General">
+            <div class="img-con-overlay">
+                <img src="https://cellshop.com.py/media/catalog/product/2/0/2063263_1_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=616&width=616&canvas=616:616" alt="Versace Eros Flame " class="ch-img">
+                <div class="overlay">
+                    <button class="boton-carrito">Agregar al carrito</button>
+                    <button class="boton-vista" onclick="
+                    mostrarModal(this)"
+                    data-img="https://cellshop.com.py/media/catalog/product/2/0/2063263_1_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=616&width=616&canvas=616:616"
+                    data-titulo="Versace Eros Flame - 100ml"
+                    data-precio="900.000gs"
+                    data-familia="Amaderada especiada "
+                    data-salida="Mandarina, limón (lima ácida), chinotto, romero, pimienta negra."
+                    data-corazon="Pimienta, geranio, rosa, pepperwood."
+                    data-fondo="Vainilla, haba tonka, cedro de Texas, sándalo, pachulí, vetiver, musgo de roble."
+                    data-descripcion="Un perfume intenso y apasionado que combina contrastes de lo frío y lo cálido: arranca cítrico y especiado en la salida, evoluciona con un corazón picante-floral, y cierra con un fondo cálido, dulce y amaderado. Es una fragancia con notable proyección y duración sólida."
+                    >Vista previa</button>
+                </div>
+            </div>
+            <h3>Versace Eros Flame</h3>
+            <span>900.000gs</span>
+        </div>
+        
+    </div>
+
+</section>
+
+<div id="fondo-oscuro" class="fondo-oscuro"></div>
+<aside class="carrito-lateral">
+    <div class="contenedor-cerrar-titulo-carritoCompra">
+        <h2 class="titulo-carritoCompra">Carrito de Compras</h2>
+        <button id="cerrar-carrito" class="cerrar-carritoCompra">Cerrar</button>
+    </div>
+
+    <div class="carrito-lista-scroll">
+        <ul id="carrito-lista"></ul>
+    </div>
+
+    <div class="contenedor-totalPrecio-carritoCompra">
+        <p class="totalPrecio-carritoCompra"><strong>Total:</strong> <span id="total-carrito">0</span> Gs</p>
+    </div>
+
+    <button class="btn-finalizarCompra">Finalizar compra</button>
+
+</aside>
+
+
+<!-- Modal para vista previa -->
+<div class="modal" id="modalVistaPrevia">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <div class="contenedor-vistaPrevia">
+      <div class="imagen-vistaPrevia">
+        <img id="img-vistaPrevia" class="img-vistaPrevia">
+      </div>
+      <div class="informacion-vistaPrevia">
+        <h2 id="titulo-infoVistaPrevia" class="titulo-infoVistaPrevia"></h2><br>
+        <p><strong>Precio: </strong><span id="precio"></span></p><br>
+        <span><strong>Familia olfativa: </strong><span id="familia"></span></span><br><br>
+        <span><strong>Notas de salida: </strong><span id="salida"></span></span><br><br>
+        <span><strong>Notas de corazón: </strong><span id="corazon"></span></span><br><br>
+        <span><strong>Notas de fondo: </strong><span id="fondo"></span></span><br><br>
+        <span><strong>¿A qué huele?<br></strong><span id="descripcion"></span></span>
+        
+        <div class="contenedor-carrito-vistaPrevia">
+
+            <div class="contador">
+                <div class="izquierda-cuadro-VistaPrevia">
+                    <button onclick="disminuir()">-</button>
+                </div>
+                <div class="numero-cuadro-VistaPrevia">
+                    <span id="cantidad">1</span>
+                </div>
+                <div class="derecha-cuadro-VistaPrevia">
+                    <button onclick="aumentar()">+</button>
+                </div>
+            </div>
+            <button id="btnAgregarDesdeVistaPrevia" class="btn-vistaPrevia-agregarAlCarrito">Agregar al carrito</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div id="mensajeCarrito" class="mensaje-carrito oculto">
+    ¡Se añadio al carrito!
+</div>
+
+<div id="footer"></div>
+<script src="../script.js"></script>
+
+</body>
+
+</html>
