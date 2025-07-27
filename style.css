@@ -53,7 +53,7 @@ body, html {
 
 @media (max-width: 1024px) {
     .contenedor-marcas-perfumes {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -199,7 +199,7 @@ body, html {
 
 @media (max-width: 1024px) {
     .contenedor-tienda-General {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -418,6 +418,7 @@ body, html {
 
 .icono-eliminarProductoCarrito {
     margin-left: 1rem;
+    cursor: pointer;
 }
 
 /*-----Fondo oscuro-----*/
@@ -437,7 +438,8 @@ body, html {
 }
 
 /*-----Contador carrito-----*/
-.numeroContadorCantidadProductos {
+.numeroContadorCantidadProductos-desktop,
+.numeroContadorCantidadProductos-mobile {
     position: absolute;
     font-size: 10px;
     top: 15px;
