@@ -109,9 +109,9 @@ function mostrarMensajeCarrito() {
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     // Cargar nav.html
-    const navResponse = await fetch("../nav.html");
-    const navHtml = await navResponse.text();
-    document.getElementById("nav").innerHTML = navHtml;
+  const navResponse = await fetch("./nav.html");
+  const navHtml = await navResponse.text();
+  document.getElementById("nav").innerHTML = navHtml;
 
     
     // Ocultar buscador si no es tienda.html
@@ -229,7 +229,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
     // Cargar footer.html
-    const footerResponse = await fetch("../footer.html");
+    const footerResponse = await fetch("./footer.html");
     const footerHtml = await footerResponse.text();
     document.getElementById("footer").innerHTML = footerHtml;
 
@@ -237,8 +237,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error al cargar nav o footer:", err);
   }
 });
-
-
-
-
 
