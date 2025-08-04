@@ -4,74 +4,74 @@
 <nav class="fixed top-0 left-0 w-full bg-[#27445D] px-6 py-4 font-[monospace] z-1000">
   <div class="flex flex-col lg:flex-row items-center justify-between w-full">
 
-    <!-- 🔹 MOBILE: FILA SUPERIOR -->
+    
     <div class="flex items-center justify-between w-full lg:hidden">
       
-      <!-- Botón menú hamburguesa a la izquierda -->
-      <button class="text-white text-2xl" id="menu-btn">
+      
+      <button class="text-white text-2xl cursor-pointer" id="menu-btn">
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <!-- Título centrado -->
+      
       <h1 class="text-[1.4rem] font-bold text-white text-center">404</h1>
 
-      <!-- Iconos a la derecha -->
+      
       <div class="flex items-center gap-4 text-xl text-white">
-        <a href="inicioSesion.html"><i class="fa-solid fa-user"></i></a>
+        <a href="/inicioSesion.html"><i class="fa-solid fa-user"></i></a>
         <i class="fa-solid fa-cart-shopping iconoCarritoIndex" id="icono-carrito-mobile">
           <span class="numeroContadorCantidadProductos-mobile"></span>
         </i>
       </div>
     </div>
 
-    <!-- 🔹 DESKTOP: TÍTULO + MENÚ + BUSCADOR + ICONOS -->
+    
     <div class="hidden lg:flex items-center justify-between w-full">
-
-      <!-- Logo + Menú -->
+  
       <div class="flex items-center gap-4 flex-grow-0">
-        <!-- Título -->
+      
         <h1 class="text-[1.4rem] font-bold text-white">404</h1>
 
-        <!-- Menú navegación -->
+        
         <ul class="flex gap-6 text-[1.4rem] text-white ml-10">
           <li><a href="/index.html" class="hover:text-[#71BBB2]">Inicio</a></li>
           <li><a href="/index.html#Marcas" class="hover:text-[#71BBB2]">Marcas</a></li>
-          <li><a href="tienda.html" class="hover:text-[#71BBB2]">Tienda</a></li>
+          <li><a href="/tienda.html" class="hover:text-[#71BBB2]">Tienda</a></li>
           <li><a href="#Contacto" class="hover:text-[#71BBB2]">Contacto</a></li>
-          <li><a href="sobreNosotros.html" class="hover:text-[#71BBB2]">Nosotros</a></li>
+          <li><a href="/sobreNosotros.html" class="hover:text-[#71BBB2]">Nosotros</a></li>
         </ul>
       </div>
 
-      <!-- Buscador + iconos -->
-      <div class="flex items-center gap-6 flex-shrink-0">
-        <!-- Buscador -->
-        <div class="relative">
+      
+      <div class="flex items-center gap-6 flex-shrink-0">   
+        <div id="buscador-productos" class="relative">
           <input type="text" placeholder="Buscar producto"
-                 class="pl-4 pr-10 py-2 rounded-xl focus:outline-none border border-white text-white text-[1rem]"
-                 id="filtroProducto-desktop">
+            class="pl-4 pr-10 py-2 rounded-xl focus:outline-none border border-white text-white text-[1rem]"
+            id="filtroProducto-desktop">
           <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-white">
             <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
           </span>
         </div>
 
-        <!-- Iconos -->
+        
         <div class="flex items-center gap-4 text-xl text-white">
-          <a href="inicioSesion.html"><i class="fa-solid fa-user"></i></a>
+          <a href="/inicioSesion.html"><i class="fa-solid fa-user"></i></a>
           <i class="fa-solid fa-cart-shopping iconoCarritoIndex" id="icono-carrito-desktop">
             <span class="numeroContadorCantidadProductos-desktop"></span>
           </i>
         </div>
       </div>
+
     </div>
 
-    <!-- 🔹 MENÚ MOBILE DESPLEGABLE -->
-    <ul class="w-full mt-2 flex-col gap-2 text-white text-[1.2rem] hidden lg:hidden" id="mobile-menu">
-      <li><a href="/index.html">Inicio</a></li>
-      <li><a href="/index.html#Marcas">Marcas</a></li>
-      <li><a href="tienda.html">Tienda</a></li>
-      <li><a href="sobreNosotros.html">Nosotros</a></li>
-      <li><a href="#Contacto">Contacto</a></li>
+   
+    <ul class="w-full mt-2 flex-col gap-2 text-white text-[1.2rem] hidden lg:hidden cursor-pointer" id="mobile-menu">
+      <li><a href="/index.html" class="hover:text-[#71BBB2]">Inicio</a></li>
+      <li><a href="/index.html#Marcas" class="hover:text-[#71BBB2]">Marcas</a></li>
+      <li><a href="tienda.html" class="hover:text-[#71BBB2]">Tienda</a></li>
+      <li><a href="sobreNosotros.html" class="hover:text-[#71BBB2]">Nosotros</a></li>
+      <li><a href="#Contacto" class="hover:text-[#71BBB2]">Contacto</a></li>
     </ul>
   </div>
 </nav>
 
+<script src="script.js"></script>

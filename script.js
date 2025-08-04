@@ -113,6 +113,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     const navHtml = await navResponse.text();
     document.getElementById("nav").innerHTML = navHtml;
 
+    
+    // Ocultar buscador si no es tienda.html
+    if (!window.location.pathname.includes("tienda.html")) {
+      const buscador = document.getElementById("buscador-productos");
+      if (buscador) buscador.style.display = "none";
+    }
+
     // Asignar eventos después de cargar nav
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
@@ -196,24 +203,30 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
 
-    // Filtrar productos por nombre de producto en la tienda
-  const inputFiltro = document.getElementById("filtroProducto-desktop");
-  const cuadros = document.querySelectorAll(".cuadro-perfumes-General");
+  // Filtrar productos por nombre de producto en la tienda
+    const inputFiltro = document.getElementById("filtroProducto-desktop");
+    const inputFiltroMobile = document.getElementById("filtroProducto-Mobile");
+    const cuadros = document.querySelectorAll(".cuadro-perfumes-General");
 
-  inputFiltro.addEventListener("input", () => {
-  const textoFiltro = inputFiltro.value.toLowerCase(); // <-- acá el fix
-
-  cuadros.forEach(cuadro => {
-    const nombre = cuadro.querySelector("h3").textContent.toLowerCase();
-
-    if(nombre.includes(textoFiltro)) {
-      cuadro.style.display = ""; // mostrar
-    } else {
-        cuadro.style.display = "none"; // ocultar
-      }
+    function filtrarProductos(texto) {
+      const textoFiltro = texto.toLowerCase();
+      cuadros.forEach(cuadro => {
+      const nombre = cuadro.querySelector("h3").textContent.toLowerCase();
+      cuadro.style.display = nombre.includes(textoFiltro) ? "" : "none";
     });
-  });
+  }
 
+  if (inputFiltro) {
+    inputFiltro.addEventListener("input", () => {
+      filtrarProductos(inputFiltro.value);
+    });
+  }
+
+  if (inputFiltroMobile) {
+    inputFiltroMobile.addEventListener("input", () => {
+      filtrarProductos(inputFiltroMobile.value);
+    });
+  }
 
     // Cargar footer.html
     const footerResponse = await fetch("../footer.html");
@@ -224,5 +237,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error al cargar nav o footer:", err);
   }
 });
+
+
+
 
 
