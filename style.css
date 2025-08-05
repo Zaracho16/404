@@ -204,6 +204,14 @@ body, html {
     position: relative;
     flex-direction: column;
     background-color: #e3f0e8;
+    margin: 10px;
+}
+
+@media (max-width:700px) {
+    .modal-contenido {
+        height: 97vh;
+        width: 97vw;
+    }
 }
 
 .cerrar {
