@@ -10,7 +10,7 @@ body, html {
 }
 
 .contenedor-marcas-perfumes {
-    background-color: #497D74;
+    background-color: #A8B79C;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     padding: 20px;
@@ -514,4 +514,8 @@ body, html {
 
 .oculto {
     display: none;
+}
+
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
