@@ -1,29 +1,59 @@
-
 import { perfumes } from "./data.js";
 
-const contenedor = document.getElementById("grid-productos");
+function getMarcaFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("marca");
+}
 
-function renderProductos(lista) {
-  contenedor.innerHTML = lista.map(p => `
-    <div class="card">
-      <img src="${p.imagen}" />
+function renderProductos() {
+  const contenedor = document.getElementById("productos");
+  if (!contenedor) return;
+
+  const marca = getMarcaFromURL();
+
+  const filtrados = marca
+    ? perfumes.filter(p => p.marca === marca)
+    : perfumes;
+
+  contenedor.innerHTML = filtrados.map(p => `
+    <div class="cuadro-perfumes-General">
+      <div class="img-con-overlay">
+        <img src="${p.imagen}" class="ch-img">
+        <div class="overlay">
+          <button class="boton-carrito"
+            onclick="agregarAlCarrito('${p.nombre}', ${p.precio}, '${p.imagen}')">
+            Agregar al carrito
+          </button>
+
+          <button class="boton-vista"
+            onclick="mostrarModalPerfume(${p.id})">
+            Vista previa
+          </button>
+        </div>
+      </div>
+
       <h3>${p.nombre}</h3>
-      <p>${p.marca}</p>
       <span>${p.precio.toLocaleString()} Gs</span>
-
-      <button onclick="verProducto(${p.id})">Ver</button>
-      <button onclick="agregarAlCarrito(${p.id})">Carrito</button>
     </div>
   `).join("");
 }
 
-renderProductos(perfumes);
+document.addEventListener("DOMContentLoaded", renderProductos);
 
-// filtro opcional
-window.filtrar = (texto) => {
-  renderProductos(
-    perfumes.filter(p =>
-      p.nombre.toLowerCase().includes(texto.toLowerCase())
-    )
-  );
-};
+function mostrarModalPerfume(id) {
+  const perfume = perfumes.find(p => p.id === id);
+  if (!perfume) return;
+
+  document.getElementById("titulo-infoVistaPrevia").innerText = perfume.nombre;
+  document.getElementById("precio").innerText = perfume.precio.toLocaleString();
+  document.getElementById("familia").innerText = perfume.familia;
+  document.getElementById("salida").innerText = perfume.notas?.salida || perfume.salida;
+  document.getElementById("corazon").innerText = perfume.notas?.corazon || perfume.corazon;
+  document.getElementById("fondo").innerText = perfume.notas?.fondo || perfume.fondo;
+  document.getElementById("descripcion").innerText = perfume.descripcion;
+  document.getElementById("img-vistaPrevia").src = perfume.imagen;
+
+  document.getElementById("modalVistaPrevia").style.display = "flex";
+}
+
+window.mostrarModalPerfume = mostrarModalPerfume;

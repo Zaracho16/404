@@ -25,3 +25,17 @@ export function eliminar(id) {
 function guardar() {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 }
+
+let carrito = [];
+
+function agregarAlCarrito(nombre, precio, imagen) {
+  const existente = carrito.find(p => p.nombre === nombre);
+
+  if (existente) {
+    existente.cantidad++;
+  } else {
+    carrito.push({ nombre, precio, imagen, cantidad: 1 });
+  }
+
+  console.log(carrito);
+}

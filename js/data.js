@@ -2,30 +2,16 @@
 export const perfumes = [
   {
     id: 1,
-    marca: "Armani",
-    nombre: "Acqua di Gio Profumo",
-    precio: 700000,
-    imagen: "assets/perfumes/armani1.jpg",
-    familia: "Aromática acuática",
+    marca: "carolinaherrera",
+    nombre: "212 Men Edt - 100ml",
+    precio: 500000,
+    imagen: "https://fuschia.com.py/userfiles/images/productos/600/8411061896259-1.jpg",
+    familia: "Amaderada Floral Almizclada",
     notas: {
-      salida: "Bergamota, notas marinas",
-      corazon: "Pachulí, incienso",
-      fondo: "Ámbar gris, vetiver"
+      salida: "Bergamota, toronja, hojas de naranjo amargo, especias verdes, lavanda",
+      corazon: "Salvia, jengibre, violeta, gardenia, pimienta verde",
+      fondo: "Sándalo, vetiver, almizcle, incienso ládano, madera de gaiac"
     },
-    descripcion: "Fresco pero profundo, elegante y ahumado"
-  },
-  {
-    id: 2,
-    marca: "Dior",
-    nombre: "Sauvage",
-    precio: 650000,
-    imagen: "assets/perfumes/dior1.jpg",
-    familia: "Aromática especiada",
-    notas: {
-      salida: "Bergamota",
-      corazon: "Lavanda",
-      fondo: "Ambroxan"
-    },
-    descripcion: "Fresco, salvaje y masculino"
+    descripcion: "Un aroma limpio, fresco, verde y moderno, ideal para uso diario. Tiene ese toque urbano y elegante, como un tipo que camina confiado por la ciudad con auriculares puestos y un plan en mente. Ni muy dulce, ni muy seco: está equilibrado y transmite energía sin empalagar."
   }
 ];

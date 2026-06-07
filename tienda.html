@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+<div id="nav"></div>
+
+<section class="seccion-titulo-marca-carolinaHerrera h-full w-full bg-[#497D74] flex items-center justify-center mt-[65px] p-[0.6rem] items-center">
+    <h1 class="font-[monospace] text-[2rem] font-bold text-[#71BBB2]">Tienda</h1>
+</section>
+
+<div id="buscador-productos" class=" lg:hidden mt-4 flex justify-center">
+    <input type="text" placeholder="Buscar producto"
+        class="pl-4 pr-10 py-2 rounded-xl focus:outline-none border border-black text-black text-[1rem]"
+        id="filtroProducto-Mobile">
+    <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-white">
+        <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+    </span>
+</div>
+
+<section class="tienda-General">
+    <div class="contenedor-tienda-General" id="productos"></div>
+</section>
+
+<div id="fondo-oscuro" class="fondo-oscuro"></div>
+<aside class="carrito-lateral">
+    <div class="contenedor-cerrar-titulo-carritoCompra">
+        <h2 class="titulo-carritoCompra">Carrito de Compras</h2>
+        <button id="cerrar-carrito" class="cerrar-carritoCompra">Cerrar</button>
+    </div>
+
+    <div class="carrito-lista-scroll">
+        <ul id="carrito-lista"></ul>
+    </div>
+
+    <div class="contenedor-totalPrecio-carritoCompra">
+        <p class="totalPrecio-carritoCompra"><strong>Total:</strong> <span id="total-carrito">0</span> Gs</p>
+    </div>
+
+    <button class="btn-finalizarCompra">Finalizar compra</button>
+
+</aside>
+
+
+<!-- Modal para vista previa -->
+<div class="modal" id="modalVistaPrevia">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <div class="contenedor-vistaPrevia">
+      <div class="imagen-vistaPrevia">
+        <img id="img-vistaPrevia" class="img-vistaPrevia">
+      </div>
+      <div class="informacion-vistaPrevia">
+        <h2 id="titulo-infoVistaPrevia" class="titulo-infoVistaPrevia"></h2><br>
+        <p><strong>Precio: </strong><span id="precio"></span></p><br>
+        <span><strong>Familia olfativa: </strong><span id="familia"></span></span><br><br>
+        <span><strong>Notas de salida: </strong><span id="salida"></span></span><br><br>
+        <span><strong>Notas de corazón: </strong><span id="corazon"></span></span><br><br>
+        <span><strong>Notas de fondo: </strong><span id="fondo"></span></span><br><br>
+        <span><strong>¿A qué huele?<br></strong><span id="descripcion"></span></span>
+        
+        <div class="contenedor-carrito-vistaPrevia">
+
+            <div class="contador">
+                <div class="izquierda-cuadro-VistaPrevia">
+                    <button onclick="disminuir()">-</button>
+                </div>
+                <div class="numero-cuadro-VistaPrevia">
+                    <span id="cantidad">1</span>
+                </div>
+                <div class="derecha-cuadro-VistaPrevia">
+                    <button onclick="aumentar()">+</button>
+                </div>
+            </div>
+            <button id="btnAgregarDesdeVistaPrevia" class="btn-vistaPrevia-agregarAlCarrito">Agregar al carrito</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div id="mensajeCarrito" class="mensaje-carrito oculto">
+    ¡Se añadio al carrito!
+</div>
+
+<div id="footer"></div>
+
+<script type="module" src="js/data.js"></script>
+<script type="module" src="js/tienda.js"></script>
+<script type="module" src="script.js"></script>
+
+</body>
+
+</html>

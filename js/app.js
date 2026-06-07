@@ -1,8 +1,6 @@
 
 import { agregarAlCarrito } from "./carrito.js";
+import { perfumes } from "./data.js";
 
 window.agregarAlCarrito = agregarAlCarrito;
-
-window.verProducto = (id) => {
-  window.location.href = `producto.html?id=${id}`;
-};
+window.verProducto = verProducto;
