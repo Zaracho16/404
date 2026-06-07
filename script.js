@@ -109,7 +109,7 @@ function mostrarMensajeCarrito() {
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     // Cargar nav.html
-  const navResponse = await fetch("./nav.html");
+  const navResponse = await fetch("./components/nav.html");
   const navHtml = await navResponse.text();
   document.getElementById("nav").innerHTML = navHtml;
 
@@ -229,7 +229,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
     // Cargar footer.html
-    const footerResponse = await fetch("./footer.html");
+    const footerResponse = await fetch("./components/footer.html");
     const footerHtml = await footerResponse.text();
     document.getElementById("footer").innerHTML = footerHtml;
 
