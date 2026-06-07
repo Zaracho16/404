@@ -1,16 +1,10 @@
-# Tienda 404 
-Proyecto web personal: tienda de PERFUMES con estética tech/programación.
+Tienda 404 
+Proyecto que simula una web de una Perfumeria
 
-## Estado actual
-En desarrollo - enfoque actual: diseño del login y estilo visual.
-
-## Tecnologías
+Tecnologías
 - HTML
 - Tailwind CSS
 - JavaScript
-
-## Objetivo
-Crear una tienda funcional con diseño atractivo y aprendizaje real.
 
 
 
