@@ -1,7 +1,16 @@
 
-// Funciones globales, afuera del DOMContentLoaded para que sean accesibles desde HTML
+import { carrito, agregarAlCarrito, eliminarDelCarrito } from "./js/carrito.js";
 
-function mostrarModal(btn) {
+// Variable de estado para el modal (Movida arriba para mejor orden)
+let cantidad = 1;
+
+// --- VINCULACIÓN AL OBJETO WINDOW (Para que el HTML pueda verlas) ---
+window.eliminarDelCarrito = function(index) {
+  eliminarDelCarrito(index); // Llama a la lógica en carrito.js (Modifica array y guarda en localStorage)
+  actualizarCarrito();       // Redibuja la lista en el DOM
+};
+
+window.mostrarModal = function(btn) {
   document.getElementById("img-vistaPrevia").src = btn.dataset.img;
   document.getElementById("titulo-infoVistaPrevia").innerText = btn.dataset.titulo;
   document.getElementById("precio").innerText = btn.dataset.precio;
@@ -11,36 +20,33 @@ function mostrarModal(btn) {
   document.getElementById("fondo").innerText = btn.dataset.fondo;
   document.getElementById("descripcion").innerText = btn.dataset.descripcion;
 
-  cantidad = 1;
+  cantidad = 1; // Resetea la variable a 1
   const cantidadSpan = document.getElementById("cantidad");
   if(cantidadSpan) cantidadSpan.textContent = cantidad;
 
   document.getElementById("modalVistaPrevia").style.display = "flex";
-}
+};
 
-function cerrarModal() {
+window.cerrarModal = function() {
   document.getElementById("modalVistaPrevia").style.display = "none";
-}
+};
 
-// Variables para cantidad en modal
-let cantidad = 1;
-
-function aumentar() {
+window.aumentar = function() {
   cantidad++;
   const cantidadSpan = document.getElementById("cantidad");
   if(cantidadSpan) cantidadSpan.textContent = cantidad;
-}
+};
 
-function disminuir() {
+window.disminuir = function() {
   if (cantidad > 1) {
     cantidad--;
     const cantidadSpan = document.getElementById("cantidad");
     if(cantidadSpan) cantidadSpan.textContent = cantidad;
   }
-}
+};
 
-let carrito = [];
-let contadorCarrito = 0;
+
+// --- FUNCIONES DE INTERFAZ (DOM) ---
 
 function actualizarContadorGlobal() {
   const contadores = document.querySelectorAll(".numeroContadorCantidadProductos-desktop, .numeroContadorCantidadProductos-mobile");
@@ -54,7 +60,6 @@ function actualizarContadorGlobal() {
     contadorSpan.style.display = contadorCarrito > 0 ? "inline-block" : "none";
   });
 }
-
 
 function actualizarCarrito() {
   const lista = document.getElementById('carrito-lista');
@@ -87,11 +92,6 @@ function actualizarCarrito() {
   actualizarContadorGlobal();
 }
 
-function eliminarDelCarrito(index) {
-  carrito.splice(index, 1);
-  actualizarCarrito();
-}
-
 function mostrarMensajeCarrito() {
   const mensaje = document.getElementById("mensajeCarrito");
   if (!mensaje) return;
@@ -105,22 +105,24 @@ function mostrarMensajeCarrito() {
   }, 1500);
 }
 
-// Espera a cargar DOM para cargar nav y footer y asignar eventos
+// --- FLUJO PRINCIPAL AL CARGAR EL DOM ---
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     // Cargar nav.html
-  const navResponse = await fetch("./components/nav.html");
-  const navHtml = await navResponse.text();
-  document.getElementById("nav").innerHTML = navHtml;
+    const navResponse = await fetch("./components/nav.html");
+    const navHtml = await navResponse.text();
+    document.getElementById("nav").innerHTML = navHtml;
 
-    
+    // Renderizar el carrito guardado apenas cargue la página
+    actualizarCarrito();
+
     // Ocultar buscador si no es tienda.html
     if (!window.location.pathname.includes("tienda.html")) {
       const buscador = document.getElementById("buscador-productos");
       if (buscador) buscador.style.display = "none";
     }
 
-    // Asignar eventos después de cargar nav
+    // Asignar eventos del menú responsive después de cargar nav
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
     if(btn && menu){
@@ -139,8 +141,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         fondoOscuro.classList.add('active');
       });
       iconoCarritoMobile.addEventListener('click', () => {
-      carritoLateral.classList.toggle('active');
-      fondoOscuro.classList.add('active');
+        carritoLateral.classList.toggle('active');
+        fondoOscuro.classList.add('active');
       });
       botonCerrar.addEventListener('click', () => {
         carritoLateral.classList.remove('active');
@@ -152,7 +154,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
 
-    // Agregar al carrito desde productos (botones)
+    // Agregar al carrito desde las tarjetas de productos
     document.querySelectorAll('.boton-carrito').forEach(btn => {
       btn.addEventListener('click', () => {
         const cuadro = btn.closest('.cuadro-perfumes-General');
@@ -165,20 +167,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const precio = parseInt(precioTexto.replace(/\D/g, ''));
 
-        const productoExistente = carrito.find(p => p.nombre === nombre);
-
-        if (productoExistente) {
-          productoExistente.cantidad += 1;
-        } else {
-          carrito.push({ nombre, precio, imagenSrc, cantidad: 1 });
-        }
-
+        agregarAlCarrito(nombre, precio, imagenSrc, 1);
         actualizarCarrito();
         mostrarMensajeCarrito();
       });
     });
 
-    // Agregar al carrito desde modal
+    // Agregar al carrito desde el modal de vista previa
     const btnAgregarModal = document.getElementById("btnAgregarDesdeVistaPrevia");
     if(btnAgregarModal){
       btnAgregarModal.addEventListener('click', () => {
@@ -189,21 +184,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const precio = parseInt(precioTexto.replace(/\D/g, ''));
 
-        const productoExistente = carrito.find(p => p.nombre === nombre);
-
-        if (productoExistente) {
-          productoExistente.cantidad += cantidad;
-        } else {
-          carrito.push({ nombre, precio, imagenSrc, cantidad });
-        }
-
+        agregarAlCarrito(nombre, precio, imagenSrc, cantidad);
         actualizarCarrito();
         mostrarMensajeCarrito();
         cerrarModal();
       });
     }
 
-  // Filtrar productos por nombre de producto en la tienda
+    // Filtrar productos en la tienda
     const inputFiltro = document.getElementById("filtroProducto-desktop");
     const inputFiltroMobile = document.getElementById("filtroProducto-Mobile");
     const cuadros = document.querySelectorAll(".cuadro-perfumes-General");
@@ -211,22 +199,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     function filtrarProductos(texto) {
       const textoFiltro = texto.toLowerCase();
       cuadros.forEach(cuadro => {
-      const nombre = cuadro.querySelector("h3").textContent.toLowerCase();
-      cuadro.style.display = nombre.includes(textoFiltro) ? "" : "none";
-    });
-  }
+        const nombre = cuadro.querySelector("h3").textContent.toLowerCase();
+        cuadro.style.display = nombre.includes(textoFiltro) ? "" : "none";
+      });
+    }
 
-  if (inputFiltro) {
-    inputFiltro.addEventListener("input", () => {
-      filtrarProductos(inputFiltro.value);
-    });
-  }
+    if (inputFiltro) {
+      inputFiltro.addEventListener("input", () => {
+        filtrarProductos(inputFiltro.value);
+      });
+    }
 
-  if (inputFiltroMobile) {
-    inputFiltroMobile.addEventListener("input", () => {
-      filtrarProductos(inputFiltroMobile.value);
-    });
-  }
+    if (inputFiltroMobile) {
+      inputFiltroMobile.addEventListener("input", () => {
+        filtrarProductos(inputFiltroMobile.value);
+      });
+    }
 
     // Cargar footer.html
     const footerResponse = await fetch("./components/footer.html");
@@ -237,4 +225,3 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error al cargar nav o footer:", err);
   }
 });
-

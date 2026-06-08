@@ -1,41 +1,27 @@
+// carrito.js
 
-import { perfumes } from "./data.js";
-
+// Intentamos cargar lo que haya en localStorage, si no, empezamos vacío
 export let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-export function agregarAlCarrito(id) {
-  const producto = perfumes.find(p => p.id === id);
-
-  const existente = carrito.find(p => p.id === id);
-
-  if (existente) {
-    existente.cantidad++;
-  } else {
-    carrito.push({ ...producto, cantidad: 1 });
-  }
-
-  guardar();
-}
-
-export function eliminar(id) {
-  carrito = carrito.filter(p => p.id !== id);
-  guardar();
-}
-
-function guardar() {
+export function guardar() {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
-let carrito = [];
-
-function agregarAlCarrito(nombre, precio, imagen) {
+// Agregar al carrito (Soportando la cantidad variable del modal)
+export function agregarAlCarrito(nombre, precio, imagenSrc, cantidad = 1) {
   const existente = carrito.find(p => p.nombre === nombre);
 
   if (existente) {
-    existente.cantidad++;
+    existente.cantidad += cantidad;
   } else {
-    carrito.push({ nombre, precio, imagen, cantidad: 1 });
+    carrito.push({ nombre, precio, imagenSrc, cantidad });
   }
 
-  console.log(carrito);
+  guardar();
+}
+
+// Eliminar del carrito por Índice (coincide exactamente con tu HTML actual)
+export function eliminarDelCarrito(index) {
+  carrito.splice(index, 1);
+  guardar();
 }
