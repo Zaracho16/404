@@ -286,7 +286,7 @@ export const perfumes = [
     marca: "armani",
     nombre: "Giorgio Armani Acqua Di Gio Profumo Parfum - 125ml",
     precio: 700000,
-    imagen: "https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/g/i/giorgio_armani_acqua_di_gi_profumo_parfum_-_masculino_125ml.jpg",
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTedlyF_JqyGayZ4eGElUYMRLXXRwBf9RAM7Q&s",
     familia: "Aromática acuática con fondo ahumado",
     notas: {
       salida: "Bergamota, notas marinas, romero, salvia, geranio.",
@@ -300,7 +300,7 @@ export const perfumes = [
     marca: "armani",
     nombre: "Giorgio Armani Acqua Di Gio Pour Homme - 100ml",
     precio: 800000,
-    imagen: "https://www.champs.com.py/products/images/1801/195205887.jpg",
+    imagen: "https://cellshop.com.py/media/catalog/product/3/5/352796_1_0590_1.jpg",
     familia: "Aromática Acuática",
     notas: {
       salida: "Lima, limón, bergamota, neroli, mandarina, jazmín, naranja, cilantro.",
@@ -312,9 +312,9 @@ export const perfumes = [
   {
     id: 23,
     marca: "armani",
-    nombre: "Giorgio Armani Eau de Parfum - 100ml", // Se normalizó agregando la medida para mantener consistencia
+    nombre: "Giorgio Armani Eau de Parfum - 100ml",
     precio: 650000,
-    imagen: "https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/p/e/perfume_giorgio_armani_code_parfum_-_masculino_125ml.jpg",
+    imagen: "https://cellshop.com.py/media/catalog/product/4/7/4715757_1_31df_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=616&width=616&canvas=616:616",
     familia: "Oriental Fougère Aromática",
     notas: {
       salida: "Lavanda, limón/lima, bergamota.",
@@ -367,10 +367,10 @@ export const perfumes = [
   },
   {
     id: 27,
-    hugoboss: "hugoboss",
+    marca: "hugoboss",
     nombre: "Hugo Boss Bottled Edt - 100ml",
     precio: 450000,
-    imagen: "https://nissei.com/media/catalog/product/cache/24e3af3791642c18c52611620aeb2e21/r/f/rfcgpS0ukLQ6zIQUt9NIKrAiJh90RLtotLu.jpg",
+    imagen: "https://fuschia.com.py/userfiles/images/productos/600/737052351018-2.jpg",
     familia: "Amaderada especiada",
     notas: {
       salida: "Manzana, ciruela, bergamota, limón, musgo de roble, geranio.",
@@ -381,7 +381,7 @@ export const perfumes = [
   },
   {
     id: 28,
-    hugoboss: "hugoboss",
+    marca: "hugoboss",
     nombre: "Hugo Boss Bottled Intense Edp - 100ml",
     precio: 300000,
     imagen: "https://i5-mx.walmartimages.com/mg/images/product-images/img_large/00800561025846l.jpg",
@@ -395,10 +395,10 @@ export const perfumes = [
   },
   {
     id: 29,
-    hugoboss: "hugoboss",
+    marca: "hugoboss",
     nombre: "Hugo Boss Bottled Night Edt - 100ml",
     precio: 630000,
-    imagen: "https://vendome.com.py/wp-content/uploads/2024/02/88045-2-960x960.webp",
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd_PAe0eUgNheflc_7boPz0nVkp_w4a3V1Vg&s",
     familia: "Amaderada aromática",
     notas: {
       salida: "Lavanda, hojas de abedul.",
@@ -409,10 +409,10 @@ export const perfumes = [
   },
   {
     id: 30,
-    hugoboss: "hugoboss",
+    marca: "hugoboss",
     nombre: "Hugo Boss Man Edt - 100ml",
     precio: 430000,
-    imagen: "https://vendome.com.py/wp-content/uploads/2023/02/3614229823776-960x960.jpg",
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4bGdiMTW4DcYLY63z9r5kJEfjuyTRHwtLOg&s",
     familia: "Amaderada aromática",
     notas: {
       salida: "Manzana verde.",
@@ -552,7 +552,7 @@ export const perfumes = [
     marca: "pacorabanne",
     nombre: "Paco Rabanne Phantom Edt - 100ml",
     precio: 430000,
-    imagen: "https://cdn.farmacenter.com.py/180/666932.jpg",
+    imagen: "https://cellshop.com.py/media/catalog/product/2/7/2771106_1_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=616&width=616&canvas=616:616",
     familia: "Amaderada aromática/chipre",
     notas: {
       salida: "Lavanda, limón de Amalfi, cardamomo, bergamota, ruibarbo.",
@@ -580,7 +580,7 @@ export const perfumes = [
     marca: "pacorabanne",
     nombre: "Paco Rabanne One Million Edt - 100ml",
     precio: 900000,
-    imagen: "https://cdn.farmacenter.com.py/180/631224.jpg",
+    imagen: "https://puntotienda.com.py/wp-content/uploads/2023/02/1064.webp",
     familia: "Amaderada/ambarada terrosa",
     notas: {
       salida: "Pomelo helado, especias, rosa.",
@@ -636,7 +636,7 @@ export const perfumes = [
     marca: "versace",
     nombre: "Versace Eros Eau de Parfum - 100ml",
     precio: 820000,
-    imagen: "https://laperfumeria.com.py/wp-content/uploads/2024/06/s-l1600-1-600x600.jpg",
+    imagen: "https://laperfumeria.com.py/wp-content/uploads/2025/10/s-l1600-1-e1721758281224.jpg",
     familia: "Oriental amaderada",
     notas: {
       salida: "Menta, manzana verde, limón, mandarina.",
@@ -734,7 +734,7 @@ export const perfumes = [
     marca: "azzaro",
     nombre: "Azzaro Wanted - 100ml",
     precio: 420000,
-    imagen: "https://laperfumeria.com.py/wp-content/uploads/2024/10/600946.jpg",
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlvlFwcrxzW-VrktOB49AoIRZGne5w7AMevA&s",
     familia: "Amaderada especiada",
     notas: {
       salida: "Limón, menta, lavanda, jengibre.",
