@@ -12,11 +12,11 @@
 
 <div id="nav"></div>
 
-<section class="seccion-titulo-marca-carolinaHerrera h-full w-full bg-[#497D74] flex items-center justify-center mt-[65px] p-[0.6rem] items-center">
+<section class="seccion-titulo-marca-carolinaHerrera h-full w-full bg-[#497D74] flex items-center justify-center mt-[65px] p-[0.6rem]">
     <h1 class="font-[monospace] text-[2rem] font-bold text-[#71BBB2]">Tienda</h1>
 </section>
 
-<div id="buscador-productos" class=" lg:hidden mt-4 flex justify-center">
+<div id="buscador-productos" class="lg:hidden mt-4 flex justify-center">
     <input type="text" placeholder="Buscar producto"
         class="pl-4 pr-10 py-2 rounded-xl focus:outline-none border border-black text-black text-[1rem]"
         id="filtroProducto-Mobile">
@@ -29,27 +29,6 @@
     <div class="contenedor-tienda-General" id="productos"></div>
 </section>
 
-<div id="fondo-oscuro" class="fondo-oscuro"></div>
-<aside class="carrito-lateral">
-    <div class="contenedor-cerrar-titulo-carritoCompra">
-        <h2 class="titulo-carritoCompra">Carrito de Compras</h2>
-        <button id="cerrar-carrito" class="cerrar-carritoCompra">Cerrar</button>
-    </div>
-
-    <div class="carrito-lista-scroll">
-        <ul id="carrito-lista"></ul>
-    </div>
-
-    <div class="contenedor-totalPrecio-carritoCompra">
-        <p class="totalPrecio-carritoCompra"><strong>Total:</strong> <span id="total-carrito">0</span> Gs</p>
-    </div>
-
-    <button class="btn-finalizarCompra">Finalizar compra</button>
-
-</aside>
-
-
-<!-- Modal para vista previa -->
 <div class="modal" id="modalVistaPrevia">
   <div class="modal-contenido">
     <span class="cerrar" onclick="cerrarModal()">&times;</span>
@@ -67,7 +46,6 @@
         <span><strong>¿A qué huele?<br></strong><span id="descripcion"></span></span>
         
         <div class="contenedor-carrito-vistaPrevia">
-
             <div class="contador">
                 <div class="izquierda-cuadro-VistaPrevia">
                     <button onclick="disminuir()">-</button>
@@ -80,7 +58,6 @@
                 </div>
             </div>
             <button id="btnAgregarDesdeVistaPrevia" class="btn-vistaPrevia-agregarAlCarrito">Agregar al carrito</button>
-
         </div>
       </div>
     </div>
@@ -88,7 +65,7 @@
 </div>
     
 <div id="mensajeCarrito" class="mensaje-carrito oculto">
-    ¡Se añadio al carrito!
+    ¡Se añadió al carrito!
 </div>
 
 <div id="footer"></div>
@@ -98,5 +75,4 @@
 <script type="module" src="script.js"></script>
 
 </body>
-
 </html>

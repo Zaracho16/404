@@ -17,7 +17,7 @@
 
       
       <div class="flex items-center gap-4 text-xl text-white">
-        <a href="pages/inicioSesion.html"><i class="fa-solid fa-user"></i></a>
+        <a href="inicioSesion.html"><i class="fa-solid fa-user"></i></a>
         <i class="fa-solid fa-cart-shopping iconoCarritoIndex" id="icono-carrito-mobile">
           <span class="numeroContadorCantidadProductos-mobile"></span>
         </i>
@@ -73,3 +73,21 @@
     </ul>
   </div>
 </nav>
+
+<div id="fondo-oscuro" class="fondo-oscuro"></div>
+<aside class="carrito-lateral">
+    <div class="contenedor-cerrar-titulo-carritoCompra">
+        <h2 class="titulo-carritoCompra">Carrito de Compras</h2>
+        <button id="cerrar-carrito" class="cerrar-carritoCompra">Cerrar</button>
+    </div>
+
+    <div class="carrito-lista-scroll">
+        <ul id="carrito-lista"></ul>
+    </div>
+
+    <div class="contenedor-totalPrecio-carritoCompra">
+        <p class="totalPrecio-carritoCompra"><strong>Total:</strong> <span id="total-carrito">0</span> Gs</p>
+    </div>
+
+    <button class="btn-finalizarCompra">Finalizar compra</button>
+</aside>

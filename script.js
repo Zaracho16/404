@@ -1,13 +1,11 @@
 
 import { carrito, agregarAlCarrito, eliminarDelCarrito } from "./js/carrito.js";
 
-// Variable de estado para el modal (Movida arriba para mejor orden)
 let cantidad = 1;
 
-// --- VINCULACIÓN AL OBJETO WINDOW (Para que el HTML pueda verlas) ---
 window.eliminarDelCarrito = function(index) {
-  eliminarDelCarrito(index); // Llama a la lógica en carrito.js (Modifica array y guarda en localStorage)
-  actualizarCarrito();       // Redibuja la lista en el DOM
+  eliminarDelCarrito(index); 
+  actualizarCarrito();  
 };
 
 window.mostrarModal = function(btn) {
@@ -20,7 +18,7 @@ window.mostrarModal = function(btn) {
   document.getElementById("fondo").innerText = btn.dataset.fondo;
   document.getElementById("descripcion").innerText = btn.dataset.descripcion;
 
-  cantidad = 1; // Resetea la variable a 1
+  cantidad = 1;
   const cantidadSpan = document.getElementById("cantidad");
   if(cantidadSpan) cantidadSpan.textContent = cantidad;
 
@@ -46,7 +44,7 @@ window.disminuir = function() {
 };
 
 
-// --- FUNCIONES DE INTERFAZ (DOM) ---
+// FUNCIONES DE INTERFAZ (DOM)
 
 function actualizarContadorGlobal() {
   const contadores = document.querySelectorAll(".numeroContadorCantidadProductos-desktop, .numeroContadorCantidadProductos-mobile");
@@ -105,7 +103,7 @@ function mostrarMensajeCarrito() {
   }, 1500);
 }
 
-// --- FLUJO PRINCIPAL AL CARGAR EL DOM ---
+//  FLUJO PRINCIPAL AL CARGAR EL DOM
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     // Cargar nav.html
@@ -113,7 +111,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const navHtml = await navResponse.text();
     document.getElementById("nav").innerHTML = navHtml;
 
-    // Renderizar el carrito guardado apenas cargue la página
+    // Renderizar el carrito guardado apenas cargue la pagina
     actualizarCarrito();
 
     // Ocultar buscador si no es tienda.html

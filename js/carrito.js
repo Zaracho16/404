@@ -1,13 +1,11 @@
-// carrito.js
 
-// Intentamos cargar lo que haya en localStorage, si no, empezamos vacío
 export let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 export function guardar() {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
-// Agregar al carrito (Soportando la cantidad variable del modal)
+// Agregar al carrito
 export function agregarAlCarrito(nombre, precio, imagenSrc, cantidad = 1) {
   const existente = carrito.find(p => p.nombre === nombre);
 
@@ -20,7 +18,7 @@ export function agregarAlCarrito(nombre, precio, imagenSrc, cantidad = 1) {
   guardar();
 }
 
-// Eliminar del carrito por Índice (coincide exactamente con tu HTML actual)
+// Eliminar del carrito por Índice
 export function eliminarDelCarrito(index) {
   carrito.splice(index, 1);
   guardar();
