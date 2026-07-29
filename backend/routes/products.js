@@ -55,4 +55,56 @@ router.get("/:id", (req, res) => {
 
 });
 
+router.post("/", (req, res) => {
+
+    const {
+        marca,
+        nombre,
+        precio,
+        imagen,
+        familia,
+        notas,
+        descripcion
+    } = req.body;
+
+
+    const sql = `
+        INSERT INTO productos
+        (marca, nombre, precio, imagen, familia, notas, descripcion)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+    `;
+
+
+    db.query(
+        sql,
+        [
+            marca,
+            nombre,
+            precio,
+            imagen,
+            familia,
+            JSON.stringify(notas),
+            descripcion
+        ],
+        (error, resultado) => {
+
+            if(error){
+                console.log(error);
+
+                return res.status(500).json({
+                    mensaje: "Error al crear producto"
+                });
+            }
+
+
+            res.status(201).json({
+                mensaje: "Producto creado",
+                id: resultado.insertId
+            });
+
+        }
+    );
+
+});
+
 module.exports = router;
