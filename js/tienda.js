@@ -1,4 +1,5 @@
-import { perfumes } from "./data.js";
+
+let perfumes = [];
 
 function getMarcaFromURL() {
   const params = new URLSearchParams(window.location.search);
@@ -7,6 +8,8 @@ function getMarcaFromURL() {
 
 function renderProductos() {
   const contenedor = document.getElementById("productos");
+  console.log("URL actual:", window.location.href);
+console.log("contenedor:", contenedor);
   if (!contenedor) return;
 
   const marca = getMarcaFromURL();
@@ -14,6 +17,7 @@ function renderProductos() {
   const filtrados = marca
     ? perfumes.filter(p => p.marca === marca)
     : perfumes;
+    console.log("productos a mostrar:", filtrados);
 
   contenedor.innerHTML = filtrados.map(p => `
     <div class="cuadro-perfumes-General">
@@ -38,7 +42,7 @@ function renderProductos() {
   `).join("");
 }
 
-document.addEventListener("DOMContentLoaded", renderProductos);
+document.addEventListener("DOMContentLoaded", cargarProductos);
 
 function mostrarModalPerfume(id) {
   const perfume = perfumes.find(p => p.id === id);
@@ -57,3 +61,34 @@ function mostrarModalPerfume(id) {
 }
 
 window.mostrarModalPerfume = mostrarModalPerfume;
+
+console.log("tienda.js cargado");
+
+
+const API_URL = "http://localhost:3000/productos";
+
+async function cargarProductos() {
+
+    console.log("cargando productos...");
+
+    try {
+
+        const respuesta = await fetch(API_URL);
+
+        console.log("respuesta:", respuesta);
+
+        perfumes = await respuesta.json();
+
+        console.log("perfumes recibidos:", perfumes);
+
+        renderProductos();
+
+    } catch(error) {
+
+        console.log("Error:", error);
+
+    }
+
+}
+
+cargarProductos();
