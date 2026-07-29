@@ -107,4 +107,107 @@ router.post("/", (req, res) => {
 
 });
 
+router.put("/:id", (req, res) => {
+
+    const id = req.params.id;
+
+    const {
+        marca,
+        nombre,
+        precio,
+        imagen,
+        familia,
+        notas,
+        descripcion
+    } = req.body;
+
+
+    const sql = `
+        UPDATE productos
+        SET 
+            marca = ?,
+            nombre = ?,
+            precio = ?,
+            imagen = ?,
+            familia = ?,
+            notas = ?,
+            descripcion = ?
+        WHERE id = ?
+    `;
+
+
+    db.query(
+        sql,
+        [
+            marca,
+            nombre,
+            precio,
+            imagen,
+            familia,
+            JSON.stringify(notas),
+            descripcion,
+            id
+        ],
+        (error, resultado) => {
+
+            if(error){
+                console.log(error);
+
+                return res.status(500).json({
+                    mensaje: "Error al actualizar producto"
+                });
+            }
+
+
+            if(resultado.affectedRows === 0){
+                return res.status(404).json({
+                    mensaje: "Producto no encontrado"
+                });
+            }
+
+
+            res.json({
+                mensaje: "Producto actualizado"
+            });
+
+        }
+    );
+
+});
+
+router.delete("/:id", (req, res) => {
+
+    const id = req.params.id;
+
+
+    db.query(
+        "DELETE FROM productos WHERE id = ?",
+        [id],
+        (error, resultado) => {
+
+            if(error){
+                console.log(error);
+
+                return res.status(500).json({
+                    mensaje: "Error al eliminar producto"
+                });
+            }
+
+
+            if(resultado.affectedRows === 0){
+                return res.status(404).json({
+                    mensaje: "Producto no encontrado"
+                });
+            }
+
+
+            res.json({
+                mensaje: "Producto eliminado"
+            });
+
+        }
+    );
+
+});
+
 module.exports = router;
