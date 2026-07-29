@@ -17,6 +17,10 @@ router.get("/", (req, res) => {
             });
         }
 
+        productos.forEach(producto => {
+            producto.notas = JSON.parse(producto.notas);
+        });
+
         res.json(productos);
 
     });
