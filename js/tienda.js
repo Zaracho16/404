@@ -65,7 +65,7 @@ window.mostrarModalPerfume = mostrarModalPerfume;
 console.log("tienda.js cargado");
 
 
-const API_URL = "http://localhost:3000/productos";
+const API_URL = "https://four04-8o6t.onrender.com/productos";
 
 async function cargarProductos() {
 
