@@ -8,7 +8,7 @@ const db = require("../database/database");
 
 router.get("/", (req, res) => {
 
-    db.all("SELECT * FROM productos", (error, productos) => {
+    db.query("SELECT * FROM productos", (error, productos) => {
 
         if(error){
             console.log(error);

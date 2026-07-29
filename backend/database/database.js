@@ -1,15 +1,11 @@
 
-const sqlite3 = require("sqlite3").verbose();
+const mysql = require("mysql2");
 
-const db = new sqlite3.Database("./database/perfumes.db", (error) => {
-
-    if (error) {
-        console.log("Error conectando a la BD:", error);
-        return;
-    }
-
-    console.log("Base de datos conectada");
+const db = mysql.createPool({
+    host: "localhost",
+    user: "root",
+    password: "2025",
+    database: "404"
 });
-
 
 module.exports = db;

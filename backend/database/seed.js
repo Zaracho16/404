@@ -750,30 +750,29 @@ const perfumes = [
 
 perfumes.forEach((perfume) => {
 
-    db.run(
-        `
-        INSERT INTO productos 
-        (marca, nombre, precio, imagen, familia, notas, descripcion)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
-        `,
-        [
-            perfume.marca,
-            perfume.nombre,
-            perfume.precio,
-            perfume.imagen,
-            perfume.familia,
-            JSON.stringify(perfume.notas),
-            perfume.descripcion
-        ],
-        (error) => {
+db.query(
+      `
+      INSERT INTO productos 
+      (marca, nombre, precio, imagen, familia, notas, descripcion)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+      `,
+      [
+          perfume.marca,
+          perfume.nombre,
+          perfume.precio,
+          perfume.imagen,
+          perfume.familia,
+          JSON.stringify(perfume.notas),
+          perfume.descripcion
+      ],
+      (error) => {
 
-            if(error){
-                console.log("Error insertando:", error);
-            } else {
-                console.log(`${perfume.nombre} agregado`);
-            }
+          if(error){
+              console.log(error);
+          } else {
+              console.log("Producto agregado");
+          }
 
-        }
-    );
+      });
 
 });
