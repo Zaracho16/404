@@ -153,24 +153,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     // Agregar al carrito desde las tarjetas de productos
-    document.querySelectorAll('.boton-carrito').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const cuadro = btn.closest('.cuadro-perfumes-General');
-        if (!cuadro) return;
+document.addEventListener("click", (e) => {
 
-        const nombre = cuadro.querySelector('h3')?.textContent.trim();
-        const imagenSrc = cuadro.querySelector("img")?.src;
-        const precioTexto = cuadro.querySelector('span')?.textContent.trim();
-        if (!nombre || !imagenSrc || !precioTexto) return;
+  if (e.target.classList.contains("boton-carrito")) {
 
-        const precio = parseInt(precioTexto.replace(/\D/g, ''));
+    const cuadro = e.target.closest(".cuadro-perfumes-General");
+    if (!cuadro) return;
 
-        agregarAlCarrito(nombre, precio, imagenSrc, 1);
-        actualizarCarrito();
-        mostrarMensajeCarrito();
-      });
-    });
+    const nombre = cuadro.querySelector("h3")?.textContent.trim();
+    const imagenSrc = cuadro.querySelector("img")?.src;
+    const precioTexto = cuadro.querySelector("span")?.textContent.trim();
 
+    if (!nombre || !imagenSrc || !precioTexto) return;
+
+    const precio = parseInt(precioTexto.replace(/\D/g, ''));
+
+    agregarAlCarrito(nombre, precio, imagenSrc, 1);
+    actualizarCarrito();
+    mostrarMensajeCarrito();
+
+  }
+
+});
     // Agregar al carrito desde el modal de vista previa
     const btnAgregarModal = document.getElementById("btnAgregarDesdeVistaPrevia");
     if(btnAgregarModal){
@@ -192,13 +196,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Filtrar productos en la tienda
     const inputFiltro = document.getElementById("filtroProducto-desktop");
     const inputFiltroMobile = document.getElementById("filtroProducto-Mobile");
-    const cuadros = document.querySelectorAll(".cuadro-perfumes-General");
 
     function filtrarProductos(texto) {
+
+      const cuadros = document.querySelectorAll(".cuadro-perfumes-General");
+
       const textoFiltro = texto.toLowerCase();
+
       cuadros.forEach(cuadro => {
-        const nombre = cuadro.querySelector("h3").textContent.toLowerCase();
-        cuadro.style.display = nombre.includes(textoFiltro) ? "" : "none";
+
+        const nombre = cuadro
+          .querySelector("h3")
+          .textContent
+          .toLowerCase();
+
+        cuadro.style.display = nombre.includes(textoFiltro)
+          ? ""
+          : "none";
+
       });
     }
 
