@@ -8,8 +8,6 @@ function getMarcaFromURL() {
 
 function renderProductos() {
   const contenedor = document.getElementById("productos");
-  console.log("URL actual:", window.location.href);
-console.log("contenedor:", contenedor);
   if (!contenedor) return;
 
   const marca = getMarcaFromURL();
@@ -17,7 +15,6 @@ console.log("contenedor:", contenedor);
   const filtrados = marca
     ? perfumes.filter(p => p.marca === marca)
     : perfumes;
-    console.log("productos a mostrar:", filtrados);
 
   contenedor.innerHTML = filtrados.map(p => `
     <div class="cuadro-perfumes-General">
@@ -62,30 +59,35 @@ function mostrarModalPerfume(id) {
 
 window.mostrarModalPerfume = mostrarModalPerfume;
 
-console.log("tienda.js cargado");
-
-
 const API_URL = "https://four04-8o6t.onrender.com/productos";
+
+const contenedorPerfumesGeneral = document.getElementById("productos");
 
 async function cargarProductos() {
 
-    console.log("cargando productos...");
+  contenedorPerfumesGeneral.innerHTML = `
+    <div class="cargando-productos-tienda">
+      <h2>Cargando productos...</h2>
+    </div>
+  `;
 
     try {
 
         const respuesta = await fetch(API_URL);
 
-        console.log("respuesta:", respuesta);
-
         perfumes = await respuesta.json();
-
-        console.log("perfumes recibidos:", perfumes);
 
         renderProductos();
 
     } catch(error) {
 
-        console.log("Error:", error);
+      contenedorPerfumesGeneral.innerHTML = `
+        <div class="error-cargando-productos-tienda">
+          <h2>Ocurrió un error al intentar cargar los productos</h2>
+        </div>
+      `;
+
+      console.log("Error:", error);
 
     }
 
