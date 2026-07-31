@@ -196,13 +196,24 @@ document.addEventListener("click", (e) => {
     // Filtrar productos en la tienda
     const inputFiltro = document.getElementById("filtroProducto-desktop");
     const inputFiltroMobile = document.getElementById("filtroProducto-Mobile");
-    const cuadros = document.querySelectorAll(".cuadro-perfumes-General");
 
     function filtrarProductos(texto) {
+
+      const cuadros = document.querySelectorAll(".cuadro-perfumes-General");
+
       const textoFiltro = texto.toLowerCase();
+
       cuadros.forEach(cuadro => {
-        const nombre = cuadro.querySelector("h3").textContent.toLowerCase();
-        cuadro.style.display = nombre.includes(textoFiltro) ? "" : "none";
+
+        const nombre = cuadro
+          .querySelector("h3")
+          .textContent
+          .toLowerCase();
+
+        cuadro.style.display = nombre.includes(textoFiltro)
+          ? ""
+          : "none";
+
       });
     }
 
