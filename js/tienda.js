@@ -1,3 +1,4 @@
+import { agregarAlCarrito } from "./carrito.js";
 
 let perfumes = [];
 
@@ -21,11 +22,9 @@ function renderProductos() {
       <div class="img-con-overlay">
         <img src="${p.imagen}" class="ch-img">
         <div class="overlay">
-          <button class="boton-carrito"
-            onclick="agregarAlCarrito('${p.nombre}', ${p.precio}, '${p.imagen}')">
+          <button class="boton-carrito" data-id="${p.id}">
             Agregar al carrito
           </button>
-
           <button class="boton-vista"
             onclick="mostrarModalPerfume(${p.id})">
             Vista previa
@@ -94,3 +93,4 @@ async function cargarProductos() {
 }
 
 cargarProductos();
+

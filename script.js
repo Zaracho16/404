@@ -153,24 +153,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     // Agregar al carrito desde las tarjetas de productos
-    document.querySelectorAll('.boton-carrito').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const cuadro = btn.closest('.cuadro-perfumes-General');
-        if (!cuadro) return;
+document.addEventListener("click", (e) => {
 
-        const nombre = cuadro.querySelector('h3')?.textContent.trim();
-        const imagenSrc = cuadro.querySelector("img")?.src;
-        const precioTexto = cuadro.querySelector('span')?.textContent.trim();
-        if (!nombre || !imagenSrc || !precioTexto) return;
+  if (e.target.classList.contains("boton-carrito")) {
 
-        const precio = parseInt(precioTexto.replace(/\D/g, ''));
+    const cuadro = e.target.closest(".cuadro-perfumes-General");
+    if (!cuadro) return;
 
-        agregarAlCarrito(nombre, precio, imagenSrc, 1);
-        actualizarCarrito();
-        mostrarMensajeCarrito();
-      });
-    });
+    const nombre = cuadro.querySelector("h3")?.textContent.trim();
+    const imagenSrc = cuadro.querySelector("img")?.src;
+    const precioTexto = cuadro.querySelector("span")?.textContent.trim();
 
+    if (!nombre || !imagenSrc || !precioTexto) return;
+
+    const precio = parseInt(precioTexto.replace(/\D/g, ''));
+
+    agregarAlCarrito(nombre, precio, imagenSrc, 1);
+    actualizarCarrito();
+    mostrarMensajeCarrito();
+
+  }
+
+});
     // Agregar al carrito desde el modal de vista previa
     const btnAgregarModal = document.getElementById("btnAgregarDesdeVistaPrevia");
     if(btnAgregarModal){
