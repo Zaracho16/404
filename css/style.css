@@ -84,6 +84,7 @@ body, html {
 
 /*------TIENDA GENERAL ESTILO------*/
 .contenedor-tienda-General {
+    min-height: 500px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 20px;
@@ -518,4 +519,17 @@ body, html {
 
 * {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/*-----MENSAJE CUANDO ESTA CARGANDO LOS PRODUCTOS-----*/
+.cargando-productos-tienda,
+.error-cargando-productos-tienda {
+    grid-column: 1 / -1; /* Para que el grid use desde la primera columna hasta el ultimo, asi deja los productos abajo y el mensaje arriba*/
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
 }
