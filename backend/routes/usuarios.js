@@ -46,14 +46,7 @@ router.post("/registro", async (req, res) => {
 
 router.post("/login", async (req, res) => {
 
-    const { email, password } = req.body || {};
-
-    console.log("Body completo:", req.body);
-    console.log("Email:", email);
-    console.log("Password:", password);
-
-    console.log("Datos recibidos: ", email, password);
-
+    const { email, password } = req.body;
 
     const sql = `
         SELECT * FROM usuarios
@@ -62,8 +55,6 @@ router.post("/login", async (req, res) => {
 
 
     db.query(sql, [email], async (error, resultado) => {
-
-        console.log("Resultado BD:", resultado);
 
         if(error){
             console.log(error);
