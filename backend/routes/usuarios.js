@@ -6,7 +6,6 @@ const express = require("express");
 const router = express.Router();
 
 const db = require ("../database/database");
-const { route } = require("./products");
 
 router.post("/registro", async (req, res) => {
 
@@ -47,7 +46,13 @@ router.post("/registro", async (req, res) => {
 
 router.post("/login", async (req, res) => {
 
-    const { email, password } = req.body;
+    const { email, password } = req.body || {};
+
+    console.log("Body completo:", req.body);
+    console.log("Email:", email);
+    console.log("Password:", password);
+
+    console.log("Datos recibidos: ", email, password);
 
 
     const sql = `
@@ -57,6 +62,8 @@ router.post("/login", async (req, res) => {
 
 
     db.query(sql, [email], async (error, resultado) => {
+
+        console.log("Resultado BD:", resultado);
 
         if(error){
             console.log(error);
