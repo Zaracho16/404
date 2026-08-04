@@ -2,7 +2,7 @@
 const API_URL = "https://four04-8o6t.onrender.com";
 
 
-const formulario = document.getElementById("formCrearCuenta");
+const formulario = document.getElementById("registro-form");
 
 
 formulario.addEventListener("submit", async (e) => {
