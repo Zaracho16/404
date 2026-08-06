@@ -193,41 +193,6 @@ document.addEventListener("click", (e) => {
       });
     }
 
-    // Filtrar productos en la tienda
-    const inputFiltro = document.getElementById("filtroProducto-desktop");
-    const inputFiltroMobile = document.getElementById("filtroProducto-Mobile");
-
-    function filtrarProductos(texto) {
-
-      const cuadros = document.querySelectorAll(".cuadro-perfumes-General");
-
-      const textoFiltro = texto.toLowerCase();
-
-      cuadros.forEach(cuadro => {
-
-        const nombre = cuadro
-          .querySelector("h3")
-          .textContent
-          .toLowerCase();
-
-        cuadro.style.display = nombre.includes(textoFiltro)
-          ? ""
-          : "none";
-
-      });
-    }
-
-    if (inputFiltro) {
-      inputFiltro.addEventListener("input", () => {
-        filtrarProductos(inputFiltro.value);
-      });
-    }
-
-    if (inputFiltroMobile) {
-      inputFiltroMobile.addEventListener("input", () => {
-        filtrarProductos(inputFiltroMobile.value);
-      });
-    }
 
     // Cargar footer.html
     const footerResponse = await fetch("./components/footer.html");
