@@ -2,40 +2,79 @@ import { agregarAlCarrito } from "./carrito.js";
 
 let perfumes = [];
 
+let textoBusqueda = "";
+
 function getMarcaFromURL() {
   const params = new URLSearchParams(window.location.search);
   return params.get("marca");
 }
 
 function renderProductos() {
+
   const contenedor = document.getElementById("productos");
   if (!contenedor) return;
 
   const marca = getMarcaFromURL();
 
-  const filtrados = marca
-    ? perfumes.filter(p => p.marca === marca)
-    : perfumes;
+  const filtrados = perfumes.filter(p => {
+
+    const coincideMarca =
+      !marca || p.marca === marca;
+
+    const coincideNombre =
+      p.nombre
+        .toLowerCase()
+        .includes(textoBusqueda.toLowerCase());
+
+    return coincideMarca && coincideNombre;
+
+  });
+
+
+  if (filtrados.length === 0) {
+
+    contenedor.innerHTML = `
+      <div class="producto-no-encontrado-mensaje">
+        <h2>Producto no encontrado</h2>
+      </div>
+    `;
+
+    return;
+  }
+
 
   contenedor.innerHTML = filtrados.map(p => `
     <div class="cuadro-perfumes-General">
+
       <div class="img-con-overlay">
+
         <img src="${p.imagen}" class="ch-img">
+
         <div class="overlay">
-          <button class="boton-carrito" data-id="${p.id}">
+
+          <button
+            class="boton-carrito"
+            data-id="${p.id}">
             Agregar al carrito
           </button>
-          <button class="boton-vista"
+
+          <button
+            class="boton-vista"
             onclick="mostrarModalPerfume(${p.id})">
             Vista previa
           </button>
+
         </div>
+
       </div>
 
       <h3>${p.nombre}</h3>
+
       <span>${p.precio.toLocaleString()} Gs</span>
+
     </div>
   `).join("");
+
 }
 
 document.addEventListener("DOMContentLoaded", cargarProductos);
@@ -92,5 +131,16 @@ async function cargarProductos() {
 
 }
 
-cargarProductos();
+const inputDesktop = document.getElementById("filtroProducto-desktop");
 
+if(inputDesktop){
+
+    inputDesktop.addEventListener("input", (e)=>{
+
+        textoBusqueda = e.target.value;
+
+        renderProductos();
+
+    });
+
+}
