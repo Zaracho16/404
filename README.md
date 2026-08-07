@@ -8,6 +8,7 @@ Proyecto de una tienda online de perfumes que simula el funcionamiento de un e-c
 
 * HTML
 * CSS
+* Tailwind
 * JavaScript
 
 ### Backend
