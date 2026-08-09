@@ -3,7 +3,7 @@ const API_URL = "https://four04-8o6t.onrender.com";
 
 const formulario = document.getElementById("login-form");
 
-formulario.addEventListener("submit", async(e) => {
+formulario.addEventListener("submit", async (e) => {
 
     e.preventDefault();
 
@@ -17,7 +17,7 @@ formulario.addEventListener("submit", async(e) => {
 
         const respuesta = await fetch(`${API_URL}/usuarios/login`, {
 
-            method = "POST",
+            method: "POST",
 
             headers: {
                 "Content-Type": "application/json"
