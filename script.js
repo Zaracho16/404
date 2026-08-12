@@ -1,5 +1,6 @@
 
 import { carrito, agregarAlCarrito, eliminarDelCarrito } from "./js/carrito.js";
+import { obtenerUsuario, cerrarSesion } from "./js/usuario.js";
 
 let cantidad = 1;
 
@@ -103,6 +104,72 @@ function mostrarMensajeCarrito() {
   }, 1500);
 }
 
+function actualizarUsuario() {
+
+  const usuario = obtenerUsuario();
+
+  const usuarioDesktop = document.getElementById("usuario-desktop");
+  const usuarioMobile = document.getElementById("usuario-mobile");
+
+  if(!usuario) {
+
+    console.log("No hay usuario logueado");
+
+    return;
+
+  }
+
+  console.log("Usuario logueado", usuario.nombre);
+
+  if(usuarioDesktop) {
+
+    usuarioDesktop.innerHTML = `
+      <div class="flex items-center gap-3">
+
+        <span>
+          Hola, ${usuario.nombre}
+        </span>
+
+        <button id="cerrar-sesion-desktop" class="cerrarSesion-desktop-estilo">
+          Cerrar sesión
+        </button>
+
+      </div>
+    `;
+
+  }
+
+  if(usuarioMobile) {
+
+    usuarioMobile.innerHTML = `
+      <div class="flex items-center gap-3">
+
+        <span>
+          Hola, ${usuario.nombre}
+        </span>
+
+        <button id="cerrar-sesion-mobile" class="cerrarSesion-mobile-estilo">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </button>
+
+      </div>
+    `;
+
+  }
+
+  const btnCerrarDesktop = document.getElementById("cerrar-sesion-desktop");
+  const btnCerrarMobile = document.getElementById("cerrar-sesion-mobile");
+
+  if(btnCerrarDesktop) {
+    btnCerrarDesktop.addEventListener("click", cerrarSesion);
+  }
+
+  if(btnCerrarMobile) {
+    btnCerrarMobile.addEventListener("click", cerrarSesion);
+  }
+
+}
+
 //  FLUJO PRINCIPAL AL CARGAR EL DOM
 document.addEventListener("DOMContentLoaded", async () => {
   try {
@@ -110,6 +177,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const navResponse = await fetch("./components/nav.html");
     const navHtml = await navResponse.text();
     document.getElementById("nav").innerHTML = navHtml;
+    
+    // verificamos usuario logueado
+    actualizarUsuario();
 
     // Renderizar el carrito guardado apenas cargue la pagina
     actualizarCarrito();

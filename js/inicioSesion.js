@@ -33,8 +33,24 @@ formulario.addEventListener("submit", async (e) => {
         const datos = await respuesta.json();
 
         console.log("Respuesta del server: ", datos);
+        
+        if(respuesta.ok) {
 
-        alert(datos.mensaje);
+            localStorage.setItem(
+                "usuario",
+                JSON.stringify(datos.usuario)
+            );
+
+            alert(datos.mensaje);
+
+            window.location.href = "index.html";
+ 
+        } else {
+
+            alert(datos.mensaje);
+
+        }
+
 
     } catch(error) {
 
