@@ -534,3 +534,13 @@ body, html {
     text-align: center;
     font-size: 2rem;
 }
+
+.cerrarSesion-desktop-estilo,
+.cerrarSesion-mobile-estilo {
+    cursor: pointer;
+}
+
+.cerrarSesion-desktop-estilo:hover,
+.cerrarSesion-mobile-estilo:hover {
+    color: #f00b0b;
+}
