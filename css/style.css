@@ -563,7 +563,8 @@ body, html {
 
     animation: aparecerBienvenida 0.4 ease;
 
-    .mensaje-bienvenida h2 {
+    .mensaje-bienvenida h2,
+    mensaje-cerrar-sesion h2 {
         margin: 0 0 5px;
     }
 
