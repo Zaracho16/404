@@ -544,3 +544,40 @@ body, html {
 .cerrarSesion-mobile-estilo:hover {
     color: #f00b0b;
 }
+
+/*-----MENSAJE DE BIENVENIDA AL LOGUEARSE-----*/
+.mensaje-bienvenida,
+.mensaje-cerrar-sesion {
+    position: fixed;
+    top: 90px;
+    right: 25px;
+
+    padding: 20px 25px;
+
+    background-color: white;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+    z-index: 2000;
+
+    animation: aparecerBienvenida 0.4 ease;
+
+    .mensaje-bienvenida h2 {
+        margin: 0 0 5px;
+    }
+
+    @keyframes aparecerBienvenida {
+        
+        from {
+            opacity: 0;
+            transform: translateY(-15px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+}

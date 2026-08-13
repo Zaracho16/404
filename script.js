@@ -170,6 +170,68 @@ function actualizarUsuario() {
 
 }
 
+
+// MOSTRAR BIENVENIDA
+
+function mostrarBienvenida() {
+
+  const bienvenida = sessionStorage.getItem("bienvenida");
+
+  if(!bienvenida) {
+    return;
+  }
+
+  const usuario = obtenerUsuario();
+
+  if(!usuario) {
+    return;
+  }
+
+  sessionStorage.removeItem("bienvenida");
+
+  const mensajeBienvenida = document.createElement("div");
+
+  mensajeBienvenida.classList.add("mensaje-bienvenida");
+
+  mensajeBienvenida.innerHTML = `
+    <h2> Bienvenido, ${usuario.nombre}! </h2>
+  `;
+
+  document.body.appendChild(mensajeBienvenida);
+
+  setTimeout(() => {
+    mensajeBienvenida.remove();
+  }, 4000);
+
+}
+
+// Mensaje al cerrar sesion
+function mensajeCerrarSesion() {
+
+  const nombreUser = sessionStorage.getItem("cerrarSesion");
+
+  if(!nombreUser) {
+    return;
+  }
+
+  sessionStorage.removeItem("cerrarSesion");
+
+  const mjsCerrarSesion = document.createElement("div");
+
+  mjsCerrarSesion.classList.add("mensaje-cerrar-sesion");
+
+  mjsCerrarSesion.innerHTML = `
+    <h2> Sesión cerrada </h2>
+  `;
+
+  document.body.appendChild(mjsCerrarSesion);
+
+  setTimeout(() => {
+    mjsCerrarSesion.remove();
+  }, 4000);
+
+}
+
 //  FLUJO PRINCIPAL AL CARGAR EL DOM
 document.addEventListener("DOMContentLoaded", async () => {
   try {
@@ -178,8 +240,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     const navHtml = await navResponse.text();
     document.getElementById("nav").innerHTML = navHtml;
     
-    // verificamos usuario logueado
+    // verificamos usuario logueado y mostramos mensaje de bienvenida
     actualizarUsuario();
+    mostrarBienvenida();
+    mensajeCerrarSesion();
+
 
     // Renderizar el carrito guardado apenas cargue la pagina
     actualizarCarrito();

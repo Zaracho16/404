@@ -13,6 +13,12 @@ function obtenerUsuario() {
 
 function cerrarSesion() {
 
+    const usuario = obtenerUsuario();
+
+    if(usuario) {
+        sessionStorage.setItem("cerrarSesion", usuario.nombre);
+    }
+
     localStorage.removeItem("usuario");
 
     window.location.reload();

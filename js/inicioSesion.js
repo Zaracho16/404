@@ -41,7 +41,10 @@ formulario.addEventListener("submit", async (e) => {
                 JSON.stringify(datos.usuario)
             );
 
-            alert(datos.mensaje);
+            sessionStorage.setItem (
+                "bienvenida",
+                "true"
+            );
 
             window.location.href = "index.html";
  
