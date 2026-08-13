@@ -535,6 +535,12 @@ body, html {
     font-size: 2rem;
 }
 
+.imagenDeCarga {
+    grid-column: 1 / -1;
+    width: 150px;
+    height: auto;
+}
+
 .cerrarSesion-desktop-estilo,
 .cerrarSesion-mobile-estilo {
     cursor: pointer;
@@ -545,7 +551,7 @@ body, html {
     color: #f00b0b;
 }
 
-/*-----MENSAJE DE BIENVENIDA AL LOGUEARSE-----*/
+/*-----MENSAJE DE BIENVENIDA AL LOGUEARSE Y CERRAR SESIÓN-----*/
 .mensaje-bienvenida,
 .mensaje-cerrar-sesion {
     position: fixed;
@@ -582,3 +588,6 @@ body, html {
 
     }
 }
+
+
+/*-----Imagen de carga en productos-----*/
