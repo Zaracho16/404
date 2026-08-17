@@ -4,6 +4,9 @@ const API_URL = "https://four04-8o6t.onrender.com";
 
 const formulario = document.getElementById("registro-form");
 
+const cargaRegistro = document.getElementById("cargaMensaje-registro");
+
+const mensajeRegistroExitoso = document.getElementById("mensaje-registro-exitoso");
 
 formulario.addEventListener("submit", async (e) => {
 
@@ -14,6 +17,7 @@ formulario.addEventListener("submit", async (e) => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
+    cargaRegistro.style.display = "flex";
 
     try {
 
@@ -36,16 +40,56 @@ formulario.addEventListener("submit", async (e) => {
 
         const datos = await respuesta.json();
 
-
         console.log(datos);
 
+        cargaRegistro.style.display = "none";
 
-        alert(datos.mensaje);
+        if(respuesta.ok) {
+
+            localStorage.setItem(
+                "usuario",
+                JSON.stringify(datos.usuario)
+            );
+
+            sessionStorage.setItem(
+                "bienvenida",
+                "true"
+            );
+
+            console.log("Usuario que voy a guardar:", datos.usuario);
+
+            localStorage.setItem(
+                "usuario",
+                JSON.stringify(datos.usuario)
+            );
+
+            console.log(
+                "Usuario guardado:",
+                localStorage.getItem("usuario")
+            );
+
+        } else {
+
+            mensajeRegistroExitoso.innerHTML = `
+                <div class = "mensaje-registro-error">
+                    <p> ${datos.mensaje} </p>
+                </div>
+            `;
+
+        }
 
 
     } catch(error) {
 
         console.log("Error:", error);
+
+        cargaRegistro.style.display = "none";
+
+        mensajeRegistroExitoso.innerHTML = `
+            <div class = "mensaje-registro-error">
+                <p> No se pudo conectar con el servidor </p>
+            </div>
+        `;
 
     }
 
