@@ -56,17 +56,7 @@ formulario.addEventListener("submit", async (e) => {
                 "true"
             );
 
-            console.log("Usuario que voy a guardar:", datos.usuario);
-
-            localStorage.setItem(
-                "usuario",
-                JSON.stringify(datos.usuario)
-            );
-
-            console.log(
-                "Usuario guardado:",
-                localStorage.getItem("usuario")
-            );
+           window.location.href = "index.html";
 
         } else {
 
