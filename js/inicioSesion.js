@@ -3,12 +3,16 @@ const API_URL = "https://four04-8o6t.onrender.com";
 
 const formulario = document.getElementById("login-form");
 
+const cargaLogin = document.getElementById("mensaje-carga-login");
+
 formulario.addEventListener("submit", async (e) => {
 
     e.preventDefault();
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+
+    cargaLogin.style.display = "flex";
 
     console.log("email: " + email);
     console.log("clave: " + password);

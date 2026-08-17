@@ -36,7 +36,11 @@ router.post("/registro", async (req, res) => {
 
         res.json({
             mensaje: "Usuario registrado correctamente",
-            id: resultado.insertId
+            usuario: {
+                id: resultado.insertId,
+                nombre,
+                email
+            }
         });
 
     });

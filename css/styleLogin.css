@@ -104,3 +104,79 @@ button:hover {
 * {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+/*----- mensaje cuando se crea una cuenta-----*/
+.mensaje-registro-exitoso,
+.mensaje-registro-error {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+    color: white;
+    font-family: monospace;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.mensaje-registro-exitoso p,
+.mensaje-registro-error p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+
+/*-----Mensaje cuando se esta iniciando sesion y el servidor esta cargando-----*/
+
+.mensajeCargaLogin,
+.carga-registro {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    z-index: 9999;
+
+    color: white;
+    font-family: monospace;
+}
+
+.mensajeCargaLogin p,
+.carga-registro p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.animacion-carga {
+    width: 45px;
+    height: 45px;
+
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid white;
+
+    border-radius: 50%;
+
+    animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
