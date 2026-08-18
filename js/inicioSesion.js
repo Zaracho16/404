@@ -5,6 +5,8 @@ const formulario = document.getElementById("login-form");
 
 const cargaLogin = document.getElementById("mensaje-carga-login");
 
+const mensajeErrorBackend = document.getElementById("mensaje-error-back");
+
 formulario.addEventListener("submit", async (e) => {
 
     e.preventDefault();
@@ -54,7 +56,14 @@ formulario.addEventListener("submit", async (e) => {
  
         } else {
 
-            alert(datos.mensaje);
+            mensajeErrorBackend.innerHTML = `
+                <div class = "mensajeErrorBack">
+                    <p> ${datos.mensaje} </p>
+                </div>
+            `;
+
+            cargaLogin.style.display = "none";
+
 
         }
 
