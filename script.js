@@ -1,5 +1,8 @@
 
 import { carrito, agregarAlCarrito, eliminarDelCarrito, cargarCarrito } from "./js/carrito.js";
+
+window.eliminarDelCarrito = eliminarDelCarrito;
+
 import { obtenerUsuario, cerrarSesion } from "./js/usuario.js";
 
 let cantidad = 1;
@@ -61,35 +64,64 @@ function actualizarContadorGlobal() {
 }
 
 function actualizarCarrito() {
-  const lista = document.getElementById('carrito-lista');
-  const totalSpan = document.getElementById('total-carrito');
-  if (!lista || !totalSpan) return;
 
-  lista.innerHTML = '';
-  let total = 0;
+    const lista = document.getElementById('carrito-lista');
+    const totalSpan = document.getElementById('total-carrito');
 
-  carrito.forEach((producto, index) => {
-    total += producto.precio * producto.cantidad;
+    if (!lista || !totalSpan) return;
 
-    const li = document.createElement('li');
-    li.classList.add('carrito-item');
-    li.innerHTML = `
-      <div class="producto-contenedor-carritoCompra">
-        <div class="caja-img-carrito">
-          <img src="${producto.imagenSrc}" alt="${producto.nombre}" class="estilo-img-carrito">
-        </div>
-        <div class="caja-nombre-carrito">
-          <span class="nombreProducto-carrito">${producto.nombre} - ${producto.precio.toLocaleString()} Gs x ${producto.cantidad}</span>
-        </div>
-      </div>
-      <button onclick="eliminarDelCarrito(${index})" class="icono-eliminarProductoCarrito">❌</button>
-    `;
-    lista.appendChild(li);
-  });
+    lista.innerHTML = '';
 
-  totalSpan.textContent = total.toLocaleString();
-  actualizarContadorGlobal();
+    let total = 0;
+
+    carrito.forEach((producto) => {
+
+        total += producto.precio * producto.cantidad;
+
+        const li = document.createElement('li');
+
+        li.classList.add('carrito-item');
+
+        li.innerHTML = `
+            <div class="producto-contenedor-carritoCompra">
+
+                <div class="caja-img-carrito">
+                    <img 
+                        src="${producto.imagen}" 
+                        alt="${producto.nombre}" 
+                        class="estilo-img-carrito"
+                    >
+                </div>
+
+                <div class="caja-nombre-carrito">
+                    <span class="nombreProducto-carrito">
+                        ${producto.nombre} -
+                        ${producto.precio.toLocaleString()} Gs
+                        x ${producto.cantidad}
+                    </span>
+                </div>
+
+            </div>
+
+            <button 
+                onclick="eliminarDelCarrito(${producto.producto_id})"
+                class="icono-eliminarProductoCarrito"
+            >
+                ❌
+            </button>
+        `;
+
+        lista.appendChild(li);
+
+    });
+
+    totalSpan.textContent = total.toLocaleString();
+
+    actualizarContadorGlobal();
+
 }
+
+window.actualizarCarrito = actualizarCarrito;
 
 function mostrarMensajeCarrito() {
   const mensaje = document.getElementById("mensajeCarrito");
@@ -318,6 +350,7 @@ document.addEventListener("click", async (e) => {
             imagenSrc,
             1
         );
+        mostrarMensajeCarrito();
 
     }
 

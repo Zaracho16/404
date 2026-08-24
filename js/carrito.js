@@ -51,8 +51,12 @@ export async function agregarAlCarrito(
             return;
 
         }
+        
 
         console.log("Producto agregado correctamente");
+
+        await cargarCarrito();
+        window.actualizarCarrito();
 
     } catch(error) {
 
@@ -104,8 +108,45 @@ export async function cargarCarrito() {
 }
 
 
-export function eliminarDelCarrito(index) {
+export async function eliminarDelCarrito(productoId) {
 
-    console.log("Eliminar del carrito todavía no migrado");
+    const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+    if (!usuario) {
+        console.log("No hay usuario logueado");
+        return;
+    }
+
+    try {
+
+        const respuesta = await fetch(
+            `${API_URL}/carrito/${usuario.id}/${productoId}`,
+            {
+                method: "DELETE"
+            }
+        );
+
+        const datos = await respuesta.json();
+
+        console.log("Respuesta al eliminar:", datos);
+
+        if (!respuesta.ok) {
+
+            console.log("Error al eliminar producto");
+            return;
+
+        }
+
+        await cargarCarrito();
+
+        window.actualizarCarrito();
+
+        console.log("Producto eliminado correctamente");
+
+    } catch(error) {
+
+        console.log("Error:", error);
+
+    }
 
 }
