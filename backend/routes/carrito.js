@@ -178,4 +178,50 @@ router.post("/", (req, res) => {
 
 });
 
+router.delete("/:usuarioId/:productoId", (req, res) => {
+
+    const usuarioId = req.params.usuarioId;
+    const productoId = req.params.productoId;
+
+    const sql = `
+        DELETE detalle_carrito
+        FROM detalle_carrito
+        INNER JOIN carritos
+            ON detalle_carrito.carrito_id = carritos.id
+        WHERE carritos.usuario_id = ?
+        AND detalle_carrito.producto_id = ?
+    `;
+
+    db.query(
+        sql,
+        [usuarioId, productoId],
+        (error, resultado) => {
+
+            if (error) {
+
+                console.log(error);
+
+                return res.status(500).json({
+                    mensaje: "Error al eliminar producto del carrito"
+                });
+
+            }
+
+            if (resultado.affectedRows === 0) {
+
+                return res.status(404).json({
+                    mensaje: "Producto no encontrado en el carrito"
+                });
+
+            }
+
+            res.json({
+                mensaje: "Producto eliminado del carrito"
+            });
+
+        }
+    );
+
+});
+
 module.exports = router;

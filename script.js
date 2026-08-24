@@ -1,5 +1,5 @@
 
-import { carrito, agregarAlCarrito, eliminarDelCarrito } from "./js/carrito.js";
+import { carrito, agregarAlCarrito, eliminarDelCarrito, cargarCarrito } from "./js/carrito.js";
 import { obtenerUsuario, cerrarSesion } from "./js/usuario.js";
 
 let cantidad = 1;
@@ -247,6 +247,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
     // Renderizar el carrito guardado apenas cargue la pagina
+    await cargarCarrito();
     actualizarCarrito();
 
     // Ocultar buscador si no es tienda.html
