@@ -80,3 +80,5 @@ router.get("/usuarioId", (req, res) => {
 
 
 });
+
+module.exports = router;
