@@ -70,7 +70,7 @@ router.get("/:usuarioId", (req, res) => {
 
       res.json({
         carritoId,
-        productos
+        productos: resultado
       });
 
     });
