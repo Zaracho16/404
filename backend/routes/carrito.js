@@ -7,7 +7,7 @@ const router = express.Router();
 
 const db = require("../database/database");
 
-router.get("/usuarioId", (req, res) => {
+router.get("/:usuarioId", (req, res) => {
 
   const usuarioId = req.params.usuarioId;
 
