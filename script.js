@@ -237,6 +237,28 @@ function mostrarBienvenida() {
 
 }
 
+function mostrarMensajeCarritoSinLogueo() {
+
+  const mensaje = document.getElementById("mensajeCarritoSesionNoLogueda");
+
+  if(!mensaje) {
+    return;
+  }
+
+  mensaje.innerHTML = `
+      <p> Debe iniciar sesión para añadir productos al carrito </p>
+  `;
+
+  mensaje.style.display = "block";
+
+  setTimeout(() => {
+    mensaje.style.display = "none";
+  }, 2300);
+
+}
+
+ window.mostrarMensajeCarritoSinLogueo = mostrarMensajeCarritoSinLogueo;
+
 // Mensaje al cerrar sesion
 function mensajeCerrarSesion() {
 
@@ -343,14 +365,18 @@ document.addEventListener("click", async (e) => {
             precioTexto.replace(/\D/g, '')
         );
 
-        await agregarAlCarrito(
+        const agregado = await agregarAlCarrito(
             productoId,
             nombre,
             precio,
             imagenSrc,
             1
         );
-        mostrarMensajeCarrito();
+        
+        if(agregado) {
+          mostrarMensajeCarrito();
+        }
+
 
     }
 
