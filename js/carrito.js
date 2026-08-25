@@ -16,9 +16,8 @@ export async function agregarAlCarrito(
 
     if (!usuario) {
 
-        console.log("No hay usuario logueado");
-
-        return;
+        window.mostrarMensajeCarritoSinLogueo();
+        return false;
 
     }
 
@@ -48,7 +47,7 @@ export async function agregarAlCarrito(
 
             console.log("Error al agregar producto");
 
-            return;
+            return false;
 
         }
         
@@ -58,9 +57,13 @@ export async function agregarAlCarrito(
         await cargarCarrito();
         window.actualizarCarrito();
 
+        return true;
+
     } catch(error) {
 
         console.log("Error:", error);
+
+        return false;
 
     }
 
