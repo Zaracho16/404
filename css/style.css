@@ -542,6 +542,8 @@ body, html {
 .cargando-productos-tienda,
 .error-cargando-productos-tienda,
 .producto-no-encontrado-mensaje {
+    flex-direction: column;
+    gap: 20px;
     grid-column: 1 / -1; /* Para que el grid use desde la primera columna hasta el ultimo, asi deja los productos abajo y el mensaje arriba*/
     min-height: 50vh;
     display: flex;
@@ -549,6 +551,27 @@ body, html {
     align-items: center;
     text-align: center;
     font-size: 2rem;
+}
+
+.animacion-carga {
+    width: 45px;
+    height: 45px;
+    border: 5px solid rgba(0, 0, 0, 0.2);
+    border-top: 5px solid black;
+    border-radius: 50%;
+    animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
 }
 
 .imagenDeCarga {

@@ -105,8 +105,8 @@ async function cargarProductos() {
 
   contenedorPerfumesGeneral.innerHTML = `
     <div class="cargando-productos-tienda">
+      <div class="animacion-carga"></div>
       <h2>Cargando productos...</h2>
-      <img src="assets/carga/loading.gif" class="imagenDeCarga">
     </div>
   `;
 
