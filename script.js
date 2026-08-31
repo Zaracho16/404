@@ -381,29 +381,63 @@ document.addEventListener("click", async (e) => {
     }
 
 });
-    // Agregar al carrito desde el modal de vista previa
-    const btnAgregarModal = document.getElementById("btnAgregarDesdeVistaPrevia");
-    if(btnAgregarModal){
-      btnAgregarModal.addEventListener('click', () => {
-        const nombre = document.getElementById("titulo-infoVistaPrevia")?.innerText.trim();
-        const imagenSrc = document.getElementById("img-vistaPrevia")?.src;
-        const precioTexto = document.getElementById("precio")?.innerText.trim();
-        if (!nombre || !imagenSrc || !precioTexto) return;
+    
+// Agregar al carrito desde el modal de vista previa
+const btnAgregarModal = document.getElementById("btnAgregarDesdeVistaPrevia");
 
-        const precio = parseInt(precioTexto.replace(/\D/g, ''));
+if(btnAgregarModal) {
 
-        agregarAlCarrito(nombre, precio, imagenSrc, cantidad);
+  btnAgregarModal.addEventListener("click", async () => {
+
+    const productoId = btnAgregarModal.dataset.id;
+
+    const nombre= document
+      .getElementById("titulo-infoVistaPrevia")
+      ?.innerHTML.trim();
+
+      const imagenSrc = document
+        .getElementById("img-vistaPrevia")
+        ?.src;
+
+      const precioTexto = document
+        .getElementById("precio")
+        ?.innerText.trim();
+
+      if(!productoId || !nombre || !imagenSrc || !precioTexto) {
+        return;
+      }
+
+      const precio = parseInt(
+        precioTexto.replace(/\D/g, "")
+      );
+
+      const cantidad = parseInt(
+        document.getElementById("cantidad")?.innerHTML
+      ) || 1;
+
+      const agregado = await agregarAlCarrito(
+        productoId,
+        nombre,
+        precio,
+        imagenSrc,
+        cantidad
+      );
+
+      if(agregado) {
         actualizarCarrito();
         mostrarMensajeCarrito();
         cerrarModal();
-      });
-    }
+      }
+
+  });
+
+}
 
 
     // Cargar footer.html
-    const footerResponse = await fetch("./components/footer.html");
-    const footerHtml = await footerResponse.text();
-    document.getElementById("footer").innerHTML = footerHtml;
+  const footerResponse = await fetch("./components/footer.html");
+  const footerHtml = await footerResponse.text();
+  document.getElementById("footer").innerHTML = footerHtml;
 
   } catch (err) {
     console.error("Error al cargar nav o footer:", err);
