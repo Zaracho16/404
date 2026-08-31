@@ -288,6 +288,7 @@ function mensajeCerrarSesion() {
 
 //  FLUJO PRINCIPAL AL CARGAR EL DOM
 document.addEventListener("DOMContentLoaded", async () => {
+
   try {
     // Cargar nav.html
     const navResponse = await fetch("./components/nav.html");
@@ -324,61 +325,65 @@ document.addEventListener("DOMContentLoaded", async () => {
     const fondoOscuro = document.getElementById('fondo-oscuro');
 
     if(iconoCarritoDesktop && iconoCarritoMobile && carritoLateral && botonCerrar && fondoOscuro){
+
       iconoCarritoDesktop.addEventListener('click', () => {
         carritoLateral.classList.toggle('active');
         fondoOscuro.classList.add('active');
       });
+
       iconoCarritoMobile.addEventListener('click', () => {
         carritoLateral.classList.toggle('active');
         fondoOscuro.classList.add('active');
       });
+
       botonCerrar.addEventListener('click', () => {
         carritoLateral.classList.remove('active');
         fondoOscuro.classList.remove('active');
       });
+
       fondoOscuro.addEventListener('click', () => {
         carritoLateral.classList.remove('active');
         fondoOscuro.classList.remove('active');
       });
-    }
+
+  }
 
 // Agregar al carrito desde las tarjetas de productos
 document.addEventListener("click", async (e) => {
 
-    if (e.target.classList.contains("boton-carrito")) {
+  if (e.target.classList.contains("boton-carrito")) {
 
-        const cuadro = e.target.closest(".cuadro-perfumes-General");
+    const cuadro = e.target.closest(".cuadro-perfumes-General");
 
-        if (!cuadro) return;
+    if (!cuadro) return;
 
-        const productoId = e.target.dataset.id;
+    const productoId = e.target.dataset.id;
 
-        const nombre = cuadro.querySelector("h3")?.textContent.trim();
+    const nombre = cuadro.querySelector("h3")?.textContent.trim();
 
-        const imagenSrc = cuadro.querySelector("img")?.src;
+    const imagenSrc = cuadro.querySelector("img")?.src;
 
-        const precioTexto = cuadro.querySelector("span")?.textContent.trim();
+    const precioTexto = cuadro.querySelector("span")?.textContent.trim();
 
-        if (!productoId || !nombre || !imagenSrc || !precioTexto) return;
+    if (!productoId || !nombre || !imagenSrc || !precioTexto) return;
 
-        const precio = parseInt(
-            precioTexto.replace(/\D/g, '')
-        );
+    const precio = parseInt(
+      precioTexto.replace(/\D/g, '')
+    );
 
-        const agregado = await agregarAlCarrito(
-            productoId,
-            nombre,
-            precio,
-            imagenSrc,
-            1
-        );
+    const agregado = await agregarAlCarrito(
+      productoId,
+      nombre,
+      precio,
+      imagenSrc,
+      1
+    );
         
-        if(agregado) {
-          mostrarMensajeCarrito();
-        }
-
-
+    if(agregado) {
+      mostrarMensajeCarrito();
     }
+
+  }
 
 });
     
@@ -395,46 +400,45 @@ if(btnAgregarModal) {
       .getElementById("titulo-infoVistaPrevia")
       ?.innerHTML.trim();
 
-      const imagenSrc = document
+    const imagenSrc = document
         .getElementById("img-vistaPrevia")
         ?.src;
 
-      const precioTexto = document
+    const precioTexto = document
         .getElementById("precio")
         ?.innerText.trim();
 
-      if(!productoId || !nombre || !imagenSrc || !precioTexto) {
-        return;
-      }
+    if(!productoId || !nombre || !imagenSrc || !precioTexto) {
+      return;
+    }
 
-      const precio = parseInt(
-        precioTexto.replace(/\D/g, "")
-      );
+    const precio = parseInt(
+      precioTexto.replace(/\D/g, "")
+    );
 
-      const cantidad = parseInt(
-        document.getElementById("cantidad")?.innerHTML
-      ) || 1;
+    const cantidad = parseInt(
+      document.getElementById("cantidad")?.innerHTML
+    ) || 1;
 
-      const agregado = await agregarAlCarrito(
-        productoId,
-        nombre,
-        precio,
-        imagenSrc,
-        cantidad
-      );
+    const agregado = await agregarAlCarrito(
+      productoId,
+      nombre,
+      precio,
+      imagenSrc,
+      cantidad
+    );
 
-      if(agregado) {
-        actualizarCarrito();
-        mostrarMensajeCarrito();
-        cerrarModal();
-      }
+    if(agregado) {
+      actualizarCarrito();
+      mostrarMensajeCarrito();
+      cerrarModal();
+    }
 
   });
 
 }
 
-
-    // Cargar footer.html
+  // Cargar footer.html
   const footerResponse = await fetch("./components/footer.html");
   const footerHtml = await footerResponse.text();
   document.getElementById("footer").innerHTML = footerHtml;
