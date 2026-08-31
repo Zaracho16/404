@@ -80,8 +80,15 @@ function renderProductos() {
 document.addEventListener("DOMContentLoaded", cargarProductos);
 
 function mostrarModalPerfume(id) {
+
   const perfume = perfumes.find(p => p.id === id);
   if (!perfume) return;
+
+  const btnAgregarModal = document.getElementById("btnAgregarDesdeVistaPrevia");
+
+  if(btnAgregarModal) {
+    btnAgregarModal.dataset.id = perfume.id;
+  }
 
   document.getElementById("titulo-infoVistaPrevia").innerText = perfume.nombre;
   document.getElementById("precio").innerText = perfume.precio.toLocaleString();
@@ -93,6 +100,7 @@ function mostrarModalPerfume(id) {
   document.getElementById("img-vistaPrevia").src = perfume.imagen;
 
   document.getElementById("modalVistaPrevia").style.display = "flex";
+
 }
 
 window.mostrarModalPerfume = mostrarModalPerfume;
