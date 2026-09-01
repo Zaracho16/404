@@ -776,4 +776,10 @@ body, html {
     .contenedor-general-facturacion-pedido {
         grid-template-columns: 1fr;
     }
+
+    .producto-pedido,
+    .subtotal-producto-pedido {
+        height: 130px;
+        box-sizing: border-box;
+    }
 }
