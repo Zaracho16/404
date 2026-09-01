@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Finalizar Compra</title>
+</head>
+
+<body>
+
+    <div id="nav"></div>
+
+    <section class="mt-16 font-[monospace] bg-[#497D74]">
+        <h1 class="text-center text-[2.2rem] min-h-[3rem] p-5 font-bold text-[#71BBB2]">Finalizar Compra</h1>
+    </section>
+
+
+    <section class="contenedor-general-facturacion-pedido">
+
+        <div class="contenedor-facturacion">
+
+            <div class="contenedor-info-factura">
+                <h2 style="font-weight: bold;"> DETALLES DE FACTURACIÓN </h2>
+
+                <div class="datos-nombreApellido">
+                    <input type="text" class="estilos-campos-fact" placeholder="Nombre">
+                    <input type="text" class="estilos-campos-fact" placeholder="Apellido">
+                </div>
+
+                <input type="text" class="estilos-campos-fact" placeholder="Dirección de la calle">
+                <input type="text" class="estilos-campos-fact" placeholder="Ciudad">
+                <input type="tel" class="estilos-campos-fact" placeholder="Teléfono">
+                <input type="email" class="estilos-campos-fact" placeholder="Correo electrónico">
+                <input type="text" class="estilos-campos-fact" placeholder="Cédula de identidad">
+            </div>
+
+        </div>
+
+        <div class="contenedor-pedido">
+
+            <div class="detalles-pedidos">
+                <h2 style="font-weight: bold;">TU PEDIDO</h2>
+            </div>
+
+            <div class="contenedor-texto-productos-subtotal">
+
+                <div class="contain-class-textos-prod-subt">
+                    <div class="class-textos-p-s">
+                        <p>Productos</p>
+                    </div>
+
+                    <div class="class-textos-p-s">
+                        <p>Subtotal</p>
+                    </div>
+                </div>
+
+                <div class="contain-detalles-prod-subt">
+
+                    <div class="contain-detalles-productos" id="lista-productos-compra">
+                    </div>
+
+                    <div class="contain-detalles-subtotal" id="lista-subtotales-compra">
+                    </div>                  
+
+                </div>
+
+            </div>
+
+            <div class="pago-total">
+
+                <div class="total-class-t">
+                    <p>Total</p>
+                </div>
+
+                <div class="total-class-n">
+                    <span id="total-compra">0</span> GS
+                </div>
+                
+            </div>
+
+            <div class="metodos-de-pago">
+
+                <label>
+                    <input type="radio" name="metodo-pago" value="tarjeta">
+                    Transferencia bancaria
+                </label>
+
+                <label>
+                    <input type="radio" name="metodo-pago" value="tarjeta">
+                    Pagar en efectivo al recibir
+                </label>
+                
+
+            </div>
+
+            <div class="btn-finalizar-pedido">
+                <button>Finalizar compra</button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+<!--Link script-->
+<script type="module" src="./script.js"></script>
+<script type="module" src="./js/compras.js"></script>
+    
+</body>
+</html>

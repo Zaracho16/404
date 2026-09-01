@@ -627,3 +627,162 @@ body, html {
 
     }
 }
+
+/*-----ESTILOS EN LA PAGINA DE FINALIZAR COMPRA-----*/
+
+.estilos-campos-fact,
+.contain-detalles-productos,
+.contain-detalles-subtotal {
+    border: 2px solid #c8c6db;
+}
+
+.contain-class-textos-prod-subt {
+    display: flex;
+    width: 100%;
+    font-weight: bold;
+}
+
+.contain-detalles-prod-subt {
+    display: flex;
+}
+
+.class-textos-p-s {
+    flex: 1;
+    text-align: center;
+}
+
+.contenedor-texto-productos-subtotal,
+.pago-total {
+    border: 2px solid #2715ca;
+}
+
+.producto-pedido,
+.subtotal-producto-pedido {
+    height: 100px;
+    box-sizing: border-box;
+}
+
+.contenedor-general-facturacion-pedido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    border: 2px solid #aee90e;
+}
+
+.contenedor-info-factura {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    margin-left: 10px;
+    border: 2px solid #03e7d4;
+}
+
+.contenedor-pedido {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #110768;
+}
+
+.estilos-campos-fact {
+    margin: 3px;
+    padding: 5px;
+    width: 100%;
+}
+
+.datos-nombreApellido {
+    display: flex;
+}
+
+.detalles-pedidos h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+.contain-detalles-productos,
+.contain-detalles-subtotal {
+    width: 50%;
+    text-align: center;
+    padding: 8px;
+}
+
+/* Items individuales del pedido */
+.producto-pedido {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-bottom: 1px solid #c8c6db;
+}
+
+.producto-pedido img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.info-producto-pedido {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-producto-pedido p {
+    margin: 0;
+}
+
+.info-producto-pedido span {
+    font-size: 14px;
+}
+
+.subtotal-producto-pedido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #c8c6db;
+}
+
+.pago-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding: 8px;
+}
+
+.total-class-t {
+    font-weight: bold;
+}
+
+.metodos-de-pago {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.btn-finalizar-pedido {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-finalizar-pedido button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: #2190f1;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.info-producto-pedido p {
+    margin: 0;
+}
+
+
+@media (max-width: 920px) {
+    .contenedor-general-facturacion-pedido {
+        grid-template-columns: 1fr;
+    }
+}

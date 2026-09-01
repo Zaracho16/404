@@ -10,11 +10,12 @@ app.use(express.json());
 const productsRoutes = require("./routes/products");
 const usuariosRoutes = require("./routes/usuarios");
 const carritoRoutes = require("./routes/carrito");
+const comprasRoutes = require("./routes/compras");
 
 app.use("/productos", productsRoutes);
 app.use("/usuarios", usuariosRoutes);
 app.use("/carrito", carritoRoutes);
-
+app.use("/compras", comprasRoutes);
 
 
 app.get("/", (req, res) => {
