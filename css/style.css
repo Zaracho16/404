@@ -772,7 +772,7 @@ body, html {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 960px) {
     .contenedor-general-facturacion-pedido {
         grid-template-columns: 1fr;
     }
@@ -780,6 +780,18 @@ body, html {
     .producto-pedido,
     .subtotal-producto-pedido {
         height: 130px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 415px) {
+    .contenedor-general-facturacion-pedido {
+        grid-template-columns: 1fr;
+    }
+
+    .producto-pedido,
+    .subtotal-producto-pedido {
+        height: 190px;
         box-sizing: border-box;
     }
 }
