@@ -136,3 +136,163 @@ function mostrarProductos(productos) {
 }
 
 cargarPedido();
+
+const botonFinalizar =
+    document.getElementById("btn-finalizar-compra");
+
+
+if (botonFinalizar) {
+
+    botonFinalizar.addEventListener("click", async () => {
+
+        const nombre =
+            document.querySelector(
+                'input[placeholder="Nombre"]'
+            ).value.trim();
+
+
+        const apellido =
+            document.querySelector(
+                'input[placeholder="Apellido"]'
+            ).value.trim();
+
+
+        const direccion =
+            document.querySelector(
+                'input[placeholder="Dirección de la calle"]'
+            ).value.trim();
+
+
+        const ciudad =
+            document.querySelector(
+                'input[placeholder="Ciudad"]'
+            ).value.trim();
+
+
+        const telefono =
+            document.querySelector(
+                'input[placeholder="Teléfono"]'
+            ).value.trim();
+
+
+        const correo =
+            document.querySelector(
+                'input[placeholder="Correo electrónico"]'
+            ).value.trim();
+
+
+        const cedula =
+            document.querySelector(
+                'input[placeholder="Cédula de identidad"]'
+            ).value.trim();
+
+
+        const metodoPago =
+            document.querySelector(
+                'input[name="metodo-pago"]:checked'
+            )?.value;
+
+
+        // Validar campos
+
+        if (
+            !nombre ||
+            !apellido ||
+            !direccion ||
+            !ciudad ||
+            !telefono ||
+            !correo ||
+            !cedula
+        ) {
+
+            alert("Completá todos los datos de facturación");
+
+            return;
+
+        }
+
+
+        if (!metodoPago) {
+
+            alert("Seleccioná un método de pago");
+
+            return;
+
+        }
+
+
+        try {
+
+            const respuesta = await fetch(
+                `${API_URL}/compras`,
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+
+                        usuarioId: usuario.id,
+
+                        nombre,
+                        apellido,
+                        direccion,
+                        ciudad,
+                        telefono,
+                        correo,
+                        cedula,
+
+                        metodoPago
+
+                    })
+                }
+            );
+
+
+            const datos = await respuesta.json();
+
+
+            console.log(
+                "Respuesta de compra:",
+                datos
+            );
+
+
+            if (!respuesta.ok) {
+
+                alert(
+                    datos.mensaje ||
+                    "No se pudo realizar la compra"
+                );
+
+                return;
+
+            }
+
+
+            alert(
+                `Compra realizada correctamente.\n\nNúmero de compra: ${datos.compraId}\nTotal: ${datos.total.toLocaleString("es-PY")} Gs`
+            );
+
+
+            window.location.href = "index.html";
+
+
+        } catch (error) {
+
+            console.log(
+                "Error al finalizar compra:",
+                error
+            );
+
+            alert(
+                "Ocurrió un error al realizar la compra"
+            );
+
+        }
+
+    });
+
+}

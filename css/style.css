@@ -260,7 +260,6 @@ body, html {
 }
 
 .informacion-vistaPrevia {
-    border: 3px solid rgb(214, 214, 189);
     margin-left: 10px;
     width: 50%;
     padding: 10px;
@@ -331,7 +330,6 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid #497D74;
 }
 
 .derecha-cuadro-VistaPrevia {
@@ -340,7 +338,6 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: 1px solid #497D74;
 }
 
 .btn-vistaPrevia-agregarAlCarrito {
@@ -424,12 +421,14 @@ body, html {
 }
 
 .btn-finalizarCompra {
+    display: block;
     background-color: #27ae60;
     padding: 10px;
     border-radius: 30px;
-    margin-top: 35px;
+    margin-top: 15px;
     cursor: pointer;
     font-size: 1.1rem;
+    text-align: center;
 }
 
 /*-----Estilos para las imagenes en el carrito de compra-----*/
@@ -633,7 +632,7 @@ body, html {
 .estilos-campos-fact,
 .contain-detalles-productos,
 .contain-detalles-subtotal {
-    border: 2px solid #c8c6db;
+    border: 1px solid #c8c6db;
 }
 
 .contain-class-textos-prod-subt {
@@ -651,11 +650,6 @@ body, html {
     text-align: center;
 }
 
-.contenedor-texto-productos-subtotal,
-.pago-total {
-    border: 2px solid #2715ca;
-}
-
 .producto-pedido,
 .subtotal-producto-pedido {
     height: 100px;
@@ -666,7 +660,6 @@ body, html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    border: 2px solid #aee90e;
 }
 
 .contenedor-info-factura {
@@ -675,13 +668,11 @@ body, html {
     gap: 15px;
     padding: 10px;
     margin-left: 10px;
-    border: 2px solid #03e7d4;
 }
 
 .contenedor-pedido {
     display: flex;
     flex-direction: column;
-    border: 2px solid #110768;
 }
 
 .estilos-campos-fact {
