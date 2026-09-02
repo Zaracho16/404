@@ -300,10 +300,11 @@ function mensajeCerrarSesion() {
 
 }
 
-//  FLUJO PRINCIPAL AL CARGAR EL DOM
+// FLUJO PRINCIPAL AL CARGAR EL DOM
 document.addEventListener("DOMContentLoaded", async () => {
 
   try {
+
     // Cargar nav.html
     const navResponse = await fetch("./components/nav.html");
     const navHtml = await navResponse.text();
@@ -395,6 +396,8 @@ document.addEventListener("click", async (e) => {
         
     if(agregado) {
       mostrarMensajeCarrito();
+    } else {
+      mostrarMensajeCarritoSinLogueo();
     }
 
   }
