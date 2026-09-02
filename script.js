@@ -8,11 +8,14 @@ import { obtenerUsuario, cerrarSesion } from "./js/usuario.js";
 let cantidad = 1;
 
 window.eliminarDelCarrito = function(index) {
+
   eliminarDelCarrito(index); 
   actualizarCarrito();  
+
 };
 
 window.mostrarModal = function(btn) {
+
   document.getElementById("img-vistaPrevia").src = btn.dataset.img;
   document.getElementById("titulo-infoVistaPrevia").innerText = btn.dataset.titulo;
   document.getElementById("precio").innerText = btn.dataset.precio;
@@ -27,30 +30,38 @@ window.mostrarModal = function(btn) {
   if(cantidadSpan) cantidadSpan.textContent = cantidad;
 
   document.getElementById("modalVistaPrevia").style.display = "flex";
+
 };
 
 window.cerrarModal = function() {
+
   document.getElementById("modalVistaPrevia").style.display = "none";
+
 };
 
 window.aumentar = function() {
+
   cantidad++;
   const cantidadSpan = document.getElementById("cantidad");
   if(cantidadSpan) cantidadSpan.textContent = cantidad;
+
 };
 
 window.disminuir = function() {
+
   if (cantidad > 1) {
     cantidad--;
     const cantidadSpan = document.getElementById("cantidad");
     if(cantidadSpan) cantidadSpan.textContent = cantidad;
   }
+
 };
 
 
 // FUNCIONES DE INTERFAZ (DOM)
 
 function actualizarContadorGlobal() {
+
   const contadores = document.querySelectorAll(".numeroContadorCantidadProductos-desktop, .numeroContadorCantidadProductos-mobile");
 
   if (!contadores.length) return;
@@ -61,6 +72,7 @@ function actualizarContadorGlobal() {
     contadorSpan.textContent = contadorCarrito;
     contadorSpan.style.display = contadorCarrito > 0 ? "inline-block" : "none";
   });
+
 }
 
 function actualizarCarrito() {
@@ -124,6 +136,7 @@ function actualizarCarrito() {
 window.actualizarCarrito = actualizarCarrito;
 
 function mostrarMensajeCarrito() {
+
   const mensaje = document.getElementById("mensajeCarrito");
   if (!mensaje) return;
 
@@ -134,6 +147,7 @@ function mostrarMensajeCarrito() {
     mensaje.classList.remove("visible");
     setTimeout(() => mensaje.classList.add("oculto"), 300);
   }, 1500);
+
 }
 
 function actualizarUsuario() {
@@ -246,7 +260,7 @@ function mostrarMensajeCarritoSinLogueo() {
   }
 
   mensaje.innerHTML = `
-      <p> Debe iniciar sesión para añadir productos al carrito </p>
+    <p> Debe iniciar sesión para añadir productos al carrito </p>
   `;
 
   mensaje.style.display = "block";
@@ -257,7 +271,7 @@ function mostrarMensajeCarritoSinLogueo() {
 
 }
 
- window.mostrarMensajeCarritoSinLogueo = mostrarMensajeCarritoSinLogueo;
+window.mostrarMensajeCarritoSinLogueo = mostrarMensajeCarritoSinLogueo;
 
 // Mensaje al cerrar sesion
 function mensajeCerrarSesion() {
@@ -300,7 +314,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     mostrarBienvenida();
     mensajeCerrarSesion();
 
-
     // Renderizar el carrito guardado apenas cargue la pagina
     await cargarCarrito();
     actualizarCarrito();
@@ -314,6 +327,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Asignar eventos del menú responsive después de cargar nav
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
+
     if(btn && menu){
       btn.addEventListener('click', () => menu.classList.toggle('hidden'));
     }
@@ -324,7 +338,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const botonCerrar = document.getElementById('cerrar-carrito');
     const fondoOscuro = document.getElementById('fondo-oscuro');
 
-    if(iconoCarritoDesktop && iconoCarritoMobile && carritoLateral && botonCerrar && fondoOscuro){
+    if(iconoCarritoDesktop && iconoCarritoMobile && carritoLateral && botonCerrar && fondoOscuro) {
 
       iconoCarritoDesktop.addEventListener('click', () => {
         carritoLateral.classList.toggle('active');
@@ -401,12 +415,12 @@ if(btnAgregarModal) {
       ?.innerHTML.trim();
 
     const imagenSrc = document
-        .getElementById("img-vistaPrevia")
-        ?.src;
+      .getElementById("img-vistaPrevia")
+      ?.src;
 
     const precioTexto = document
-        .getElementById("precio")
-        ?.innerText.trim();
+      .getElementById("precio")
+      ?.innerText.trim();
 
     if(!productoId || !nombre || !imagenSrc || !precioTexto) {
       return;
@@ -440,10 +454,13 @@ if(btnAgregarModal) {
 
   // Cargar footer.html
   const footerResponse = await fetch("./components/footer.html");
+  
   const footerHtml = await footerResponse.text();
+
   document.getElementById("footer").innerHTML = footerHtml;
 
   } catch (err) {
     console.error("Error al cargar nav o footer:", err);
   }
+  
 });
