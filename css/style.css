@@ -795,3 +795,68 @@ body, html {
         box-sizing: border-box;
     }
 }
+
+/*-----Estilos para mobile-----*/
+
+@media (max-width: 566px) {
+
+    .ajusteMobile {
+        height: 60vh;
+    }
+
+    .textoPerfumesPorMarcaMobile {
+        font-size: 25px;
+    }
+
+    .imagen-marcas-perfumes {
+        width: 140px;
+        height: 100px;
+        padding: 11px;
+    }
+
+    .cuadro-marcas h3 {
+        font-size: 15px;
+        
+    }
+
+    .containInfoIndex h4 {
+       font-size: 16px;
+    }
+
+    .containInfoIndex span {
+        font-size: 15px;
+    }
+
+    .containFooter h3 {
+        font-size: 17px;
+    }
+
+    .containFooter a,
+    .containFooter span {
+        font-size: 16px;
+    }
+
+    .derechos-reservados {
+        font-size: 15px;
+    }
+
+    .contain-buscarProducto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .buscadorProductoMobile {
+        width: 70%;
+    }
+
+    .iconoBuscadorProducto-mobile {
+        margin-right: 55px;
+    }
+
+    .tituloTiendaMobile {
+        font-size: 23px;
+    }
+
+}
