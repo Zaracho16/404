@@ -32,7 +32,7 @@ db.getConnection((error, connection) => {
     connection.query("SET time_zone = '-03:00'", (error) => {
 
         if(error) {
-            console.log("Error en la configuracion de la zona horaria;", error);
+            console.log("Error en la configuracion de la zona horaria", error);
             connection.release();
             return;
         }
