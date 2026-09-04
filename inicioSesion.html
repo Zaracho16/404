@@ -20,22 +20,25 @@
     <h1 class="titulo-404-header">404</h1>
 </header>
 
-<section class="flex items-center justify-center min-h-screen">
-<div class="login-container">
-    <h1 class="titulo-iniciar-sesion">Iniciar Sesión</h1>
-    <form id="login-form">
-        <input type="email" id="email" placeholder="Correo" required>
-        <div id="mensaje-error-back"></div>
-        <input type="password" id="password" placeholder="Contraseña" required>
-        <button type="submit">Entrar</button>
-    </form>
+<section class="seccion-loginYregistroContain">
+    <div class="login-container">
 
-   <p class="crear-cuenta font-[monospace]">
+        <h1 class="titulo-iniciar-sesion">Iniciar Sesión</h1>
+        
+        <form id="login-form">
+            <input type="email" id="email" placeholder="Correo" required>
+            <div id="mensaje-error-back"></div>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit" class="btn-entrar">Entrar</button>
+        </form>
+
+    <p class="crear-cuenta font-[monospace]">
         ¿No tenés cuenta? <a href="registro.html"><u>Crear cuenta</u></a>
-   </p>
+    </p>
 
-   <a href="recuperar-password" class="p-clave font-[monospace]">Olvidé mi contraseña</a>
-</div>
+    <a href="recuperar-password" class="p-clave font-[monospace]">Olvidé mi contraseña</a>
+
+    </div>
 </section>
 
 <script type="module" src="./js/inicioSesion.js"></script>
